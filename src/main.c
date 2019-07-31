@@ -15,10 +15,13 @@
 int		main(int ac, char **av)
 {
 	t_ls	*ls;
+	DIR     *fd;
 
 	//vanilla_ls(av[1]);
 	ls = ft_memalloc(sizeof(t_ls));
 	ls->par = ft_create_elem(flag_return(ac, av));
-	vanilla_ls(ls->par->name);
+	fd = opendir(ls->par->name);
+	vanilla_ls(fd, 1, 0);
+	vanilla_ls(fd, 1, 0);
 	return (0);
 }
