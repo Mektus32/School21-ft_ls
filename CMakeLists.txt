@@ -129,4 +129,4 @@ add_executable(School21_ft_ls
         libft/ft_ultoa.c
         libft/ft_ultoa_base.c
         libft/get_next_line.c
-        src/main.c src/vanilla_ls.c src/error.c src/flag_return.c)
+        src/main.c src/vanilla_ls.c src/error.c src/flag_return.c src/mektus_func.c src/flag_choose.c src/recursion_ls.c)

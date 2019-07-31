@@ -450,10 +450,19 @@
 		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/src/error.c">
 			<Option target="School21_ft_ls"/>
 		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/src/flag_choose.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
 		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/src/flag_return.c">
 			<Option target="School21_ft_ls"/>
 		</Unit>
 		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/src/main.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/src/mektus_func.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/src/recursion_ls.c">
 			<Option target="School21_ft_ls"/>
 		</Unit>
 		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/src/vanilla_ls.c">

@@ -120,8 +120,11 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/humanbean/ecole42/School21-ft_ls/libft/ft_ultoa_base.c" "/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles/School21_ft_ls.dir/libft/ft_ultoa_base.c.o"
   "/home/humanbean/ecole42/School21-ft_ls/libft/get_next_line.c" "/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles/School21_ft_ls.dir/libft/get_next_line.c.o"
   "/home/humanbean/ecole42/School21-ft_ls/src/error.c" "/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles/School21_ft_ls.dir/src/error.c.o"
+  "/home/humanbean/ecole42/School21-ft_ls/src/flag_choose.c" "/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles/School21_ft_ls.dir/src/flag_choose.c.o"
   "/home/humanbean/ecole42/School21-ft_ls/src/flag_return.c" "/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles/School21_ft_ls.dir/src/flag_return.c.o"
   "/home/humanbean/ecole42/School21-ft_ls/src/main.c" "/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles/School21_ft_ls.dir/src/main.c.o"
+  "/home/humanbean/ecole42/School21-ft_ls/src/mektus_func.c" "/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles/School21_ft_ls.dir/src/mektus_func.c.o"
+  "/home/humanbean/ecole42/School21-ft_ls/src/recursion_ls.c" "/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.o"
   "/home/humanbean/ecole42/School21-ft_ls/src/vanilla_ls.c" "/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

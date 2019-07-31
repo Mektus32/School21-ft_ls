@@ -3255,6 +3255,33 @@ src/error.c.s:
 	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/error.c.s
 .PHONY : src/error.c.s
 
+src/flag_choose.o: src/flag_choose.c.o
+
+.PHONY : src/flag_choose.o
+
+# target to build an object file
+src/flag_choose.c.o:
+	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/flag_choose.c.o
+.PHONY : src/flag_choose.c.o
+
+src/flag_choose.i: src/flag_choose.c.i
+
+.PHONY : src/flag_choose.i
+
+# target to preprocess a source file
+src/flag_choose.c.i:
+	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/flag_choose.c.i
+.PHONY : src/flag_choose.c.i
+
+src/flag_choose.s: src/flag_choose.c.s
+
+.PHONY : src/flag_choose.s
+
+# target to generate assembly for a file
+src/flag_choose.c.s:
+	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/flag_choose.c.s
+.PHONY : src/flag_choose.c.s
+
 src/flag_return.o: src/flag_return.c.o
 
 .PHONY : src/flag_return.o
@@ -3308,6 +3335,60 @@ src/main.s: src/main.c.s
 src/main.c.s:
 	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/main.c.s
 .PHONY : src/main.c.s
+
+src/mektus_func.o: src/mektus_func.c.o
+
+.PHONY : src/mektus_func.o
+
+# target to build an object file
+src/mektus_func.c.o:
+	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/mektus_func.c.o
+.PHONY : src/mektus_func.c.o
+
+src/mektus_func.i: src/mektus_func.c.i
+
+.PHONY : src/mektus_func.i
+
+# target to preprocess a source file
+src/mektus_func.c.i:
+	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/mektus_func.c.i
+.PHONY : src/mektus_func.c.i
+
+src/mektus_func.s: src/mektus_func.c.s
+
+.PHONY : src/mektus_func.s
+
+# target to generate assembly for a file
+src/mektus_func.c.s:
+	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/mektus_func.c.s
+.PHONY : src/mektus_func.c.s
+
+src/recursion_ls.o: src/recursion_ls.c.o
+
+.PHONY : src/recursion_ls.o
+
+# target to build an object file
+src/recursion_ls.c.o:
+	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.o
+.PHONY : src/recursion_ls.c.o
+
+src/recursion_ls.i: src/recursion_ls.c.i
+
+.PHONY : src/recursion_ls.i
+
+# target to preprocess a source file
+src/recursion_ls.c.i:
+	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.i
+.PHONY : src/recursion_ls.c.i
+
+src/recursion_ls.s: src/recursion_ls.c.s
+
+.PHONY : src/recursion_ls.s
+
+# target to generate assembly for a file
+src/recursion_ls.c.s:
+	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.s
+.PHONY : src/recursion_ls.c.s
 
 src/vanilla_ls.o: src/vanilla_ls.c.o
 
@@ -3693,12 +3774,21 @@ help:
 	@echo "... src/error.o"
 	@echo "... src/error.i"
 	@echo "... src/error.s"
+	@echo "... src/flag_choose.o"
+	@echo "... src/flag_choose.i"
+	@echo "... src/flag_choose.s"
 	@echo "... src/flag_return.o"
 	@echo "... src/flag_return.i"
 	@echo "... src/flag_return.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/mektus_func.o"
+	@echo "... src/mektus_func.i"
+	@echo "... src/mektus_func.s"
+	@echo "... src/recursion_ls.o"
+	@echo "... src/recursion_ls.i"
+	@echo "... src/recursion_ls.s"
 	@echo "... src/vanilla_ls.o"
 	@echo "... src/vanilla_ls.i"
 	@echo "... src/vanilla_ls.s"

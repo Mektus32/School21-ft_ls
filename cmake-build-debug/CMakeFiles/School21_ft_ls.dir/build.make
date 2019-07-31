@@ -1604,6 +1604,45 @@ CMakeFiles/School21_ft_ls.dir/src/flag_return.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_ft_ls.dir/src/flag_return.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/humanbean/ecole42/School21-ft_ls/src/flag_return.c -o CMakeFiles/School21_ft_ls.dir/src/flag_return.c.s
 
+CMakeFiles/School21_ft_ls.dir/src/mektus_func.c.o: CMakeFiles/School21_ft_ls.dir/flags.make
+CMakeFiles/School21_ft_ls.dir/src/mektus_func.c.o: ../src/mektus_func.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building C object CMakeFiles/School21_ft_ls.dir/src/mektus_func.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_ft_ls.dir/src/mektus_func.c.o   -c /home/humanbean/ecole42/School21-ft_ls/src/mektus_func.c
+
+CMakeFiles/School21_ft_ls.dir/src/mektus_func.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_ft_ls.dir/src/mektus_func.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/humanbean/ecole42/School21-ft_ls/src/mektus_func.c > CMakeFiles/School21_ft_ls.dir/src/mektus_func.c.i
+
+CMakeFiles/School21_ft_ls.dir/src/mektus_func.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_ft_ls.dir/src/mektus_func.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/humanbean/ecole42/School21-ft_ls/src/mektus_func.c -o CMakeFiles/School21_ft_ls.dir/src/mektus_func.c.s
+
+CMakeFiles/School21_ft_ls.dir/src/flag_choose.c.o: CMakeFiles/School21_ft_ls.dir/flags.make
+CMakeFiles/School21_ft_ls.dir/src/flag_choose.c.o: ../src/flag_choose.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/School21_ft_ls.dir/src/flag_choose.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_ft_ls.dir/src/flag_choose.c.o   -c /home/humanbean/ecole42/School21-ft_ls/src/flag_choose.c
+
+CMakeFiles/School21_ft_ls.dir/src/flag_choose.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_ft_ls.dir/src/flag_choose.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/humanbean/ecole42/School21-ft_ls/src/flag_choose.c > CMakeFiles/School21_ft_ls.dir/src/flag_choose.c.i
+
+CMakeFiles/School21_ft_ls.dir/src/flag_choose.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_ft_ls.dir/src/flag_choose.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/humanbean/ecole42/School21-ft_ls/src/flag_choose.c -o CMakeFiles/School21_ft_ls.dir/src/flag_choose.c.s
+
+CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.o: CMakeFiles/School21_ft_ls.dir/flags.make
+CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.o: ../src/recursion_ls.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.o   -c /home/humanbean/ecole42/School21-ft_ls/src/recursion_ls.c
+
+CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/humanbean/ecole42/School21-ft_ls/src/recursion_ls.c > CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.i
+
+CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/humanbean/ecole42/School21-ft_ls/src/recursion_ls.c -o CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.s
+
 # Object files for target School21_ft_ls
 School21_ft_ls_OBJECTS = \
 "CMakeFiles/School21_ft_ls.dir/ft_printf/src/check_args.c.o" \
@@ -1724,7 +1763,10 @@ School21_ft_ls_OBJECTS = \
 "CMakeFiles/School21_ft_ls.dir/src/main.c.o" \
 "CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.o" \
 "CMakeFiles/School21_ft_ls.dir/src/error.c.o" \
-"CMakeFiles/School21_ft_ls.dir/src/flag_return.c.o"
+"CMakeFiles/School21_ft_ls.dir/src/flag_return.c.o" \
+"CMakeFiles/School21_ft_ls.dir/src/mektus_func.c.o" \
+"CMakeFiles/School21_ft_ls.dir/src/flag_choose.c.o" \
+"CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.o"
 
 # External object files for target School21_ft_ls
 School21_ft_ls_EXTERNAL_OBJECTS =
@@ -1848,9 +1890,12 @@ School21_ft_ls: CMakeFiles/School21_ft_ls.dir/src/main.c.o
 School21_ft_ls: CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.o
 School21_ft_ls: CMakeFiles/School21_ft_ls.dir/src/error.c.o
 School21_ft_ls: CMakeFiles/School21_ft_ls.dir/src/flag_return.c.o
+School21_ft_ls: CMakeFiles/School21_ft_ls.dir/src/mektus_func.c.o
+School21_ft_ls: CMakeFiles/School21_ft_ls.dir/src/flag_choose.c.o
+School21_ft_ls: CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.o
 School21_ft_ls: CMakeFiles/School21_ft_ls.dir/build.make
 School21_ft_ls: CMakeFiles/School21_ft_ls.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Linking C executable School21_ft_ls"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Linking C executable School21_ft_ls"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/School21_ft_ls.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

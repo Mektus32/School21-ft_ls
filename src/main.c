@@ -14,7 +14,11 @@
 
 int		main(int ac, char **av)
 {
+	t_ls	*ls;
+
 	//vanilla_ls(av[1]);
-	printf("%s\n", flag_return(ac, av));
+	ls = ft_memalloc(sizeof(t_ls));
+	ls->par = ft_create_elem(flag_return(ac, av));
+	vanilla_ls(ls->par->name);
 	return (0);
 }

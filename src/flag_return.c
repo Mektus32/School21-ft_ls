@@ -1,6 +1,6 @@
 #include "ft_ls.h"
 
-char    *filename_case1(char *flags, char *av)
+static char    *filename_case1(char *flags, char *av)
 {
 	char *tmp;
 
@@ -11,7 +11,7 @@ char    *filename_case1(char *flags, char *av)
 	return (ft_strjoin(flags, av));
 }
 
-char    *filename_case2(char *flags)
+static char    *filename_case2(char *flags)
 {
 	char *tmp;
 
@@ -22,7 +22,7 @@ char    *filename_case2(char *flags)
 	return (ft_strjoin(flags, "."));
 }
 
-char    *filename_case3(char *av)
+static char    *filename_case3(char *av)
 {
 	char *tmp;
 	char *filename;
