@@ -17,7 +17,7 @@ char    *flag_return(int ac, char **av)
 		if (flags)
 			tmp = ft_strdup(flags);
 		else
-			tmp = ft_strdup("_");
+			tmp = ft_strdup(" ");
 		ft_strdel(&flags);
 		flags = ft_strjoin(tmp, av[i] + 1);
 		ft_strdel(&tmp);
