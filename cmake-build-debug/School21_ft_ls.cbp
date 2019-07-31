@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="School21_ft_ls"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="School21_ft_ls">
+				<Option output="/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/School21_ft_ls" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/humanbean/ecole42/School21-ft_ls/ft_printf/includes"/>
+					<Add directory="/home/humanbean/ecole42/School21-ft_ls/includes"/>
+					<Add directory="/home/humanbean/ecole42/School21-ft_ls/libft/includes"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 School21_ft_ls"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="School21_ft_ls/fast">
+				<Option output="/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/School21_ft_ls" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/humanbean/ecole42/School21-ft_ls/ft_printf/includes"/>
+					<Add directory="/home/humanbean/ecole42/School21-ft_ls/includes"/>
+					<Add directory="/home/humanbean/ecole42/School21-ft_ls/libft/includes"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 School21_ft_ls/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/includes/ft_printf.h">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/check_args.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/choise_spec.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/ft_atoi.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/ft_free_strjoin_duo.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/ft_free_strjoin_rev.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/ft_free_strncpy.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/ft_ftoa.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/ft_itoa.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/ft_ltoa.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/ft_ltoa_base.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/ft_memset.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/ft_printf.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/ft_strchr.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/ft_strdup.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/ft_strjoin.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/ft_strlen.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/ft_strncmp.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/ft_strnew.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/ft_strtolower.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/ft_ultoa.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/ft_ultoa_base.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/init_arg.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/print_digit.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/print_double.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/print_non_printabl.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/print_spec.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/print_spec_etc.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/print_xox.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/ft_printf/src/settings.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/includes/ft_ls.h">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/includes/ft_printf.h">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/includes/libft.h">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_abs.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_absf.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_atoi.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_bzero.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_count_words.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_free_join.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_free_strjoin_duo.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_free_strjoin_rev.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_frtwarr.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_ftoa.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_isalnum.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_isalpha.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_isascii.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_isdigit.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_isdigonly.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_isprint.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_isspace.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_itoa.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_list_add.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_list_foreach_if.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_list_push_back.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_list_remove_free_if.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_lstadd.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_lstaddback.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_lstdel.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_lstdelone.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_lstiter.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_lstmap.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_lstnew.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_ltoa.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_ltoa_base.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_max.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_memalloc.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_memccpy.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_memchr.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_memcmp.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_memcpy.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_memdel.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_memmove.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_memset.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_min.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_pow.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_putchar.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_putchar_fd.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_putendl.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_putendl_fd.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_putnbr.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_putnbr_fd.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_putstr.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_putstr_fd.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_setbackground_fd.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strcat.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strchr.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strclr.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strcmp.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strcpy.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strdel.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strdup.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strequ.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_striter.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_striteri.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strjoin.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strlcat.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strlcpy.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strlen.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strmap.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strmapi.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strncat.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strncmp.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strncpy.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strnequ.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strnew.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strnstr.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strrchr.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strrev.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strsplit.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strstr.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strsub.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strtolower.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_strtrim.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_tolower.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_toupper.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_truncf.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_ultoa.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/ft_ultoa_base.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/get_next_line.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/includes/get_next_line.h">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/includes/libft.h">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/src/main.c">
+			<Option target="School21_ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

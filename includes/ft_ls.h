@@ -15,5 +15,7 @@
 
 # include "libft.h"
 # include "ft_printf.h"
+# include <sys/types.h>
+# include <dirent.h>
 
 #endif
