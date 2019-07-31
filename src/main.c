@@ -12,6 +12,51 @@
 
 #include "ft_ls.h"
 
+char    *flag_return(int ac, char **av)
+{
+	int     i;
+	char    *filename;
+	char    *flags;
+	char    *tmp;
+	i = 1;
+	filename = NULL;
+	flags = NULL;
+	if (ac == 1)
+		return (ft_strjoin("_","."));
+	while (i < ac && av[i][0] == '-')
+	{
+		if (flags)
+			tmp = ft_strdup(flags);
+		else
+			tmp = ft_strdup("");
+		ft_strdel(&flags);
+		flags = ft_strjoin(tmp, av[i] + 1);
+		ft_strdel(&tmp);
+		i++;
+	}
+	if (flags && i < ac)
+	{
+		tmp = ft_strdup(flags);
+		ft_strdel(&flags);
+		flags = ft_strjoin(tmp, "_");
+		filename = ft_strjoin(flags, av[i]);
+	}
+	else if (flags && i == ac)
+	{
+		tmp = ft_strdup(flags);
+		ft_strdel(&flags);
+		flags = ft_strjoin(tmp, "_");
+		filename = ft_strjoin(flags, ".");
+	}
+	else
+	{
+		tmp = ft_strdup(av[i]);
+		filename = ft_strjoin("_", tmp);
+	}
+	ft_strdel(&tmp);
+	return (filename);
+}
+
 int		main(int ac, char **av)
 {
 	t_ls	*ls;
@@ -19,8 +64,7 @@ int		main(int ac, char **av)
 	ac = 0;
 	av[0] = NULL;
 	ls = ft_memalloc(sizeof(t_ls));
-	ls->par = ft_create_elem(ft_strdup("filename_lRartufgdG"));
-	printf("nam->[%s]\n", ls->par->name);
+	ft_push_back(&ls->par, flag_return(ac, av));
 	printf("l->[%u]\n", ls->par->l);
 	printf("R->[%u]\n", ls->par->R);
 	printf("a->[%u]\n", ls->par->a);

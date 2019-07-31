@@ -18,12 +18,9 @@ t_param		*ft_create_elem(char *str)
 	int			i;
 
 	if (!(list = ft_memalloc(sizeof(t_param))))
-		return (NULL);
+		return (0);
 	i = 0;
 	while (str[i] != '_' && str[i] != '\0')
-		i++;
-	list->name = ft_strsub(str, 0, i);
-	while (str[++i] != '\0')
 	{
 		str[i] == 'l' ? list->l = (unsigned int)1 : 0;
 		str[i] == 'R' ? list->R = (unsigned int)1 : 0;
@@ -35,9 +32,10 @@ t_param		*ft_create_elem(char *str)
 		str[i] == 'g' ? list->g = (unsigned int)1 : 0;
 		str[i] == 'd' ? list->d = (unsigned int)1 : 0;
 		str[i] == 'G' ? list->G = (unsigned int)1 : 0;
+		i++;
 	}
+	list->name = ft_strdup(&str[i + 1]);
 	free(str);
-	list->next = NULL;
 	return (list);
 }
 
