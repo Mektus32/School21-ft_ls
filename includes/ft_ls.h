@@ -45,7 +45,7 @@ t_param				*ft_create_elem(char *str);
 t_param				*ft_push_back(t_param **head, char *str);
 
 void    no_such_dir(char *filename);
-void vanilla_ls(DIR *dir, int flag, int flag2);
+int vanilla_ls(DIR *dir, int flag, int flag2);
 char    *flag_return(int ac, char **av);
 
 #endif

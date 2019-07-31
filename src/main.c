@@ -21,7 +21,6 @@ int		main(int ac, char **av)
 	ls = ft_memalloc(sizeof(t_ls));
 	ls->par = ft_create_elem(flag_return(ac, av));
 	fd = opendir(ls->par->name);
-	vanilla_ls(fd, 1, 0);
-	vanilla_ls(fd, 1, 0);
+	while (vanilla_ls(fd, 0, 0));
 	return (0);
 }

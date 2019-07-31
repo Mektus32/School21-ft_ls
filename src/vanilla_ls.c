@@ -1,13 +1,15 @@
 #include "ft_ls.h"
 
-void vanilla_ls(DIR *dir, int flag, int flag2)
+int vanilla_ls(DIR *dir, int flag, int flag2)
 {
 	struct dirent   *entry;
 	struct stat     file;
 
 	if (!dir)
-		return ;
+		return (0);
 	entry = readdir(dir);
+	if (!entry)
+		return (0);
 	lstat(entry->d_name, &file);
 	if (flag == 0 && (S_ISREG(file.st_mode) || S_ISDIR(file.st_mode))
 		&& (entry->d_name[0] != '.'))
@@ -26,4 +28,5 @@ void vanilla_ls(DIR *dir, int flag, int flag2)
 		else
 			write(1, &"  ", 2);
 	}
+	return (1);
 }
