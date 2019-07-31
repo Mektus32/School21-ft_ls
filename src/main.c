@@ -12,8 +12,9 @@
 
 #include "ft_ls.h"
 
-int		main(void)
+int		main(int ac, char **av)
 {
-	ft_printf("Hello World!\n");
+	//vanilla_ls(av[1]);
+	printf("%s\n", flag_return(ac, av));
 	return (0);
 }

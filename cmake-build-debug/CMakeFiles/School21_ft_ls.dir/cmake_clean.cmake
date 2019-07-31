@@ -115,6 +115,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/School21_ft_ls.dir/libft/ft_ultoa_base.c.o"
   "CMakeFiles/School21_ft_ls.dir/libft/get_next_line.c.o"
   "CMakeFiles/School21_ft_ls.dir/src/main.c.o"
+  "CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.o"
+  "CMakeFiles/School21_ft_ls.dir/src/error.c.o"
+  "CMakeFiles/School21_ft_ls.dir/src/flag_return.c.o"
   "School21_ft_ls.pdb"
   "School21_ft_ls"
 )

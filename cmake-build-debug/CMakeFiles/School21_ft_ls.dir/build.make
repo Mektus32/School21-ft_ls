@@ -1565,6 +1565,45 @@ CMakeFiles/School21_ft_ls.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_ft_ls.dir/src/main.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/humanbean/ecole42/School21-ft_ls/src/main.c -o CMakeFiles/School21_ft_ls.dir/src/main.c.s
 
+CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.o: CMakeFiles/School21_ft_ls.dir/flags.make
+CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.o: ../src/vanilla_ls.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building C object CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.o   -c /home/humanbean/ecole42/School21-ft_ls/src/vanilla_ls.c
+
+CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/humanbean/ecole42/School21-ft_ls/src/vanilla_ls.c > CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.i
+
+CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/humanbean/ecole42/School21-ft_ls/src/vanilla_ls.c -o CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.s
+
+CMakeFiles/School21_ft_ls.dir/src/error.c.o: CMakeFiles/School21_ft_ls.dir/flags.make
+CMakeFiles/School21_ft_ls.dir/src/error.c.o: ../src/error.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building C object CMakeFiles/School21_ft_ls.dir/src/error.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_ft_ls.dir/src/error.c.o   -c /home/humanbean/ecole42/School21-ft_ls/src/error.c
+
+CMakeFiles/School21_ft_ls.dir/src/error.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_ft_ls.dir/src/error.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/humanbean/ecole42/School21-ft_ls/src/error.c > CMakeFiles/School21_ft_ls.dir/src/error.c.i
+
+CMakeFiles/School21_ft_ls.dir/src/error.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_ft_ls.dir/src/error.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/humanbean/ecole42/School21-ft_ls/src/error.c -o CMakeFiles/School21_ft_ls.dir/src/error.c.s
+
+CMakeFiles/School21_ft_ls.dir/src/flag_return.c.o: CMakeFiles/School21_ft_ls.dir/flags.make
+CMakeFiles/School21_ft_ls.dir/src/flag_return.c.o: ../src/flag_return.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building C object CMakeFiles/School21_ft_ls.dir/src/flag_return.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_ft_ls.dir/src/flag_return.c.o   -c /home/humanbean/ecole42/School21-ft_ls/src/flag_return.c
+
+CMakeFiles/School21_ft_ls.dir/src/flag_return.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_ft_ls.dir/src/flag_return.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/humanbean/ecole42/School21-ft_ls/src/flag_return.c > CMakeFiles/School21_ft_ls.dir/src/flag_return.c.i
+
+CMakeFiles/School21_ft_ls.dir/src/flag_return.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_ft_ls.dir/src/flag_return.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/humanbean/ecole42/School21-ft_ls/src/flag_return.c -o CMakeFiles/School21_ft_ls.dir/src/flag_return.c.s
+
 # Object files for target School21_ft_ls
 School21_ft_ls_OBJECTS = \
 "CMakeFiles/School21_ft_ls.dir/ft_printf/src/check_args.c.o" \
@@ -1682,7 +1721,10 @@ School21_ft_ls_OBJECTS = \
 "CMakeFiles/School21_ft_ls.dir/libft/ft_ultoa.c.o" \
 "CMakeFiles/School21_ft_ls.dir/libft/ft_ultoa_base.c.o" \
 "CMakeFiles/School21_ft_ls.dir/libft/get_next_line.c.o" \
-"CMakeFiles/School21_ft_ls.dir/src/main.c.o"
+"CMakeFiles/School21_ft_ls.dir/src/main.c.o" \
+"CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.o" \
+"CMakeFiles/School21_ft_ls.dir/src/error.c.o" \
+"CMakeFiles/School21_ft_ls.dir/src/flag_return.c.o"
 
 # External object files for target School21_ft_ls
 School21_ft_ls_EXTERNAL_OBJECTS =
@@ -1803,9 +1845,12 @@ School21_ft_ls: CMakeFiles/School21_ft_ls.dir/libft/ft_ultoa.c.o
 School21_ft_ls: CMakeFiles/School21_ft_ls.dir/libft/ft_ultoa_base.c.o
 School21_ft_ls: CMakeFiles/School21_ft_ls.dir/libft/get_next_line.c.o
 School21_ft_ls: CMakeFiles/School21_ft_ls.dir/src/main.c.o
+School21_ft_ls: CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.o
+School21_ft_ls: CMakeFiles/School21_ft_ls.dir/src/error.c.o
+School21_ft_ls: CMakeFiles/School21_ft_ls.dir/src/flag_return.c.o
 School21_ft_ls: CMakeFiles/School21_ft_ls.dir/build.make
 School21_ft_ls: CMakeFiles/School21_ft_ls.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Linking C executable School21_ft_ls"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Linking C executable School21_ft_ls"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/School21_ft_ls.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

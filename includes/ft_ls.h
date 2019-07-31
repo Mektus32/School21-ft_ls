@@ -13,9 +13,14 @@
 #ifndef FT_LS_H
 # define FT_LS_H
 
+# include <stdio.h>
 # include "libft.h"
 # include "ft_printf.h"
 # include <sys/types.h>
 # include <dirent.h>
+
+void    no_such_dir(char *filename);
+void    vanilla_ls(char *filename);
+char    *flag_return(int ac, char **av);
 
 #endif

@@ -50,7 +50,7 @@ OBJS = $(addprefix $(OBJDIR)/, $(OBJ))
 HEADER = -I includes
 
 CC = gcc
-CFLAGS = -c -Wall -Wextra -Werror
+CFLAGS = -c
 
 NAME = libftprintf.a
 

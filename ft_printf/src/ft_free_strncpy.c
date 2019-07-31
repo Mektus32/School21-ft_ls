@@ -15,9 +15,7 @@
 char	*ft_free_strncpy(char *dest, const char *new, size_t n)
 {
 	size_t	i;
-	int		f;
 
-	f = 0;
 	i = 0;
 	while (new[i] != '\0' && i < n)
 	{

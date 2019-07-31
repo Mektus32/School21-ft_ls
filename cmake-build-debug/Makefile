@@ -3228,6 +3228,60 @@ libft/get_next_line.c.s:
 	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/libft/get_next_line.c.s
 .PHONY : libft/get_next_line.c.s
 
+src/error.o: src/error.c.o
+
+.PHONY : src/error.o
+
+# target to build an object file
+src/error.c.o:
+	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/error.c.o
+.PHONY : src/error.c.o
+
+src/error.i: src/error.c.i
+
+.PHONY : src/error.i
+
+# target to preprocess a source file
+src/error.c.i:
+	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/error.c.i
+.PHONY : src/error.c.i
+
+src/error.s: src/error.c.s
+
+.PHONY : src/error.s
+
+# target to generate assembly for a file
+src/error.c.s:
+	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/error.c.s
+.PHONY : src/error.c.s
+
+src/flag_return.o: src/flag_return.c.o
+
+.PHONY : src/flag_return.o
+
+# target to build an object file
+src/flag_return.c.o:
+	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/flag_return.c.o
+.PHONY : src/flag_return.c.o
+
+src/flag_return.i: src/flag_return.c.i
+
+.PHONY : src/flag_return.i
+
+# target to preprocess a source file
+src/flag_return.c.i:
+	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/flag_return.c.i
+.PHONY : src/flag_return.c.i
+
+src/flag_return.s: src/flag_return.c.s
+
+.PHONY : src/flag_return.s
+
+# target to generate assembly for a file
+src/flag_return.c.s:
+	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/flag_return.c.s
+.PHONY : src/flag_return.c.s
+
 src/main.o: src/main.c.o
 
 .PHONY : src/main.o
@@ -3254,6 +3308,33 @@ src/main.s: src/main.c.s
 src/main.c.s:
 	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/main.c.s
 .PHONY : src/main.c.s
+
+src/vanilla_ls.o: src/vanilla_ls.c.o
+
+.PHONY : src/vanilla_ls.o
+
+# target to build an object file
+src/vanilla_ls.c.o:
+	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.o
+.PHONY : src/vanilla_ls.c.o
+
+src/vanilla_ls.i: src/vanilla_ls.c.i
+
+.PHONY : src/vanilla_ls.i
+
+# target to preprocess a source file
+src/vanilla_ls.c.i:
+	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.i
+.PHONY : src/vanilla_ls.c.i
+
+src/vanilla_ls.s: src/vanilla_ls.c.s
+
+.PHONY : src/vanilla_ls.s
+
+# target to generate assembly for a file
+src/vanilla_ls.c.s:
+	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.s
+.PHONY : src/vanilla_ls.c.s
 
 # Help Target
 help:
@@ -3609,9 +3690,18 @@ help:
 	@echo "... libft/get_next_line.o"
 	@echo "... libft/get_next_line.i"
 	@echo "... libft/get_next_line.s"
+	@echo "... src/error.o"
+	@echo "... src/error.i"
+	@echo "... src/error.s"
+	@echo "... src/flag_return.o"
+	@echo "... src/flag_return.i"
+	@echo "... src/flag_return.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/vanilla_ls.o"
+	@echo "... src/vanilla_ls.i"
+	@echo "... src/vanilla_ls.s"
 .PHONY : help
 
 
