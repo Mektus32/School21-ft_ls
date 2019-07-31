@@ -7,5 +7,5 @@ void    flag_choose(t_param *list)
 			list->f == 0 && list->R == 0 &&
 			list->r == 0 && list->t == 0 &&
 			list->u == 0 && list->G == 0)
-		vanilla_ls(list->name, 0, 0);
+		vanilla_ls(list->name, 0, NULL);
 }

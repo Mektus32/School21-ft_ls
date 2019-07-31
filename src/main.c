@@ -14,6 +14,7 @@
 
 int		main(int ac, char **av)
 {
+	char    *line;
 	t_ls	*ls;
 	DIR     *fd;
 
@@ -21,6 +22,11 @@ int		main(int ac, char **av)
 	ls = ft_memalloc(sizeof(t_ls));
 	ls->par = ft_create_elem(flag_return(ac, av));
 	fd = opendir(ls->par->name);
-	while (vanilla_ls(fd, 0, 0));
+	while (vanilla_ls(fd, 1, &line))
+	{
+		if (line)
+			printf("%s\n", line);
+		ft_strdel(&line);
+	}
 	return (0);
 }
