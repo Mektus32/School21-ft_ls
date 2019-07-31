@@ -17,10 +17,12 @@ int		main(int ac, char **av)
 	char    *line;
 	t_ls	*ls;
 	DIR     *fd;
+	int 	j = 1;
 
 	//vanilla_ls(av[1]);
 	ls = ft_memalloc(sizeof(t_ls));
-	ls->par = ft_create_elem(flag_return(ac, av));
+	ft_fill_param_list(ac, av, ls);
+	//ls->par = ft_create_elem(flag_return(ac, av, &j));
 	fd = opendir(ls->par->name);
 	while (vanilla_ls(fd, 1, &line))
 	{
