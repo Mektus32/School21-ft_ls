@@ -16,4 +16,28 @@
 # include "libft.h"
 # include "ft_printf.h"
 
+typedef struct		s_param
+{
+	char			*name;
+	unsigned int	l : 1;
+	unsigned int	R : 1;
+	unsigned int	a : 1;
+	unsigned int	r : 1;
+	unsigned int	t : 1;
+	unsigned int	u : 1;
+	unsigned int	f : 1;
+	unsigned int	g : 1;
+	unsigned int	d : 1;
+	unsigned int	G : 1;
+	struct s_param	*next;
+}					t_param;
+
+typedef	struct		s_ls
+{
+	t_param		*par;
+}					t_ls;
+
+t_param				*ft_create_elem(char *str);
+t_param				*ft_push_back(t_param **head, char *str);
+
 #endif

@@ -15,7 +15,8 @@
 NAME = ft_ls
 
 # src / obj files
-SRC = main.c \
+SRC =	main.c \
+		param_func.c
 
 OBJ = $(addprefix $(OBJDIR), $(SRC:.c=.o))
 
