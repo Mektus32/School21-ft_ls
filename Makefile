@@ -15,14 +15,17 @@
 NAME = ft_ls
 
 # src / obj files
-SRC =	main.c \
-		param_func.c
+
+SRC = main.c \
+		vanilla_ls.c error.c \
+		flag_return.c param_func.c \
+		create_list.c
 
 OBJ = $(addprefix $(OBJDIR), $(SRC:.c=.o))
 
 # compiler
 CC = gcc
-CFLAGS = -Wextra -Wall -Werror -g
+CFLAGS = -g
 
 # ft library
 FT = ./libft

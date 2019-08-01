@@ -12,68 +12,55 @@
 
 #include "ft_ls.h"
 
-char    *flag_return(int ac, char **av)
+void	ft_print_subdir(t_subdir *head)
 {
-	int     i;
-	char    *filename;
-	char    *flags;
-	char    *tmp;
-	i = 1;
-	filename = NULL;
-	flags = NULL;
-	if (ac == 1)
-		return (ft_strjoin("_","."));
-	while (i < ac && av[i][0] == '-')
+	t_subdir	*tmp;
+
+	tmp = head;
+	while (tmp)
 	{
-		if (flags)
-			tmp = ft_strdup(flags);
-		else
-			tmp = ft_strdup("");
-		ft_strdel(&flags);
-		flags = ft_strjoin(tmp, av[i] + 1);
-		ft_strdel(&tmp);
-		i++;
+		ft_printf("%s--", tmp->name);
+		ft_printf("-a->%ld", tmp->atime);
+		ft_printf("-m->%ld", tmp->mtime);
+		ft_printf("-c->%ld\n", tmp->ctime);
+		tmp = tmp->next;
 	}
-	if (flags && i < ac)
+	while (head)
 	{
-		tmp = ft_strdup(flags);
-		ft_strdel(&flags);
-		flags = ft_strjoin(tmp, "_");
-		filename = ft_strjoin(flags, av[i]);
+		ft_print_subdir(head->newlvl);
+		head = head->next;
 	}
-	else if (flags && i == ac)
+}
+
+void	ft_print_list(t_param *head)
+{
+	printf("\n\n");
+	while (head)
 	{
-		tmp = ft_strdup(flags);
-		ft_strdel(&flags);
-		flags = ft_strjoin(tmp, "_");
-		filename = ft_strjoin(flags, ".");
+		ft_print_subdir(head->newlvl);
+		head = head->next;
 	}
-	else
-	{
-		tmp = ft_strdup(av[i]);
-		filename = ft_strjoin("_", tmp);
-	}
-	ft_strdel(&tmp);
-	return (filename);
 }
 
 int		main(int ac, char **av)
 {
+	char    *line;
 	t_ls	*ls;
+	DIR     *fd;
+	int 	j = 1;
 
-	ac = 0;
-	av[0] = NULL;
+	//vanilla_ls(av[1]);
 	ls = ft_memalloc(sizeof(t_ls));
-	ft_push_back(&ls->par, flag_return(ac, av));
-	printf("l->[%u]\n", ls->par->l);
-	printf("R->[%u]\n", ls->par->R);
-	printf("a->[%u]\n", ls->par->a);
-	printf("r->[%u]\n", ls->par->r);
-	printf("t->[%u]\n", ls->par->t);
-	printf("u->[%u]\n", ls->par->u);
-	printf("f->[%u]\n", ls->par->f);
-	printf("g->[%u]\n", ls->par->g);
-	printf("f->[%u]\n", ls->par->f);
-	printf("G->[%u]\n", ls->par->G);
+//	ft_fill_param_list(ac, av, ls);
+	ls->par = ft_create_param("_/Users/ojessi/Desktop/ft_ls/subdir");
+	ft_fill_subdir(&ls->par->newlvl, ls->par->name);
+	ft_print_list(ls->par);
+//	fd = opendir(ls->par->name);
+//	while (vanilla_ls(fd, 1, &line))
+//	{
+//		if (line)
+//			printf("%s\n", line);
+//		ft_strdel(&line);
+//	}
 	return (0);
 }

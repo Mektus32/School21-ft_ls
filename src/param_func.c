@@ -12,7 +12,7 @@
 
 #include "ft_ls.h"
 
-t_param		*ft_create_elem(char *str)
+t_param		*ft_create_param(char *str)
 {
 	t_param		*list;
 	int			i;
@@ -34,14 +34,15 @@ t_param		*ft_create_elem(char *str)
 		str[i] == 'G' ? list->G = (unsigned int)1 : 0;
 		i++;
 	}
-	list->name = ft_strdup(&str[i + 1]);
-	free(str);
+	list->name = ft_strdup(str + i + 1);
+	list->newlvl = NULL;
+	//free(str);
 	return (list);
 }
 
-t_param		*ft_push_back(t_param **head, char *str)
+t_param		*ft_push_back_param(t_param **head, char *str)
 {
-	t_param	*list;
+	t_param		*list;
 
 	if (!head)
 		return (NULL);
@@ -50,9 +51,9 @@ t_param		*ft_push_back(t_param **head, char *str)
 	{
 		while (list->next)
 			list = list->next;
-		list->next = ft_create_elem(str);
+		list->next = ft_create_param(str);
 	}
 	else
-		list = ft_create_elem(str);
+		list = ft_create_param(str);
 	return (list);
 }

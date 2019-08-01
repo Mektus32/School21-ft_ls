@@ -13,8 +13,23 @@
 #ifndef FT_LS_H
 # define FT_LS_H
 
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <stdio.h>
 # include "libft.h"
 # include "ft_printf.h"
+# include <dirent.h>
+
+typedef struct		s_subdir
+{
+	char				*name;
+	struct s_subdir		*next;
+	struct s_subdir		*prev;
+	struct s_subdir		*newlvl;
+	time_t				atime;
+	time_t				mtime;
+	time_t				ctime;
+}					t_subdir;
 
 typedef struct		s_param
 {
@@ -30,6 +45,7 @@ typedef struct		s_param
 	unsigned int	d : 1;
 	unsigned int	G : 1;
 	struct s_param	*next;
+	t_subdir		*newlvl;
 }					t_param;
 
 typedef	struct		s_ls
@@ -37,7 +53,19 @@ typedef	struct		s_ls
 	t_param		*par;
 }					t_ls;
 
-t_param				*ft_create_elem(char *str);
-t_param				*ft_push_back(t_param **head, char *str);
+/*
+ ** Функции для работы с основным списком
+ */
+void				ft_fill_param_list(int ac, char **av, t_ls *ls);
+t_param				*ft_create_param(char *str);
+t_param				*ft_push_back_param(t_param **head, char *str);
+void				ft_fill_list(t_param **head);
+t_subdir			*ft_fill_subdir(t_subdir **head, char *name);
+t_subdir			*ft_push_back_next_subdir(t_subdir **head, char *name);
+t_subdir			*ft_create_next_subdir(char *name, t_subdir *prev);
+
+void	no_such_dir(char *filename);
+int		vanilla_ls(DIR *dir, int print_hidden, char **filename);
+char	*flag_return(int ac, char **av, int *j);
 
 #endif
