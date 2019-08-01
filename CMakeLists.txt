@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(School21_ft_ls C)
+project(ft_ls C)
 
 set(CMAKE_C_STANDARD 11)
 
@@ -7,29 +7,12 @@ include_directories(ft_printf/includes)
 include_directories(includes)
 include_directories(libft/includes)
 
-add_executable(School21_ft_ls
+add_executable(ft_ls
         ft_printf/includes/ft_printf.h
         ft_printf/src/check_args.c
         ft_printf/src/choise_spec.c
-        ft_printf/src/ft_atoi.c
-        ft_printf/src/ft_free_strjoin_duo.c
-        ft_printf/src/ft_free_strjoin_rev.c
         ft_printf/src/ft_free_strncpy.c
-        ft_printf/src/ft_ftoa.c
-        ft_printf/src/ft_itoa.c
-        ft_printf/src/ft_ltoa.c
-        ft_printf/src/ft_ltoa_base.c
-        ft_printf/src/ft_memset.c
         ft_printf/src/ft_printf.c
-        ft_printf/src/ft_strchr.c
-        ft_printf/src/ft_strdup.c
-        ft_printf/src/ft_strjoin.c
-        ft_printf/src/ft_strlen.c
-        ft_printf/src/ft_strncmp.c
-        ft_printf/src/ft_strnew.c
-        ft_printf/src/ft_strtolower.c
-        ft_printf/src/ft_ultoa.c
-        ft_printf/src/ft_ultoa_base.c
         ft_printf/src/init_arg.c
         ft_printf/src/print_digit.c
         ft_printf/src/print_double.c
@@ -129,4 +112,10 @@ add_executable(School21_ft_ls
         libft/ft_ultoa.c
         libft/ft_ultoa_base.c
         libft/get_next_line.c
-        src/main.c src/vanilla_ls.c src/error.c src/flag_return.c src/mektus_func.c src/flag_choose.c src/recursion_ls.c)
+        src/error.c
+        src/flag_choose.c
+        src/flag_return.c
+        src/main.c
+        src/param_func.c
+        src/recursion_ls.c
+        src/vanilla_ls.c src/create_list.c)

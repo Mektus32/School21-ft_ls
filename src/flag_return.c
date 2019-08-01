@@ -33,7 +33,7 @@ static char    *filename_case3(char *av)
 	return (filename);
 }
 
-char    *flag_return(int ac, char **av)
+char    *flag_return(int ac, char **av, int *j)
 {
 	int     i;
 	char    *filename;
@@ -62,5 +62,6 @@ char    *flag_return(int ac, char **av)
 		filename = filename_case2(flags);
 	else
 		filename = filename_case3(av[i]);
+	*j += i - 1;
 	return (filename);
 }
