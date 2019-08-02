@@ -12,51 +12,6 @@
 
 #include "ft_ls.h"
 
-char    *flag_return(int ac, char **av)
-{
-	int     i;
-	char    *filename;
-	char    *flags;
-	char    *tmp;
-	i = 1;
-	filename = NULL;
-	flags = NULL;
-	if (ac == 1)
-		return (ft_strjoin("_","."));
-	while (i < ac && av[i][0] == '-')
-	{
-		if (flags)
-			tmp = ft_strdup(flags);
-		else
-			tmp = ft_strdup("");
-		ft_strdel(&flags);
-		flags = ft_strjoin(tmp, av[i] + 1);
-		ft_strdel(&tmp);
-		i++;
-	}
-	if (flags && i < ac)
-	{
-		tmp = ft_strdup(flags);
-		ft_strdel(&flags);
-		flags = ft_strjoin(tmp, "_");
-		filename = ft_strjoin(flags, av[i]);
-	}
-	else if (flags && i == ac)
-	{
-		tmp = ft_strdup(flags);
-		ft_strdel(&flags);
-		flags = ft_strjoin(tmp, "_");
-		filename = ft_strjoin(flags, ".");
-	}
-	else
-	{
-		tmp = ft_strdup(av[i]);
-		filename = ft_strjoin("_", tmp);
-	}
-	ft_strdel(&tmp);
-	return (filename);
-}
-
 int		main(int ac, char **av)
 {
 	t_ls	*ls;
