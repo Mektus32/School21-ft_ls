@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   param_func.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/07/31 12:24:56 by ojessi            #+#    #+#             */
+/*   Updated: 2019/07/31 12:24:57 by ojessi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_ls.h"
 
-t_param		*ft_create_param(char *str)
+t_param		*ft_create_elem(char *str)
 {
 	t_param		*list;
 	int			i;
@@ -27,9 +39,9 @@ t_param		*ft_create_param(char *str)
 	return (list);
 }
 
-t_param		*ft_push_back_param(t_param **head, char *str)
+t_param		*ft_push_back(t_param **head, char *str)
 {
-	t_param		*list;
+	t_param	*list;
 
 	if (!head)
 		return (NULL);
@@ -38,9 +50,9 @@ t_param		*ft_push_back_param(t_param **head, char *str)
 	{
 		while (list->next)
 			list = list->next;
-		list->next = ft_create_param(str);
+		list->next = ft_create_elem(str);
 	}
 	else
-		list = ft_create_param(str);
+		list = ft_create_elem(str);
 	return (list);
 }

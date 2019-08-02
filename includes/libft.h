@@ -14,6 +14,7 @@
 # define LIBFT_H
 # define ABS(Value) (Value < 0 ? -(Value) : Value)
 
+# include <stdio.h>
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
