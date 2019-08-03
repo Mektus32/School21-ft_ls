@@ -1,5 +1,21 @@
 #include "ft_ls.h"
 
+int		cmp(const char *str1, const char *str2)
+{
+	int	i;
+
+	i = 0;
+	while (str1[i] != '\0' || str2[i] != '\0')
+	{
+		if ((unsigned char)str1[i] != (unsigned char)str2[i])
+			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+		i++;
+	}
+	if ((unsigned char)str1[i] != (unsigned char)str2[i])
+		return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+	return (0);
+}
+
 void    print_level(t_subdir *level)
 {
 	t_subdir *tmp;
@@ -8,7 +24,7 @@ void    print_level(t_subdir *level)
 	printf("-----------------\n");
 	while (level)
 	{
-		printf("%s---->%ld\n", level->name, level->atime);
+		printf("%s---->%ld\n", level->name, level->mtime);
 		tmp = level;
 		level = level->next;
 	}
@@ -87,7 +103,7 @@ int     list_find(t_subdir *head, t_subdir *tmp)
 	int len;
 
 	len = 0;
-	while (head && ft_strcmp(head->name, tmp->name))
+	while (head && cmp(head->name, tmp->name))
 	{
 		len++;
 		head = head->next;

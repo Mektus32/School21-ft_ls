@@ -57,11 +57,12 @@ int		main(int ac, char **av)
 	//vanilla_ls(av[1]);
 	ls = ft_memalloc(sizeof(t_ls));
 	//ft_fill_param_list(ac, av, ls);
-	ls->par = ft_create_param("_/home/humanbean/ecole42/School21-ft_ls/1file");
+	ls->par = ft_create_param("_/home/humanbean/ecole42/School21-ft_ls/2files");
 	//printf("%s\n", )
 	ft_fill_subdir(&ls->par->newlvl, ls->par->name);
 	ft_print_list(ls->par);
-	levels_time_sort(&ls->par->newlvl, 0);
+	//levels_time_sort(&ls->par->newlvl, 1);
+	//levels_alph_sort(&ls->par->newlvl, 1);
 	ft_print_list(ls->par);
 	/*levels_alph_sort(&ls->par->newlvl);
 	ft_print_list(ls->par);*/
