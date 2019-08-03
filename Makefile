@@ -15,12 +15,7 @@
 NAME = ft_ls
 
 # src / obj files
-
-SRC = main.c \
-		vanilla_ls.c error.c \
-		flag_return.c param_func.c \
-		create_list.c
-
+SRC =	*.c
 OBJ = $(addprefix $(OBJDIR), $(SRC:.c=.o))
 
 # compiler

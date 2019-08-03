@@ -19,7 +19,8 @@ void	ft_print_subdir(t_subdir *head)
 	tmp = head;
 	while (tmp)
 	{
-		ft_printf("%s--", tmp->name);
+		if (tmp->name)
+			ft_printf("%s--", tmp->name);
 		ft_printf("-a->%ld", tmp->atime);
 		ft_printf("-m->%ld", tmp->mtime);
 		ft_printf("-c->%ld\n", tmp->ctime);
@@ -27,7 +28,8 @@ void	ft_print_subdir(t_subdir *head)
 	}
 	while (head)
 	{
-		ft_print_subdir(head->newlvl);
+		if (head->newlvl)
+			ft_print_subdir(head->newlvl);
 		head = head->next;
 	}
 }
@@ -37,7 +39,8 @@ void	ft_print_list(t_param *head)
 	printf("\n\n");
 	while (head)
 	{
-		ft_print_subdir(head->newlvl);
+		if (head->newlvl)
+			ft_print_subdir(head->newlvl);
 		head = head->next;
 	}
 }
@@ -52,15 +55,10 @@ int		main(int ac, char **av)
 	//vanilla_ls(av[1]);
 	ls = ft_memalloc(sizeof(t_ls));
 //	ft_fill_param_list(ac, av, ls);
-	ls->par = ft_create_param("_/Users/ojessi/Desktop/ft_ls/subdir");
+	ls->par = ft_create_param("_/home/humanbean/ecole42/School21-ft_ls/");
 	ft_fill_subdir(&ls->par->newlvl, ls->par->name);
-	ft_print_list(ls->par);
-//	fd = opendir(ls->par->name);
-//	while (vanilla_ls(fd, 1, &line))
-//	{
-//		if (line)
-//			printf("%s\n", line);
-//		ft_strdel(&line);
-//	}
+	//levels_sort(&ls->par->newlvl);
+	printf("%s\n%s\n", ls->par->newlvl->name, ls->par->newlvl->next->name);
+	//ft_print_list(ls->par);
 	return (0);
 }

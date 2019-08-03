@@ -15,7 +15,7 @@
 t_subdir	*ft_create_next_subdir(char *name, t_subdir *prev)
 {
 	t_subdir	*new;
-	struct stat	*buf;
+	struct stat	buf;
 
 	if (!(new = (t_subdir*)malloc(sizeof(t_subdir))))
 		return (NULL);
@@ -23,11 +23,10 @@ t_subdir	*ft_create_next_subdir(char *name, t_subdir *prev)
 	new->newlvl = NULL;
 	new->prev = prev;
 	new->name = name;
-	lstat(ft_strrchr(name, '/'), buf);
-	new->atime = buf->st_atime;
-	new->mtime = buf->st_mtime;
-	new->ctime = buf->st_ctime;
-	printf("name->[%s]\n", new->name);
+	lstat(ft_strrchr(name, '/'), &buf);
+	new->atime = buf.st_atime;
+	new->mtime = buf.st_mtime;
+	new->ctime = buf.st_ctime;
 	return (new);
 }
 
@@ -68,7 +67,7 @@ t_subdir	*ft_fill_subdir(t_subdir **head, char *name)
 	while ((file = readdir(dir)))
 	{
 		if ((ft_strlen(file->d_name) == 1 && file->d_name[0] == '.') ||
-				(ft_strlen(file->d_name) == 2 && file->d_name[0] == '.' && file->d_name[1] == '.'))
+		    (ft_strlen(file->d_name) == 2 && file->d_name[0] == '.' && file->d_name[1] == '.'))
 			continue ;
 		if (!list)
 			*head = ft_push_back_next_subdir(&list, ft_free_join(ft_strjoin(name, "/"), file->d_name));
@@ -93,7 +92,7 @@ void		ft_fill_list(t_param **head)
 	list = *head;
 	while (list)
 	{
-		ft_fill_subdir(&list->newlvl, list->name);
+		ft_fill_subdir(&(list->newlvl), list->name);
 		list = list->next;
 	}
 }

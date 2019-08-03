@@ -33,35 +33,51 @@ static char    *filename_case3(char *av)
 	return (filename);
 }
 
-char    *flag_return(int ac, char **av, int *j)
+void flag_return(int ac, char **av, char **split, int *i)
 {
-	int     i;
-	char    *filename;
 	char    *flags;
 	char    *tmp;
 
-	i = 1;
-	filename = NULL;
 	flags = NULL;
 	if (ac == 1)
-		return (ft_strjoin("_","."));
-	while (i < ac && av[i][0] == '-')
+	{
+		*split = ft_strjoin("_", ".");
+		return ;
+	}
+	while (*i < ac && av[*i][0] == '-')
 	{
 		if (flags)
 			tmp = ft_strdup(flags);
 		else
 			tmp = ft_strdup("");
 		ft_strdel(&flags);
-		flags = ft_strjoin(tmp, av[i] + 1);
+		flags = ft_strjoin(tmp, av[*i] + 1);
 		ft_strdel(&tmp);
-		i++;
+		(*i)++;
 	}
-	if (flags && i < ac)
-		filename = filename_case1(flags, av[i]);
-	else if (flags && i == ac)
-		filename = filename_case2(flags);
+	if (flags && *i < ac)
+		*split = filename_case1(flags, av[*i]);
+	else if (flags && *i == ac)
+		*split = filename_case2(flags);
 	else
-		filename = filename_case3(av[i]);
-	*j += i - 1;
-	return (filename);
+		*split = filename_case3(av[*i]);
+}
+
+char    **flag_split(int ac, char **av, int *j)
+{
+	char    **split;
+	int     i;
+	int     count;
+
+	split = (char **)malloc(sizeof(char *) * ac);
+	i = 1;
+	count = 0;
+	while (i < ac && count < ac)
+	{
+		flag_return(ac, av, &split[count], &i);
+		i++;
+		count++;
+	}
+	split[i] = NULL;
+	return (split);
 }
