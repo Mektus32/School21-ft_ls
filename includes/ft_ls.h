@@ -60,8 +60,9 @@ typedef	struct		s_ls
 /*
  ** Функции для работы с основным списком
  */
-void                levels_alph_sort(t_subdir **level);
-void                level_alph_sort(t_subdir **level);
+t_subdir	*ft_push_back_subdir(t_subdir **head, char *name);
+void	            ft_fill(t_param **head, char **split);
+void                levels_alph_sort(t_subdir **level, int rev);
 void				ft_fill_param_list(int ac, char **av, t_ls *ls);
 t_param				*ft_create_param(char *str);
 t_param				*ft_push_back_param(t_param **head, char *str);
@@ -74,9 +75,9 @@ void    print_level(t_subdir *level);
 void    swap_1(t_subdir **head, t_subdir **a, t_subdir **b);
 void    do_swap(t_subdir **head, t_subdir **a, t_subdir **b);
 int     list_find(t_subdir *head, t_subdir *tmp);
-void levels_time_sort(t_subdir **level, int rev);
+void    levels_time_sort(t_subdir **level, int rev);
 char    **flag_split(int ac, char **av);
-char *l_flag(char *filename);
+char     *l_flag(char *filename);
 char    *a_flag(char *filename);
 char    *no_flag(char *filename);
 char    *new_strjoin(char **line);

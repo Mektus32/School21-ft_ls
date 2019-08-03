@@ -24,7 +24,6 @@ t_subdir	*ft_create_next_subdir(char *name, t_subdir *prev)
 	new->prev = prev;
 	new->name = name;
 	lstat(name, &buf);
-	new->print = l_flag(name);
 	new->atime = buf.st_atime;
 	new->mtime = buf.st_mtime;
 	new->ctime = buf.st_ctime;
@@ -84,16 +83,27 @@ t_subdir	*ft_fill_subdir(t_subdir **head, char *name)
 	return (list);
 }
 
-void		ft_fill_list(t_param **head)
+t_subdir	*ft_push_back_subdir(t_subdir **head, char *name)
 {
-	t_param		*list;
+	t_subdir		*list;
+	DIR				*dir;
+	struct dirent	*file;
 
-	if (!head || !*head)
-		return ;
+	if (!head)
+		return (NULL);
 	list = *head;
-	while (list)
+	if (!(dir = opendir(name)))
+		return (NULL);
+	while ((file = readdir(dir)))
 	{
-		ft_fill_subdir(&(list->newlvl), list->name);
-		list = list->next;
+		if ((ft_strlen(file->d_name) == 1 && file->d_name[0] == '.') ||
+		    (ft_strlen(file->d_name) == 2 && file->d_name[0] == '.' && file->d_name[1] == '.'))
+			continue ;
+		if (!list)
+			*head = ft_push_back_next_subdir(&list, ft_free_join(ft_strjoin(name, "/"), file->d_name));
+		else
+			ft_push_back_next_subdir(&list, ft_free_join(ft_strjoin(name, "/"), file->d_name));
 	}
+	closedir(dir);
+	return (list);
 }

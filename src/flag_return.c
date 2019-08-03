@@ -39,11 +39,6 @@ void flag_return(int ac, char **av, char **split, int *i)
 	char    *tmp;
 
 	flags = NULL;
-	if (ac == 1)
-	{
-		*split = ft_strjoin("_", ".");
-		return ;
-	}
 	while (*i < ac && av[*i][0] == '-')
 	{
 		if (flags)
@@ -72,6 +67,8 @@ char **flag_split(int ac, char **av)
 	split = (char **)malloc(sizeof(char *) * ac);
 	i = 1;
 	count = 0;
+	if (ac == 1)
+		split[count] = ft_strjoin(".", "_");
 	while (i < ac && count < ac)
 	{
 		flag_return(ac, av, &split[count], &i);

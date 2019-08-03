@@ -19,13 +19,11 @@ void	ft_print_subdir(t_subdir *head)
 	tmp = head;
 	while (tmp)
 	{
-		//if (tmp->name)
-		//	ft_printf("%s--", tmp->name);
-		if (tmp->print)
-			ft_printf("%s\n", tmp->print);
-		//ft_printf("-a->%ld", tmp->atime);
-		//ft_printf("-m->%ld", tmp->mtime);
-		//ft_printf("-c->%ld\n", tmp->ctime);
+		if (tmp->name)
+			ft_printf("%s--", tmp->name);
+		ft_printf("-a->%ld", tmp->atime);
+		ft_printf("-m->%ld", tmp->mtime);
+		ft_printf("-c->%ld\n", tmp->ctime);
 		tmp = tmp->next;
 	}
 	while (head)
@@ -43,28 +41,22 @@ void	ft_print_list(t_param *head)
 	{
 		if (head->newlvl)
 			ft_print_subdir(head->newlvl);
+		ft_printf("%s\n", head->name);
 		head = head->next;
 	}
 }
 
 int		main(int ac, char **av)
 {
-	char    *line;
+	char    **split;
 	t_ls	*ls;
-	DIR     *fd;
-	int 	j = 1;
+	int 	j = 0;
 
-	//vanilla_ls(av[1]);
 	ls = ft_memalloc(sizeof(t_ls));
-	//ft_fill_param_list(ac, av, ls);
-	ls->par = ft_create_param("_/home/humanbean/ecole42/School21-ft_ls/2files");
-	//printf("%s\n", )
-	ft_fill_subdir(&ls->par->newlvl, ls->par->name);
+	split = flag_split(ac, av);
+	ft_fill(&ls->par, split);
+	levels_time_sort(&ls->par->newlvl, 1);
+	levels_alph_sort(&ls->par->newlvl, 0);
 	ft_print_list(ls->par);
-	//levels_time_sort(&ls->par->newlvl, 1);
-	//levels_alph_sort(&ls->par->newlvl, 1);
-	ft_print_list(ls->par);
-	/*levels_alph_sort(&ls->par->newlvl);
-	ft_print_list(ls->par);*/
 	return (0);
 }

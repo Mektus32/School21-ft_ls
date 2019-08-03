@@ -56,7 +56,6 @@ void    rev_level_time_sort(t_subdir **level)
 		while (cur)
 		{
 			cmp = tmp->mtime - cur->mtime;
-			print_level(*level);
 			/*printf("cmp = %ld\n", cmp);
 			printf("tmp = %s\ncur = %s\n", tmp->name, cur->name);
 			printf("tmp = %lu\ncur = %lu\n", tmp->mtime, cur->mtime);
