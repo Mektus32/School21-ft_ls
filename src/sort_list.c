@@ -48,8 +48,6 @@ void    do_swap(t_subdir **head, t_subdir **a, t_subdir **b)
 	t_subdir *b_prev;
 	t_subdir *a_next;
 	t_subdir *b_next;
-	int      i;
-	int      j;
 
 	if ((*a)->next == (*b))
 		swap_1(head, a, b);
@@ -57,26 +55,18 @@ void    do_swap(t_subdir **head, t_subdir **a, t_subdir **b)
 		swap_1(head, b, a);
 	else
 	{
-		printf("here\n");
+		//printf("here\n");
 		a_prev = *head;
 		b_prev = *head;
-		i = 0;
-		j = 0;
 		while (a_prev != (*a) && a_prev && a_prev->next != (*a))
-		{
-			i = 1;
 			a_prev = a_prev->next;
-		}
 		while (b_prev != (*b) && b_prev && b_prev->next != (*b))
-		{
-			j = 1;
 			b_prev = b_prev->next;
-		}
-		if (a_prev)
+		/*if (a_prev)
 			printf("a_prev = %s\n", a_prev->name);
 		if (b_prev)
 			printf("b_prev = %s\n", b_prev->name);
-		printf("ok\n");
+		printf("ok\n");*/
 		a_next = (*a)->next;
 		b_next = (*b)->next;
 		(*a)->next = b_next;
@@ -89,8 +79,6 @@ void    do_swap(t_subdir **head, t_subdir **a, t_subdir **b)
 			b_prev->next = (*a);
 		else
 			(*head) = (*a);
-		//printf("%s\n%s\n%s\n", (*head)->name, (*head)->next->name, (*head)->next->next->name);
-		//exit(0);
 	}
 }
 
@@ -103,7 +91,7 @@ int     sorted_level(t_subdir *level)
 	cur = level;
 	while (tmp)
 	{
-		if (ft_strcmp(tmp->name, cur->name) > 0)
+		if (ft_strcmp(tmp->name, cur->name) < 0)
 			return (0);
 		cur = cur->next;
 		tmp = tmp->next;
@@ -111,32 +99,55 @@ int     sorted_level(t_subdir *level)
 	return (1);
 }
 
+int     len(t_subdir *head, t_subdir *tmp)
+{
+	int len;
+
+	len = 0;
+	while (head && ft_strcmp(head->name, tmp->name))
+	{
+		len++;
+		head = head->next;
+	}
+	return (len);
+}
+
 void    alph_sort(t_subdir **level)
 {
-	t_subdir *head;
-	t_subdir *tmp;
-	t_subdir *cur;
-	t_subdir *cp;
+	t_subdir    *tmp;
+	t_subdir    *cur;
+	int         cmp;
 
 	tmp = *level;
-	head = *level;
 	print_level(*level);
-	while (tmp)
+	while (!sorted_level(*level))
 	{
-		cur = head;
-		printf("tmp = %s\n", tmp->name);
+		cur = (*level);
 		while (cur)
 		{
-			//print_level(*level);
-			if (ft_strcmp((tmp->name), (cur->name)) > 0)
+			print_level(*level);
+			cmp = ft_strcmp((tmp->name), (cur->name));
+			printf("cmp = %d\n", cmp);
+			printf("tmp = %s\n", tmp->name);
+			printf("cur = %s\n", cur->name);
+			//printf("head = %s\n", (*level)->name);
+			printf("tmp_len = %d cur_len = %d\n", len(*level, tmp), len(*level, cur));
+			if (cmp > 0 && len(*level, tmp) < len(*level, cur))
 			{
-				//printf("a = %s\nb = %s\n", tmp->name, cur->name);
+				printf("a = %s\nb = %s\n", tmp->name, cur->name);
 				do_swap(level, &tmp, &cur);
 			}
-			printf("cur = %s\n", cur->name);
+			else if (cmp < 0 && len(*level, tmp) > len(*level, cur))
+			{
+				printf("a = %s\nb = %s\n", tmp->name, cur->name);
+				do_swap(level, &tmp, &cur);
+			}
 			cur = cur->next;
 		}
-		tmp = tmp->next;
+		if (tmp->next == NULL)
+			tmp = (*level);
+		else
+			tmp = tmp->next;
 	}
 	print_level(*level);
 }
