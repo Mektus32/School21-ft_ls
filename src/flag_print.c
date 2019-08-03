@@ -65,7 +65,7 @@ char **l_flag(char *filename)
 	struct stat file;
 
 	lstat(filename, &file);
-	result = (char **)malloc(sizeof(char *) * 9);
+	result = (char **)malloc(sizeof(char *) * 8);
 	ac_rights = ft_strdup("----------");
 	file_type(file, &ac_rights);
 	uid_rights(file, &ac_rights);
@@ -78,7 +78,8 @@ char **l_flag(char *filename)
 	result[4] = ft_strdup(ft_itoa(file.st_size));
 	result[5] = ft_strdup(ctime(&file.st_mtime));
 	result[5][25 - 1] = '\0';
-	result[6] = NULL;
+	result[6] = ft_strdup(filename);
+	result[7] = NULL;
 	return (result);
 }
 

@@ -113,9 +113,11 @@ add_executable(ft_ls
         libft/ft_ultoa_base.c
         libft/get_next_line.c
         src/error.c
+        src/flag_print.c
+        src/new_strjoin.c
         src/flag_choose.c
         src/flag_return.c
         src/main.c
         src/param_func.c
         src/recursion_ls.c
-        src/vanilla_ls.c src/create_list.c)
+        src/vanilla_ls.c src/create_list.c src/sort_list.c)

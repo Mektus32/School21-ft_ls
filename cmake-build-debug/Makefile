@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/ojessi/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /home/humanbean/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Users/ojessi/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /home/humanbean/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ojessi/Desktop/ft_ls
+CMAKE_SOURCE_DIR = /home/humanbean/ecole42/School21-ft_ls
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ojessi/Desktop/ft_ls/cmake-build-debug
+CMAKE_BINARY_DIR = /home/humanbean/ecole42/School21-ft_ls/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/ojessi/Desktop/ft_ls/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/ojessi/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/humanbean/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/ojessi/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/humanbean/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ojessi/Desktop/ft_ls/cmake-build-debug/CMakeFiles /Users/ojessi/Desktop/ft_ls/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles /home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ojessi/Desktop/ft_ls/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -2850,6 +2850,33 @@ src/flag_choose.c.s:
 	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/flag_choose.c.s
 .PHONY : src/flag_choose.c.s
 
+src/flag_print.o: src/flag_print.c.o
+
+.PHONY : src/flag_print.o
+
+# target to build an object file
+src/flag_print.c.o:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/flag_print.c.o
+.PHONY : src/flag_print.c.o
+
+src/flag_print.i: src/flag_print.c.i
+
+.PHONY : src/flag_print.i
+
+# target to preprocess a source file
+src/flag_print.c.i:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/flag_print.c.i
+.PHONY : src/flag_print.c.i
+
+src/flag_print.s: src/flag_print.c.s
+
+.PHONY : src/flag_print.s
+
+# target to generate assembly for a file
+src/flag_print.c.s:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/flag_print.c.s
+.PHONY : src/flag_print.c.s
+
 src/flag_return.o: src/flag_return.c.o
 
 .PHONY : src/flag_return.o
@@ -2903,6 +2930,33 @@ src/main.s: src/main.c.s
 src/main.c.s:
 	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/main.c.s
 .PHONY : src/main.c.s
+
+src/new_strjoin.o: src/new_strjoin.c.o
+
+.PHONY : src/new_strjoin.o
+
+# target to build an object file
+src/new_strjoin.c.o:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/new_strjoin.c.o
+.PHONY : src/new_strjoin.c.o
+
+src/new_strjoin.i: src/new_strjoin.c.i
+
+.PHONY : src/new_strjoin.i
+
+# target to preprocess a source file
+src/new_strjoin.c.i:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/new_strjoin.c.i
+.PHONY : src/new_strjoin.c.i
+
+src/new_strjoin.s: src/new_strjoin.c.s
+
+.PHONY : src/new_strjoin.s
+
+# target to generate assembly for a file
+src/new_strjoin.c.s:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/new_strjoin.c.s
+.PHONY : src/new_strjoin.c.s
 
 src/param_func.o: src/param_func.c.o
 
@@ -2958,6 +3012,33 @@ src/recursion_ls.c.s:
 	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/recursion_ls.c.s
 .PHONY : src/recursion_ls.c.s
 
+src/sort_list.o: src/sort_list.c.o
+
+.PHONY : src/sort_list.o
+
+# target to build an object file
+src/sort_list.c.o:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/sort_list.c.o
+.PHONY : src/sort_list.c.o
+
+src/sort_list.i: src/sort_list.c.i
+
+.PHONY : src/sort_list.i
+
+# target to preprocess a source file
+src/sort_list.c.i:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/sort_list.c.i
+.PHONY : src/sort_list.c.i
+
+src/sort_list.s: src/sort_list.c.s
+
+.PHONY : src/sort_list.s
+
+# target to generate assembly for a file
+src/sort_list.c.s:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/sort_list.c.s
+.PHONY : src/sort_list.c.s
+
 src/vanilla_ls.o: src/vanilla_ls.c.o
 
 .PHONY : src/vanilla_ls.o
@@ -2992,8 +3073,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... ft_ls"
+	@echo "... edit_cache"
 	@echo "... ft_printf/src/check_args.o"
 	@echo "... ft_printf/src/check_args.i"
 	@echo "... ft_printf/src/check_args.s"
@@ -3297,18 +3378,27 @@ help:
 	@echo "... src/flag_choose.o"
 	@echo "... src/flag_choose.i"
 	@echo "... src/flag_choose.s"
+	@echo "... src/flag_print.o"
+	@echo "... src/flag_print.i"
+	@echo "... src/flag_print.s"
 	@echo "... src/flag_return.o"
 	@echo "... src/flag_return.i"
 	@echo "... src/flag_return.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/new_strjoin.o"
+	@echo "... src/new_strjoin.i"
+	@echo "... src/new_strjoin.s"
 	@echo "... src/param_func.o"
 	@echo "... src/param_func.i"
 	@echo "... src/param_func.s"
 	@echo "... src/recursion_ls.o"
 	@echo "... src/recursion_ls.i"
 	@echo "... src/recursion_ls.s"
+	@echo "... src/sort_list.o"
+	@echo "... src/sort_list.i"
+	@echo "... src/sort_list.s"
 	@echo "... src/vanilla_ls.o"
 	@echo "... src/vanilla_ls.i"
 	@echo "... src/vanilla_ls.s"

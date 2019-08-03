@@ -296,6 +296,11 @@ CMakeFiles/ft_ls.dir/libft/get_next_line.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/ft_ls.dir/libft/get_next_line.c.o: ../libft/includes/libft.h
 CMakeFiles/ft_ls.dir/libft/get_next_line.c.o: ../libft/get_next_line.c
 
+CMakeFiles/ft_ls.dir/src/create_list.c.o: ../includes/ft_ls.h
+CMakeFiles/ft_ls.dir/src/create_list.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_ls.dir/src/create_list.c.o: ../includes/libft.h
+CMakeFiles/ft_ls.dir/src/create_list.c.o: ../src/create_list.c
+
 CMakeFiles/ft_ls.dir/src/error.c.o: ../includes/ft_ls.h
 CMakeFiles/ft_ls.dir/src/error.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_ls.dir/src/error.c.o: ../includes/libft.h
@@ -305,6 +310,11 @@ CMakeFiles/ft_ls.dir/src/flag_choose.c.o: ../includes/ft_ls.h
 CMakeFiles/ft_ls.dir/src/flag_choose.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_ls.dir/src/flag_choose.c.o: ../includes/libft.h
 CMakeFiles/ft_ls.dir/src/flag_choose.c.o: ../src/flag_choose.c
+
+CMakeFiles/ft_ls.dir/src/flag_print.c.o: ../includes/ft_ls.h
+CMakeFiles/ft_ls.dir/src/flag_print.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_ls.dir/src/flag_print.c.o: ../includes/libft.h
+CMakeFiles/ft_ls.dir/src/flag_print.c.o: ../src/flag_print.c
 
 CMakeFiles/ft_ls.dir/src/flag_return.c.o: ../includes/ft_ls.h
 CMakeFiles/ft_ls.dir/src/flag_return.c.o: ../includes/ft_printf.h
@@ -316,15 +326,25 @@ CMakeFiles/ft_ls.dir/src/main.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_ls.dir/src/main.c.o: ../includes/libft.h
 CMakeFiles/ft_ls.dir/src/main.c.o: ../src/main.c
 
-CMakeFiles/ft_ls.dir/src/mektus_func.c.o: ../includes/ft_ls.h
-CMakeFiles/ft_ls.dir/src/mektus_func.c.o: ../includes/ft_printf.h
-CMakeFiles/ft_ls.dir/src/mektus_func.c.o: ../includes/libft.h
-CMakeFiles/ft_ls.dir/src/mektus_func.c.o: ../src/mektus_func.c
+CMakeFiles/ft_ls.dir/src/new_strjoin.c.o: ../includes/ft_ls.h
+CMakeFiles/ft_ls.dir/src/new_strjoin.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_ls.dir/src/new_strjoin.c.o: ../includes/libft.h
+CMakeFiles/ft_ls.dir/src/new_strjoin.c.o: ../src/new_strjoin.c
+
+CMakeFiles/ft_ls.dir/src/param_func.c.o: ../includes/ft_ls.h
+CMakeFiles/ft_ls.dir/src/param_func.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_ls.dir/src/param_func.c.o: ../includes/libft.h
+CMakeFiles/ft_ls.dir/src/param_func.c.o: ../src/param_func.c
 
 CMakeFiles/ft_ls.dir/src/recursion_ls.c.o: ../includes/ft_ls.h
 CMakeFiles/ft_ls.dir/src/recursion_ls.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_ls.dir/src/recursion_ls.c.o: ../includes/libft.h
 CMakeFiles/ft_ls.dir/src/recursion_ls.c.o: ../src/recursion_ls.c
+
+CMakeFiles/ft_ls.dir/src/sort_list.c.o: ../includes/ft_ls.h
+CMakeFiles/ft_ls.dir/src/sort_list.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_ls.dir/src/sort_list.c.o: ../includes/libft.h
+CMakeFiles/ft_ls.dir/src/sort_list.c.o: ../src/sort_list.c
 
 CMakeFiles/ft_ls.dir/src/vanilla_ls.c.o: ../includes/ft_ls.h
 CMakeFiles/ft_ls.dir/src/vanilla_ls.c.o: ../includes/ft_printf.h

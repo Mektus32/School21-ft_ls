@@ -98,6 +98,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_ls.dir/libft/ft_ultoa_base.c.o"
   "CMakeFiles/ft_ls.dir/libft/get_next_line.c.o"
   "CMakeFiles/ft_ls.dir/src/error.c.o"
+  "CMakeFiles/ft_ls.dir/src/flag_print.c.o"
+  "CMakeFiles/ft_ls.dir/src/new_strjoin.c.o"
   "CMakeFiles/ft_ls.dir/src/flag_choose.c.o"
   "CMakeFiles/ft_ls.dir/src/flag_return.c.o"
   "CMakeFiles/ft_ls.dir/src/main.c.o"
@@ -105,6 +107,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_ls.dir/src/recursion_ls.c.o"
   "CMakeFiles/ft_ls.dir/src/vanilla_ls.c.o"
   "CMakeFiles/ft_ls.dir/src/create_list.c.o"
+  "CMakeFiles/ft_ls.dir/src/sort_list.c.o"
   "ft_ls.pdb"
   "ft_ls"
 )

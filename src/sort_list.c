@@ -99,7 +99,7 @@ int     sorted_level(t_subdir *level)
 	return (1);
 }
 
-int     len(t_subdir *head, t_subdir *tmp)
+int     list_find(t_subdir *head, t_subdir *tmp)
 {
 	int len;
 
@@ -125,9 +125,9 @@ void    level_alph_sort(t_subdir **level)
 		while (cur)
 		{
 			cmp = ft_strcmp((tmp->name), (cur->name));
-			if (cmp > 0 && len(*level, tmp) < len(*level, cur))
+			if (cmp > 0 && list_find(*level, tmp) < list_find(*level, cur))
 				do_swap(level, &tmp, &cur);
-			else if (cmp < 0 && len(*level, tmp) > len(*level, cur))
+			else if (cmp < 0 && list_find(*level, tmp) > list_find(*level, cur))
 				do_swap(level, &tmp, &cur);
 			cur = cur->next;
 		}
@@ -142,6 +142,7 @@ void    levels_sort(t_subdir **level)
 {
 	t_subdir *nlvl;
 
+	//print_level(*level);
 	nlvl = *level;
 	level_alph_sort(&nlvl);
 	(*level) = nlvl;

@@ -19,11 +19,11 @@ int		ft_strcmp(const char *str1, const char *str2)
 	i = 0;
 	while (str1[i] != '\0' || str2[i] != '\0')
 	{
-		if ((unsigned char)str1[i] != (unsigned char)str2[i])
-			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+		if (ft_toupper((unsigned char)str1[i]) != ft_toupper((unsigned char)str2[i]))
+			return (ft_toupper((unsigned char)str1[i]) - ft_toupper((unsigned char)str2[i]));
 		i++;
 	}
-	if ((unsigned char)str1[i] != (unsigned char)str2[i])
-		return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+	if (ft_toupper((unsigned char)str1[i]) != ft_toupper((unsigned char)str2[i]))
+		return (ft_toupper((unsigned char)str1[i]) - ft_toupper((unsigned char)str2[i]));
 	return (0);
 }

@@ -12,50 +12,87 @@
 
 #include "ft_ls.h"
 
-void	ft_fill_param_list(int ac, char **av, t_ls *ls)
+t_subdir	*ft_create_next_subdir(char *name, t_subdir *prev)
 {
+	t_subdir	*new;
+	struct stat	buf;
 
-}
-
-t_subdir	*ft_create_subdir(char *name, t_subdir *prev)
-{
-	t_subdir	*list;
-
-	if (!(list = (t_subdir*)malloc(sizeof(t_subdir))))
+	if (!(new = (t_subdir*)malloc(sizeof(t_subdir))))
 		return (NULL);
-	list->name = name;
-	list->next = NULL;
-	list->prev = prev;
-	list->newlvl = NULL;
-	return (list);
+	new->next = NULL;
+	new->newlvl = NULL;
+	new->prev = prev;
+	new->name = name;
+	lstat(ft_strrchr(name, '/'), &buf);
+	new->atime = buf.st_atime;
+	new->mtime = buf.st_mtime;
+	new->ctime = buf.st_ctime;
+	return (new);
 }
 
-void		ft_push_back_subdir(t_subdir **head, char *name)
+t_subdir	*ft_push_back_next_subdir(t_subdir **head, char *name)
 {
 	t_subdir	*list;
 	t_subdir	*tmp;
 
-	if (!*head)
-		return ;
+	if (!head)
+		return (NULL);
 	list = *head;
 	if (list)
 	{
 		tmp = list;
 		while (list->next)
+		{
+			tmp = list;
 			list = list->next;
-		list->next = ft_create_subdir(name, tmp);
+		}
+		list->next = ft_create_next_subdir(name, tmp);
 	}
 	else
-		list = ft_create_subdir(name, NULL);
+		return (*head = ft_create_next_subdir(name, NULL));
+	return (list);
 }
 
-t_subdir	*ft_push_newlvl(t_subdir **head, char *name, char *path)
+t_subdir	*ft_fill_subdir(t_subdir **head, char *name)
 {
-	t_subdir	*list;
-	int 		i;
+	t_subdir		*list;
+	DIR				*dir;
+	struct dirent	*file;
 
-	i = 0;
-	while (path[i] != '/' && path[i] != '\0')
-		i++;
-	if (path[i] == '\0')
+	if (!head)
+		return (NULL);
+	list = *head;
+	if (!(dir = opendir(name)))
+		return (NULL);
+	while ((file = readdir(dir)))
+	{
+		if ((ft_strlen(file->d_name) == 1 && file->d_name[0] == '.') ||
+		    (ft_strlen(file->d_name) == 2 && file->d_name[0] == '.' && file->d_name[1] == '.'))
+			continue ;
+		if (!list)
+			*head = ft_push_back_next_subdir(&list, ft_free_join(ft_strjoin(name, "/"), file->d_name));
+		else
+			ft_push_back_next_subdir(&list, ft_free_join(ft_strjoin(name, "/"), file->d_name));
+	}
+	closedir(dir);
+	while (list)
+	{
+		ft_fill_subdir(&list->newlvl, list->name);
+		list = list->next;
+	}
+	return (list);
+}
+
+void		ft_fill_list(t_param **head)
+{
+	t_param		*list;
+
+	if (!head || !*head)
+		return ;
+	list = *head;
+	while (list)
+	{
+		ft_fill_subdir(&(list->newlvl), list->name);
+		list = list->next;
+	}
 }
