@@ -13,12 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="977f3758-71b2-4796-99c0-3f2d93905ac4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/myft_ls.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/myft_ls.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/myft_ls.dir/src/create_list.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/myft_ls.dir/src/create_list.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/myft_ls" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/myft_ls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/ft_ls.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/ft_ls.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/create_list.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/create_list.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/param_func.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/param_func.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564838474974</updated>
-      <workItem from="1564838476896" duration="7103000" />
+      <workItem from="1564838476896" duration="8910000" />
     </task>
     <servers />
   </component>

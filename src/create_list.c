@@ -58,17 +58,21 @@ t_subdir	*ft_fill_subdir(t_subdir **head, char *name)
 	t_subdir		*list;
 	DIR				*dir;
 	struct dirent	*file;
+	char 			*spec;
 
 	if (!head)
 		return (NULL);
 	list = *head;
+	if ((spec = ft_strrchr(name, '/')))
+		spec += 1;
+	else
+		spec = name;
+	if ((spec[0] == '.' && spec[1] == '\0') || (spec[0] == '.' && spec[1] == '.' && spec[2] == '\0'))
+		return (NULL);
 	if (!(dir = opendir(name)))
 		return (NULL);
 	while ((file = readdir(dir)))
 	{
-		if ((ft_strlen(file->d_name) == 1 && file->d_name[0] == '.') ||
-		    (ft_strlen(file->d_name) == 2 && file->d_name[0] == '.' && file->d_name[1] == '.'))
-			continue ;
 		if (!list)
 			*head = ft_push_back_next_subdir(&list, ft_free_join(ft_strjoin(name, "/"), file->d_name));
 		else
@@ -102,17 +106,16 @@ t_subdir	*ft_push_back_subdir(t_subdir **head, char *name)
 	t_subdir		*list;
 	DIR				*dir;
 	struct dirent	*file;
+	char 			*spec;
 
 	if (!head)
 		return (NULL);
 	list = *head;
+	spec = ft_strchr(name, '/') + 1;
 	if (!(dir = opendir(name)))
 		return (NULL);
 	while ((file = readdir(dir)))
 	{
-		if ((ft_strlen(file->d_name) == 1 && file->d_name[0] == '.') ||
-			(ft_strlen(file->d_name) == 2 && file->d_name[0] == '.' && file->d_name[1] == '.'))
-			continue ;
 		if (!list)
 			*head = ft_push_back_next_subdir(&list, ft_free_join(ft_strjoin(name, "/"), file->d_name));
 		else
