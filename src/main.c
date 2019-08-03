@@ -12,23 +12,53 @@
 
 #include "ft_ls.h"
 
+void	ft_print_subdir(t_subdir *head)
+{
+	t_subdir	*tmp;
+
+	tmp = head;
+	while (tmp)
+	{
+		if (tmp->name)
+			ft_printf("%s--", tmp->name);
+		ft_printf("-a->%ld", tmp->atime);
+		ft_printf("-m->%ld", tmp->mtime);
+		ft_printf("-c->%ld\n", tmp->ctime);
+		tmp = tmp->next;
+	}
+	while (head)
+	{
+		if (head->newlvl)
+			ft_print_subdir(head->newlvl);
+		head = head->next;
+	}
+}
+
+void	ft_print_list(t_param *head)
+{
+	printf("\n\n");
+	while (head)
+	{
+		if (head->newlvl)
+			ft_print_subdir(head->newlvl);
+		head = head->next;
+	}
+}
+
 int		main(int ac, char **av)
 {
+	char    *line;
 	t_ls	*ls;
+	DIR     *fd;
+	int 	j = 1;
 
-	ac = 0;
-	av[0] = NULL;
+	//vanilla_ls(av[1]);
 	ls = ft_memalloc(sizeof(t_ls));
-	ft_push_back(&ls->par, flag_return(ac, av));
-	printf("l->[%u]\n", ls->par->l);
-	printf("R->[%u]\n", ls->par->R);
-	printf("a->[%u]\n", ls->par->a);
-	printf("r->[%u]\n", ls->par->r);
-	printf("t->[%u]\n", ls->par->t);
-	printf("u->[%u]\n", ls->par->u);
-	printf("f->[%u]\n", ls->par->f);
-	printf("g->[%u]\n", ls->par->g);
-	printf("f->[%u]\n", ls->par->f);
-	printf("G->[%u]\n", ls->par->G);
+//	ft_fill_param_list(ac, av, ls);
+	ls->par = ft_create_param("_/home/humanbean/ecole42/School21-ft_ls/");
+	ft_fill_subdir(&ls->par->newlvl, ls->par->name);
+	//levels_sort(&ls->par->newlvl);
+	printf("%s\n%s\n", ls->par->newlvl->name, ls->par->newlvl->next->name);
+	//ft_print_list(ls->par);
 	return (0);
 }
