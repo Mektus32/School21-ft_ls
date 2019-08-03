@@ -1,0 +1,3 @@
+/Users/ojessi/Desktop/myft_ls/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/ojessi/Desktop/myft_ls/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/ojessi/Desktop/myft_ls/cmake-build-debug/CMakeFiles/myft_ls.dir

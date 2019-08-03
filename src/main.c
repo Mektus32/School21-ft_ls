@@ -41,24 +41,28 @@ void	ft_print_list(t_param *head)
 	{
 		if (head->newlvl)
 			ft_print_subdir(head->newlvl);
+		ft_printf("%s\n", head->name);
 		head = head->next;
 	}
 }
 
 int		main(int ac, char **av)
 {
-	char    *line;
 	t_ls	*ls;
-	DIR     *fd;
-	int 	j = 1;
+	char	**split;
+	int		count;
 
-	//vanilla_ls(av[1]);
 	ls = ft_memalloc(sizeof(t_ls));
-//	ft_fill_param_list(ac, av, ls);
-	ls->par = ft_create_param("_/home/humanbean/ecole42/School21-ft_ls/");
-	ft_fill_subdir(&ls->par->newlvl, ls->par->name);
+	split = flag_split(ac, av);
+	ft_fill(&ls->par, split);
+//	ls->par = ft_create_param("_/Users/ojessi/Desktop/myft_ls/src/");
+	//ft_fill_subdir(&ls->par->newlvl, ls->par->name);
+	ft_print_list(ls->par);
 	//levels_sort(&ls->par->newlvl);
-	printf("%s\n%s\n", ls->par->newlvl->name, ls->par->newlvl->next->name);
 	//ft_print_list(ls->par);
+//	for (count = 0; split[count]; count++)
+//		ft_printf("%s\n", split[count]);
+//	for (int i = 0; i < count; i++)
+//		ft_printf("%s\n", split[i]);
 	return (0);
 }

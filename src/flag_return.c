@@ -1,6 +1,6 @@
 #include "ft_ls.h"
 
-static char    *filename_case1(char *flags, char *av)
+static char *filename_case1(char *flags, char *av)
 {
 	char *tmp;
 
@@ -11,7 +11,7 @@ static char    *filename_case1(char *flags, char *av)
 	return (ft_strjoin(flags, av));
 }
 
-static char    *filename_case2(char *flags)
+static char *filename_case2(char *flags)
 {
 	char *tmp;
 
@@ -22,7 +22,7 @@ static char    *filename_case2(char *flags)
 	return (ft_strjoin(flags, "."));
 }
 
-static char    *filename_case3(char *av)
+static char *filename_case3(char *av)
 {
 	char *tmp;
 	char *filename;
@@ -35,8 +35,8 @@ static char    *filename_case3(char *av)
 
 void flag_return(int ac, char **av, char **split, int *i)
 {
-	char    *flags;
-	char    *tmp;
+	char *flags;
+	char *tmp;
 
 	flags = NULL;
 	if (ac == 1)
@@ -63,11 +63,11 @@ void flag_return(int ac, char **av, char **split, int *i)
 		*split = filename_case3(av[*i]);
 }
 
-char    **flag_split(int ac, char **av, int *j)
+char **flag_split(int ac, char **av)
 {
-	char    **split;
-	int     i;
-	int     count;
+	char **split;
+	int i;
+	int count;
 
 	split = (char **)malloc(sizeof(char *) * ac);
 	i = 1;
@@ -78,6 +78,6 @@ char    **flag_split(int ac, char **av, int *j)
 		i++;
 		count++;
 	}
-	split[i] = NULL;
+	split[count] = NULL;
 	return (split);
 }

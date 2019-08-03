@@ -69,9 +69,11 @@ void				ft_fill_list(t_param **head);
 t_subdir			*ft_fill_subdir(t_subdir **head, char *name);
 t_subdir			*ft_push_back_next_subdir(t_subdir **head, char *name);
 t_subdir			*ft_create_next_subdir(char *name, t_subdir *prev);
+void				ft_fill(t_param **head, char **split);
 
 void	no_such_dir(char *filename);
 int		vanilla_ls(DIR *dir, int print_hidden, char **filename);
 void	flag_return(int ac, char **av, char **split, int *i);
+char	**flag_split(int ac, char **av);
 
 #endif
