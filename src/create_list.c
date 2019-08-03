@@ -96,3 +96,28 @@ void		ft_fill_list(t_param **head)
 		list = list->next;
 	}
 }
+
+t_subdir	*ft_push_back_subdir(t_subdir **head, char *name)
+{
+	t_subdir		*list;
+	DIR				*dir;
+	struct dirent	*file;
+
+	if (!head)
+		return (NULL);
+	list = *head;
+	if (!(dir = opendir(name)))
+		return (NULL);
+	while ((file = readdir(dir)))
+	{
+		if ((ft_strlen(file->d_name) == 1 && file->d_name[0] == '.') ||
+			(ft_strlen(file->d_name) == 2 && file->d_name[0] == '.' && file->d_name[1] == '.'))
+			continue ;
+		if (!list)
+			*head = ft_push_back_next_subdir(&list, ft_free_join(ft_strjoin(name, "/"), file->d_name));
+		else
+			ft_push_back_next_subdir(&list, ft_free_join(ft_strjoin(name, "/"), file->d_name));
+	}
+	closedir(dir);
+	return (list);
+}

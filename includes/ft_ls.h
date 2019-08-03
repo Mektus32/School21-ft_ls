@@ -70,6 +70,7 @@ t_subdir			*ft_fill_subdir(t_subdir **head, char *name);
 t_subdir			*ft_push_back_next_subdir(t_subdir **head, char *name);
 t_subdir			*ft_create_next_subdir(char *name, t_subdir *prev);
 void				ft_fill(t_param **head, char **split);
+t_subdir			*ft_push_back_subdir(t_subdir **head, char *name);
 
 void	no_such_dir(char *filename);
 int		vanilla_ls(DIR *dir, int print_hidden, char **filename);

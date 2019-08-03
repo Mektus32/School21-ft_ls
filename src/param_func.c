@@ -74,6 +74,8 @@ void	ft_fill(t_param **head, char **split)
 		list = ft_push_back_param(head, split[i]);
 		if (list->R == 1)
 			ft_fill_subdir(&list->newlvl, list->name);
+		else
+			ft_push_back_subdir(&list->newlvl, list->name);
 		i++;
 	}
 }
