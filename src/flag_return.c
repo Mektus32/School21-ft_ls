@@ -63,7 +63,7 @@ void flag_return(int ac, char **av, char **split, int *i)
 		*split = filename_case3(av[*i]);
 }
 
-char    **flag_split(int ac, char **av, int *j)
+char **flag_split(int ac, char **av)
 {
 	char    **split;
 	int     i;
@@ -78,6 +78,6 @@ char    **flag_split(int ac, char **av, int *j)
 		i++;
 		count++;
 	}
-	split[i] = NULL;
+	split[count] = NULL;
 	return (split);
 }

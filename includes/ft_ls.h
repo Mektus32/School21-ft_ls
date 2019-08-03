@@ -30,9 +30,9 @@ typedef struct		s_subdir
 	struct s_subdir		*next;
 	struct s_subdir		*prev;
 	struct s_subdir		*newlvl;
-	time_t				atime;
-	time_t				mtime;
-	time_t				ctime;
+	time_t			    atime;
+	time_t			    mtime;
+	time_t			    ctime;
 }					t_subdir;
 
 typedef struct		s_param
@@ -60,7 +60,7 @@ typedef	struct		s_ls
 /*
  ** Функции для работы с основным списком
  */
-void                levels_sort(t_subdir **level);
+void                levels_alph_sort(t_subdir **level);
 void                level_alph_sort(t_subdir **level);
 void				ft_fill_param_list(int ac, char **av, t_ls *ls);
 t_param				*ft_create_param(char *str);
@@ -70,6 +70,16 @@ t_subdir			*ft_fill_subdir(t_subdir **head, char *name);
 t_subdir			*ft_push_back_next_subdir(t_subdir **head, char *name);
 t_subdir			*ft_create_next_subdir(char *name, t_subdir *prev);
 
+void    print_level(t_subdir *level);
+void    swap_1(t_subdir **head, t_subdir **a, t_subdir **b);
+void    do_swap(t_subdir **head, t_subdir **a, t_subdir **b);
+int     list_find(t_subdir *head, t_subdir *tmp);
+void levels_time_sort(t_subdir **level, int rev);
+char    **flag_split(int ac, char **av);
+char *l_flag(char *filename);
+char    *a_flag(char *filename);
+char    *no_flag(char *filename);
+char    *new_strjoin(char **line);
 void	no_such_dir(char *filename);
 int		vanilla_ls(DIR *dir, int print_hidden, char **filename);
 void	flag_return(int ac, char **av, char **split, int *i);

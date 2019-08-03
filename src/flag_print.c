@@ -58,7 +58,7 @@ void    oth_rights(struct stat file, char **ac_rights)
 		(*ac_rights)[7] = 'r';
 }
 
-char **l_flag(char *filename)
+char *l_flag(char *filename)
 {
 	char        *ac_rights;
 	char        **result;
@@ -80,7 +80,7 @@ char **l_flag(char *filename)
 	result[5][25 - 1] = '\0';
 	result[6] = ft_strdup(filename);
 	result[7] = NULL;
-	return (result);
+	return (new_strjoin(result));
 }
 
 char *no_flag(char *filename)

@@ -396,6 +396,9 @@
 		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/libft/includes/libft.h">
 			<Option target="ft_ls"/>
 		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/src/alph_sort.c">
+			<Option target="ft_ls"/>
+		</Unit>
 		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/src/create_list.c">
 			<Option target="ft_ls"/>
 		</Unit>
@@ -424,6 +427,9 @@
 			<Option target="ft_ls"/>
 		</Unit>
 		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/src/sort_list.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/src/time_sort.c">
 			<Option target="ft_ls"/>
 		</Unit>
 		<Unit filename="/home/humanbean/ecole42/School21-ft_ls/src/vanilla_ls.c">

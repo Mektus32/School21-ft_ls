@@ -108,6 +108,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_ls.dir/src/vanilla_ls.c.o"
   "CMakeFiles/ft_ls.dir/src/create_list.c.o"
   "CMakeFiles/ft_ls.dir/src/sort_list.c.o"
+  "CMakeFiles/ft_ls.dir/src/alph_sort.c.o"
+  "CMakeFiles/ft_ls.dir/src/time_sort.c.o"
   "ft_ls.pdb"
   "ft_ls"
 )

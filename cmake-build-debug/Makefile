@@ -2769,6 +2769,33 @@ libft/get_next_line.c.s:
 	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/libft/get_next_line.c.s
 .PHONY : libft/get_next_line.c.s
 
+src/alph_sort.o: src/alph_sort.c.o
+
+.PHONY : src/alph_sort.o
+
+# target to build an object file
+src/alph_sort.c.o:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/alph_sort.c.o
+.PHONY : src/alph_sort.c.o
+
+src/alph_sort.i: src/alph_sort.c.i
+
+.PHONY : src/alph_sort.i
+
+# target to preprocess a source file
+src/alph_sort.c.i:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/alph_sort.c.i
+.PHONY : src/alph_sort.c.i
+
+src/alph_sort.s: src/alph_sort.c.s
+
+.PHONY : src/alph_sort.s
+
+# target to generate assembly for a file
+src/alph_sort.c.s:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/alph_sort.c.s
+.PHONY : src/alph_sort.c.s
+
 src/create_list.o: src/create_list.c.o
 
 .PHONY : src/create_list.o
@@ -3038,6 +3065,33 @@ src/sort_list.s: src/sort_list.c.s
 src/sort_list.c.s:
 	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/sort_list.c.s
 .PHONY : src/sort_list.c.s
+
+src/time_sort.o: src/time_sort.c.o
+
+.PHONY : src/time_sort.o
+
+# target to build an object file
+src/time_sort.c.o:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/time_sort.c.o
+.PHONY : src/time_sort.c.o
+
+src/time_sort.i: src/time_sort.c.i
+
+.PHONY : src/time_sort.i
+
+# target to preprocess a source file
+src/time_sort.c.i:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/time_sort.c.i
+.PHONY : src/time_sort.c.i
+
+src/time_sort.s: src/time_sort.c.s
+
+.PHONY : src/time_sort.s
+
+# target to generate assembly for a file
+src/time_sort.c.s:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/time_sort.c.s
+.PHONY : src/time_sort.c.s
 
 src/vanilla_ls.o: src/vanilla_ls.c.o
 
@@ -3369,6 +3423,9 @@ help:
 	@echo "... libft/get_next_line.o"
 	@echo "... libft/get_next_line.i"
 	@echo "... libft/get_next_line.s"
+	@echo "... src/alph_sort.o"
+	@echo "... src/alph_sort.i"
+	@echo "... src/alph_sort.s"
 	@echo "... src/create_list.o"
 	@echo "... src/create_list.i"
 	@echo "... src/create_list.s"
@@ -3399,6 +3456,9 @@ help:
 	@echo "... src/sort_list.o"
 	@echo "... src/sort_list.i"
 	@echo "... src/sort_list.s"
+	@echo "... src/time_sort.o"
+	@echo "... src/time_sort.i"
+	@echo "... src/time_sort.s"
 	@echo "... src/vanilla_ls.o"
 	@echo "... src/vanilla_ls.i"
 	@echo "... src/vanilla_ls.s"
