@@ -13,7 +13,11 @@
   <component name="ChangeListManager">
     <list default="true" id="977f3758-71b2-4796-99c0-3f2d93905ac4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/ft_ls.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/ft_ls.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/create_list.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/create_list.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/usual_ls.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/usual_ls.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,17 +32,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/myft_ls.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectId" id="1Ourlh66xY1bIuqEgoajiomqQpI" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -81,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564838474974</updated>
-      <workItem from="1564838476896" duration="8910000" />
+      <workItem from="1564838476896" duration="13397000" />
     </task>
     <servers />
   </component>

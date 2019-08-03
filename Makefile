@@ -26,7 +26,8 @@ SRC =	create_list.c \
 		recursion_ls.c \
 		sort_list.c \
 		usual_ls.c \
-		vanilla_ls.c
+		vanilla_ls.c \
+		choise_flag.c
 OBJ = $(addprefix $(OBJDIR), $(SRC:.c=.o))
 
 # compiler

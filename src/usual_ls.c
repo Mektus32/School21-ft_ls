@@ -2,5 +2,5 @@
 
 char    *ls(t_param *list)
 {
-
+	return (NULL);
 }

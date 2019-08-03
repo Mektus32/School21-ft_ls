@@ -30,6 +30,7 @@ typedef struct		s_subdir
 	struct s_subdir		*next;
 	struct s_subdir		*prev;
 	struct s_subdir		*newlvl;
+	struct stat			buf;
 	time_t				atime;
 	time_t				mtime;
 	time_t				ctime;
@@ -76,5 +77,8 @@ void	no_such_dir(char *filename);
 int		vanilla_ls(DIR *dir, int print_hidden, char **filename);
 void	flag_return(int ac, char **av, char **split, int *i);
 char	**flag_split(int ac, char **av);
+void	ft_print_flags(t_param *par);
+void	ft_print_list(t_param *head);
+void	ft_print_subdir(t_subdir *head);
 
 #endif
