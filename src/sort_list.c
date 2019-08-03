@@ -29,8 +29,6 @@ void    swap_1(t_subdir **head, t_subdir **a, t_subdir **b)
 		a_prev = a_prev->next;
 	if (a_prev && a_prev == *head && a_prev->next != (*a))
 		flag = 1;
-	//printf("a_prev = %s\na_prev_next = %s\n", a_prev->name, a_prev->next->name);
-	//printf("%d\n", flag);
 	first = (*a);
 	second = (*a)->next;
 	third = (*a)->next->next;
@@ -48,6 +46,8 @@ void    do_swap(t_subdir **head, t_subdir **a, t_subdir **b)
 	t_subdir *b_prev;
 	t_subdir *a_next;
 	t_subdir *b_next;
+	int      flag_a;
+	int      flag_b;
 
 	if ((*a)->next == (*b))
 		swap_1(head, a, b);
@@ -55,27 +55,27 @@ void    do_swap(t_subdir **head, t_subdir **a, t_subdir **b)
 		swap_1(head, b, a);
 	else
 	{
-		//printf("here\n");
+		flag_a = 0;
+		flag_b = 0;
 		a_prev = *head;
 		b_prev = *head;
 		while (a_prev != (*a) && a_prev && a_prev->next != (*a))
 			a_prev = a_prev->next;
 		while (b_prev != (*b) && b_prev && b_prev->next != (*b))
 			b_prev = b_prev->next;
-		/*if (a_prev)
-			printf("a_prev = %s\n", a_prev->name);
-		if (b_prev)
-			printf("b_prev = %s\n", b_prev->name);
-		printf("ok\n");*/
+		if (a_prev && a_prev == *head && a_prev->next != (*a))
+			flag_a = 1;
+		if (b_prev && b_prev == *head && b_prev->next != (*b))
+			flag_b = 1;
 		a_next = (*a)->next;
 		b_next = (*b)->next;
 		(*a)->next = b_next;
 		(*b)->next = a_next;
-		if (a_prev && a_prev != *head)
+		if (flag_a == 0)
 			a_prev->next = (*b);
 		else
 			(*head) = (*b);
-		if (b_prev && b_prev != *head)
+		if (flag_b == 0)
 			b_prev->next = (*a);
 		else
 			(*head) = (*a);
@@ -112,36 +112,23 @@ int     len(t_subdir *head, t_subdir *tmp)
 	return (len);
 }
 
-void    alph_sort(t_subdir **level)
+void    level_alph_sort(t_subdir **level)
 {
 	t_subdir    *tmp;
 	t_subdir    *cur;
 	int         cmp;
 
 	tmp = *level;
-	print_level(*level);
 	while (!sorted_level(*level))
 	{
 		cur = (*level);
 		while (cur)
 		{
-			print_level(*level);
 			cmp = ft_strcmp((tmp->name), (cur->name));
-			printf("cmp = %d\n", cmp);
-			printf("tmp = %s\n", tmp->name);
-			printf("cur = %s\n", cur->name);
-			//printf("head = %s\n", (*level)->name);
-			printf("tmp_len = %d cur_len = %d\n", len(*level, tmp), len(*level, cur));
 			if (cmp > 0 && len(*level, tmp) < len(*level, cur))
-			{
-				printf("a = %s\nb = %s\n", tmp->name, cur->name);
 				do_swap(level, &tmp, &cur);
-			}
 			else if (cmp < 0 && len(*level, tmp) > len(*level, cur))
-			{
-				printf("a = %s\nb = %s\n", tmp->name, cur->name);
 				do_swap(level, &tmp, &cur);
-			}
 			cur = cur->next;
 		}
 		if (tmp->next == NULL)
@@ -149,5 +136,19 @@ void    alph_sort(t_subdir **level)
 		else
 			tmp = tmp->next;
 	}
-	print_level(*level);
+}
+
+void    levels_sort(t_subdir **level)
+{
+	t_subdir *nlvl;
+
+	nlvl = *level;
+	level_alph_sort(&nlvl);
+	(*level) = nlvl;
+	while (nlvl)
+	{
+		if (nlvl->newlvl)
+			levels_sort(&(nlvl->newlvl));
+		nlvl = nlvl->next;
+	}
 }
