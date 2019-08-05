@@ -58,42 +58,50 @@ void    oth_rights(struct stat file, char **ac_rights)
 		(*ac_rights)[7] = 'r';
 }
 
-char *l_flag(char *filename, struct stat file)
+void l_flag(char *filename, struct stat file, int hidden)
 {
 	char        *ac_rights;
-	char        **result;
+	char        *time;
 
+	if (!filename)
+		return ;
 	lstat(filename, &file);
-	result = (char **)malloc(sizeof(char *) * 8);
 	ac_rights = ft_strdup("----------");
 	file_type(file, &ac_rights);
 	uid_rights(file, &ac_rights);
 	grp_rights(file, &ac_rights);
 	oth_rights(file, &ac_rights);
-	result[0] = ac_rights;
-	result[1] = ft_strdup(ft_itoa(file.st_nlink));
-	result[2] = ft_strdup(getpwuid(file.st_uid)->pw_name);
-	result[3] = ft_strdup(getgrgid(file.st_gid)->gr_name);
-	result[4] = ft_strdup(ft_itoa(file.st_size));
-	result[5] = ft_strdup(ctime(&file.st_mtime));
-	result[5][25 - 1] = '\0';
-	result[6] = ft_strdup(filename);
-	result[7] = NULL;
-	return (new_strjoin(result));
+	ft_printf("%s %ld %s %s %6ld ", ac_rights, file.st_nlink,
+	          getpwuid(file.st_uid)->pw_name, getgrgid(file.st_gid)->gr_name,
+	          file.st_size);
+	ft_strdel(&ac_rights);
+	time = ft_strdup(ctime(&file.st_mtime));
+	time[ft_strlen(time) - 1] = '\0';
+	ft_putstr(time);
+	ft_strdel(&time);
+	write(1, &" ", 1);
+	if (hidden == 1)
+		a_flag(filename);
+	else if (hidden == 0)
+		no_flag(filename);
+	write(1, &"\n", 1);
 }
 
-char *no_flag(char *filename)
+void no_flag(char *filename)
 {
 	if (!filename)
-		return (0);
+		return ;
 	if (filename[0] != '.')
-		return (ft_strdup(filename));
-	return (ft_strdup(""));
+	{
+		ft_putstr(filename);
+		write(1, &"  ", 2);
+	}
 }
 
-char *a_flag(char *filename)
+void a_flag(char *filename)
 {
 	if (!filename)
-		return (0);
-	return (ft_strdup(filename));
+		return;
+	ft_putstr(filename);
+	write(1, &"  ", 2);
 }

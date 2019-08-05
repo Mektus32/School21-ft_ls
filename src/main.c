@@ -12,39 +12,62 @@
 
 #include "ft_ls.h"
 
-void	ft_print_subdir(t_subdir *head)
+char    *new_strchr(char *str, char c)
+{
+	int i;
+
+	i = 0;
+	while (str[i] && str[i] != c)
+		i++;
+	str[i] = '\0';
+	return (str);
+}
+
+void	ft_print_subdir(t_subdir *head, t_param *p)
 {
 	t_subdir	*tmp;
 
 	tmp = head;
 	while (tmp)
 	{
-		printf("%s\n", tmp->print);
-		//if (tmp->name)
-		//	ft_printf("%s--", tmp->name);
-		//ft_printf("-a->%ld", tmp->atime);
-		//ft_printf("-m->%ld", tmp->mtime);
-		//ft_printf("-c->%ld\n", tmp->ctime);
+		if (p->l == 1 && p->a == 1)
+			l_flag(ft_strrchr(tmp->name, '/') + 1, tmp->buf, 1);
+		else if (p->l == 1 && p->a == 0)
+			l_flag(ft_strrchr(tmp->name, '/') + 1, tmp->buf, 0);
+		else if (p->a == 1)
+			a_flag(ft_strrchr(tmp->name, '/') + 1);
+		else
+			no_flag(ft_strrchr(tmp->name, '/') + 1);
 		tmp = tmp->next;
 	}
 	while (head)
 	{
 		if (head->newlvl)
-			ft_print_subdir(head->newlvl);
+		{
+			ft_printf("\n%s:\n", head->name);
+			ft_print_subdir(head->newlvl, p);
+		}
 		head = head->next;
 	}
 }
 
 void	ft_print_list(t_param *head)
 {
-	printf("\n\n");
+	t_param *tmp;
+
+	tmp = head;
+	if (tmp->l == 1)
+		ft_printf("%s:\n", new_strchr(head->name, '/'));
 	while (head)
 	{
 		if (head->newlvl)
-			ft_print_subdir(head->newlvl);
-		ft_printf("%s\n", head->name);
+		{
+			ft_print_subdir(head->newlvl, head);
+		}
 		head = head->next;
 	}
+	if (tmp->l == 0)
+		write(1, &"\n", 1);
 }
 
 int		main(int ac, char **av)

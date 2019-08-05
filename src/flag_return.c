@@ -8,7 +8,7 @@ static char    *filename_case1(char *flags, char *av)
 	ft_strdel(&flags);
 	flags = ft_strjoin(tmp, "_");
 	ft_strdel(&tmp);
-	return (ft_strjoin(flags, av));
+	return (ft_strjoin(flags, new_strchr(av, '/')));
 }
 
 static char    *filename_case2(char *flags)
@@ -28,7 +28,7 @@ static char    *filename_case3(char *av)
 	char *filename;
 
 	tmp = ft_strdup(av);
-	filename = ft_strjoin("_", tmp);
+	filename = ft_strjoin("_", new_strchr(tmp, '/'));
 	ft_strdel(&tmp);
 	return (filename);
 }
