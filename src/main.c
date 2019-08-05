@@ -74,7 +74,7 @@ void	ft_print_list(t_param *head)
 		}
 		head = head->next;
 	}
-	if (tmp->l == 0 && tmp->R == 0)
+	if (tmp->l == 0)
 		write(1, &"\n", 1);
 }
 
