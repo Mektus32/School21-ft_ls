@@ -67,7 +67,7 @@ void				ft_fill_param_list(int ac, char **av, t_ls *ls);
 t_param				*ft_create_param(char *str);
 t_param				*ft_push_back_param(t_param **head, char *str);
 void				ft_fill_list(t_param **head);
-t_subdir			*ft_fill_subdir(t_subdir **head, char *name);
+t_subdir			*ft_fill_subdir(t_subdir **head, char *name, int can);
 t_subdir			*ft_push_back_next_subdir(t_subdir **head, char *name);
 t_subdir			*ft_create_next_subdir(char *name, t_subdir *prev);
 void				ft_fill(t_param **head, char **split);
