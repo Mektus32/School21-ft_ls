@@ -52,12 +52,13 @@ t_subdir	*ft_push_back_next_subdir(t_subdir **head, char *name)
 	return (list);
 }
 
-t_subdir	*ft_fill_subdir(t_subdir **head, char *name)
+t_subdir	*ft_fill_subdir(t_subdir **head, char *name, int can)
 {
 	t_subdir		*list;
 	DIR				*dir;
 	struct dirent	*file;
 	char 			*spec;
+	static int 		i = 1;
 
 	if (!head)
 		return (NULL);
@@ -66,10 +67,11 @@ t_subdir	*ft_fill_subdir(t_subdir **head, char *name)
 		spec += 1;
 	else
 		spec = name;
-	if ((spec[0] == '.' && spec[1] == '\0') || (spec[0] == '.' && spec[1] == '.' && spec[2] == '\0'))
+	if (((spec[0] == '.' && spec[1] == '\0') || (spec[0] == '.' && spec[1] == '.' && spec[2] == '\0')) && can)
 		return (NULL);
 	if (!(dir = opendir(name)))
 		return (NULL);
+
 	while ((file = readdir(dir)))
 	{
 		if (!list)
@@ -80,7 +82,7 @@ t_subdir	*ft_fill_subdir(t_subdir **head, char *name)
 	closedir(dir);
 	while (list)
 	{
-		ft_fill_subdir(&list->newlvl, list->name);
+		ft_fill_subdir(&list->newlvl, list->name, 1);
 		list = list->next;
 	}
 	return (list);
@@ -95,7 +97,7 @@ void		ft_fill_list(t_param **head)
 	list = *head;
 	while (list)
 	{
-		ft_fill_subdir(&(list->newlvl), list->name);
+		ft_fill_subdir(&(list->newlvl), list->name, 1);
 		list = list->next;
 	}
 }
@@ -110,7 +112,6 @@ t_subdir	*ft_push_back_subdir(t_subdir **head, char *name)
 	if (!head)
 		return (NULL);
 	list = *head;
-	spec = ft_strchr(name, '/') + 1;
 	if (!(dir = opendir(name)))
 		return (NULL);
 	while ((file = readdir(dir)))

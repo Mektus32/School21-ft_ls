@@ -27,13 +27,13 @@ typedef struct		s_subdir
 {
 	char				*name;
 	char                *print;
-	struct stat         buf;
 	struct s_subdir		*next;
 	struct s_subdir		*prev;
 	struct s_subdir		*newlvl;
-	time_t			    atime;
-	time_t			    mtime;
-	time_t			    ctime;
+	struct stat			buf;
+	time_t				atime;
+	time_t				mtime;
+	time_t				ctime;
 }					t_subdir;
 
 typedef struct		s_param
@@ -42,10 +42,10 @@ typedef struct		s_param
 	unsigned int	l : 1;
 	unsigned int	R : 1;
 	unsigned int	a : 1;
-	unsigned int	r : 1; //sort flag
-	unsigned int	t : 1; //sort flag
-	unsigned int	u : 1; //sort flag
-	unsigned int	f : 1; //sort flag
+	unsigned int	r : 1;
+	unsigned int	t : 1;
+	unsigned int	u : 1;
+	unsigned int	f : 1;
 	unsigned int	g : 1;
 	unsigned int	d : 1;
 	unsigned int	G : 1;
@@ -68,7 +68,7 @@ void				ft_fill_param_list(int ac, char **av, t_ls *ls);
 t_param				*ft_create_param(char *str);
 t_param				*ft_push_back_param(t_param **head, char *str);
 void				ft_fill_list(t_param **head);
-t_subdir			*ft_fill_subdir(t_subdir **head, char *name);
+t_subdir			*ft_fill_subdir(t_subdir **head, char *name, int can);
 t_subdir			*ft_push_back_next_subdir(t_subdir **head, char *name);
 t_subdir			*ft_create_next_subdir(char *name, t_subdir *prev);
 

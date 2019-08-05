@@ -73,7 +73,12 @@ void	ft_fill(t_param **head, char **split)
 	{
 		list = ft_push_back_param(head, split[i]);
 		if (list->R == 1)
-			ft_fill_subdir(&list->newlvl, list->name);
+		{
+			if (list->name[0] == '.' && list->name[1] == '\0')
+				ft_fill_subdir(&list->newlvl, list->name, 0);
+			else
+				ft_fill_subdir(&list->newlvl, list->name, 1);
+		}
 		else
 			ft_push_back_subdir(&list->newlvl, list->name);
 		i++;
