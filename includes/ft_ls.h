@@ -41,10 +41,10 @@ typedef struct		s_param
 	unsigned int	l : 1;
 	unsigned int	R : 1;
 	unsigned int	a : 1;
-	unsigned int	r : 1;
-	unsigned int	t : 1;
-	unsigned int	u : 1;
-	unsigned int	f : 1;
+	unsigned int	r : 1; //sort flag
+	unsigned int	t : 1; //sort flag
+	unsigned int	u : 1; //sort flag
+	unsigned int	f : 1; //sort flag
 	unsigned int	g : 1;
 	unsigned int	d : 1;
 	unsigned int	G : 1;
@@ -71,6 +71,7 @@ t_subdir			*ft_fill_subdir(t_subdir **head, char *name);
 t_subdir			*ft_push_back_next_subdir(t_subdir **head, char *name);
 t_subdir			*ft_create_next_subdir(char *name, t_subdir *prev);
 
+void    flag_sort(t_param *list);
 void    print_level(t_subdir *level);
 void    swap_1(t_subdir **head, t_subdir **a, t_subdir **b);
 void    do_swap(t_subdir **head, t_subdir **a, t_subdir **b);

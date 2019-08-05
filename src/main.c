@@ -19,11 +19,12 @@ void	ft_print_subdir(t_subdir *head)
 	tmp = head;
 	while (tmp)
 	{
-		if (tmp->name)
-			ft_printf("%s--", tmp->name);
-		ft_printf("-a->%ld", tmp->atime);
-		ft_printf("-m->%ld", tmp->mtime);
-		ft_printf("-c->%ld\n", tmp->ctime);
+		printf("%s\n", tmp->print);
+		//if (tmp->name)
+		//	ft_printf("%s--", tmp->name);
+		//ft_printf("-a->%ld", tmp->atime);
+		//ft_printf("-m->%ld", tmp->mtime);
+		//ft_printf("-c->%ld\n", tmp->ctime);
 		tmp = tmp->next;
 	}
 	while (head)
@@ -55,8 +56,7 @@ int		main(int ac, char **av)
 	ls = ft_memalloc(sizeof(t_ls));
 	split = flag_split(ac, av);
 	ft_fill(&ls->par, split);
-	levels_time_sort(&ls->par->newlvl, 1);
-	levels_alph_sort(&ls->par->newlvl, 0);
+	flag_sort(ls->par);
 	ft_print_list(ls->par);
 	return (0);
 }

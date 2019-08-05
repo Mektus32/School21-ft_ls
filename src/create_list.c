@@ -22,6 +22,7 @@ t_subdir	*ft_create_next_subdir(char *name, t_subdir *prev)
 	new->next = NULL;
 	new->newlvl = NULL;
 	new->prev = prev;
+	new->print = l_flag(name);
 	new->name = name;
 	lstat(name, &buf);
 	new->atime = buf.st_atime;
