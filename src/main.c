@@ -51,7 +51,6 @@ int		main(int ac, char **av)
 {
 	char    **split;
 	t_ls	*ls;
-	int 	j = 0;
 
 	ls = ft_memalloc(sizeof(t_ls));
 	split = flag_split(ac, av);

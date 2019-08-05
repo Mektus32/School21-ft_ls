@@ -15,19 +15,17 @@
 t_subdir	*ft_create_next_subdir(char *name, t_subdir *prev)
 {
 	t_subdir	*new;
-	struct stat	buf;
 
 	if (!(new = (t_subdir*)malloc(sizeof(t_subdir))))
 		return (NULL);
+	lstat(name, &new->buf);
 	new->next = NULL;
 	new->newlvl = NULL;
 	new->prev = prev;
-	new->print = l_flag(name);
 	new->name = name;
-	lstat(name, &buf);
-	new->atime = buf.st_atime;
-	new->mtime = buf.st_mtime;
-	new->ctime = buf.st_ctime;
+	new->atime = new->buf.st_atime;
+	new->mtime = new->buf.st_mtime;
+	new->ctime = new->buf.st_ctime;
 	return (new);
 }
 

@@ -58,11 +58,10 @@ void    oth_rights(struct stat file, char **ac_rights)
 		(*ac_rights)[7] = 'r';
 }
 
-char *l_flag(char *filename)
+char *l_flag(char *filename, struct stat file)
 {
 	char        *ac_rights;
 	char        **result;
-	struct stat file;
 
 	lstat(filename, &file);
 	result = (char **)malloc(sizeof(char *) * 8);

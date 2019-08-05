@@ -27,6 +27,7 @@ typedef struct		s_subdir
 {
 	char				*name;
 	char                *print;
+	struct stat         buf;
 	struct s_subdir		*next;
 	struct s_subdir		*prev;
 	struct s_subdir		*newlvl;
@@ -78,7 +79,7 @@ void    do_swap(t_subdir **head, t_subdir **a, t_subdir **b);
 int     list_find(t_subdir *head, t_subdir *tmp);
 void    levels_time_sort(t_subdir **level, int rev);
 char    **flag_split(int ac, char **av);
-char     *l_flag(char *filename);
+char *l_flag(char *filename, struct stat buf);
 char    *a_flag(char *filename);
 char    *no_flag(char *filename);
 char    *new_strjoin(char **line);
