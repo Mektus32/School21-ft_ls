@@ -6,7 +6,7 @@
 /*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 11:22:46 by ojessi            #+#    #+#             */
-/*   Updated: 2019/07/31 11:23:12 by ojessi           ###   ########.fr       */
+/*   Updated: 2019/08/05 15:57:15 by ojessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,15 @@ int		main(int ac, char **av)
 //	for (int i = 0; i < count; i++)
 //		ft_printf("%s\n", split[i]);
 	ft_print_flags(ls->par);
+	printf("l->%d\n", ls->par->l);
+	printf("a->%d\n", ls->par->a);
+	printf("r->%d\n", ls->par->r);
+	printf("t->%d\n", ls->par->t);
+	printf("u->%d\n", ls->par->u);
+	printf("f->%d\n", ls->par->f);
+	printf("g->%d\n", ls->par->g);
+	printf("d->%d\n", ls->par->d);
+	printf("G->%d\n", ls->par->G);
+	printf("R->%d\n", ls->par->R);
 	return (0);
 }
