@@ -63,7 +63,7 @@ void l_flag(char *filename, struct stat file, int hidden)
 	char        *ac_rights;
 	char        *time;
 
-	if (!filename)
+	if (!filename || (hidden == 0 && filename[0] == '.'))
 		return ;
 	lstat(filename, &file);
 	ac_rights = ft_strdup("----------");

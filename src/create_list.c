@@ -18,11 +18,11 @@ t_subdir	*ft_create_next_subdir(char *name, t_subdir *prev)
 
 	if (!(new = (t_subdir*)malloc(sizeof(t_subdir))))
 		return (NULL);
-	lstat(name, &new->buf);
 	new->next = NULL;
 	new->newlvl = NULL;
 	new->prev = prev;
 	new->name = name;
+	lstat(name, &new->buf);
 	new->atime = new->buf.st_atime;
 	new->mtime = new->buf.st_mtime;
 	new->ctime = new->buf.st_ctime;
@@ -57,17 +57,21 @@ t_subdir	*ft_fill_subdir(t_subdir **head, char *name)
 	t_subdir		*list;
 	DIR				*dir;
 	struct dirent	*file;
+	char 			*spec;
 
 	if (!head)
 		return (NULL);
 	list = *head;
+	if ((spec = ft_strrchr(name, '/')))
+		spec += 1;
+	else
+		spec = name;
+	if ((spec[0] == '.' && spec[1] == '\0') || (spec[0] == '.' && spec[1] == '.' && spec[2] == '\0'))
+		return (NULL);
 	if (!(dir = opendir(name)))
 		return (NULL);
 	while ((file = readdir(dir)))
 	{
-		if ((ft_strlen(file->d_name) == 1 && file->d_name[0] == '.') ||
-		    (ft_strlen(file->d_name) == 2 && file->d_name[0] == '.' && file->d_name[1] == '.'))
-			continue ;
 		if (!list)
 			*head = ft_push_back_next_subdir(&list, ft_free_join(ft_strjoin(name, "/"), file->d_name));
 		else
@@ -82,22 +86,35 @@ t_subdir	*ft_fill_subdir(t_subdir **head, char *name)
 	return (list);
 }
 
+void		ft_fill_list(t_param **head)
+{
+	t_param		*list;
+
+	if (!head || !*head)
+		return ;
+	list = *head;
+	while (list)
+	{
+		ft_fill_subdir(&(list->newlvl), list->name);
+		list = list->next;
+	}
+}
+
 t_subdir	*ft_push_back_subdir(t_subdir **head, char *name)
 {
 	t_subdir		*list;
 	DIR				*dir;
 	struct dirent	*file;
+	char 			*spec;
 
 	if (!head)
 		return (NULL);
 	list = *head;
+	spec = ft_strchr(name, '/') + 1;
 	if (!(dir = opendir(name)))
 		return (NULL);
 	while ((file = readdir(dir)))
 	{
-		if ((ft_strlen(file->d_name) == 1 && file->d_name[0] == '.') ||
-		    (ft_strlen(file->d_name) == 2 && file->d_name[0] == '.' && file->d_name[1] == '.'))
-			continue ;
 		if (!list)
 			*head = ft_push_back_next_subdir(&list, ft_free_join(ft_strjoin(name, "/"), file->d_name));
 		else
