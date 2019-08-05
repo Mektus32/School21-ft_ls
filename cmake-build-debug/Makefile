@@ -2796,6 +2796,33 @@ src/alph_sort.c.s:
 	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/alph_sort.c.s
 .PHONY : src/alph_sort.c.s
 
+src/atime_sort.o: src/atime_sort.c.o
+
+.PHONY : src/atime_sort.o
+
+# target to build an object file
+src/atime_sort.c.o:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/atime_sort.c.o
+.PHONY : src/atime_sort.c.o
+
+src/atime_sort.i: src/atime_sort.c.i
+
+.PHONY : src/atime_sort.i
+
+# target to preprocess a source file
+src/atime_sort.c.i:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/atime_sort.c.i
+.PHONY : src/atime_sort.c.i
+
+src/atime_sort.s: src/atime_sort.c.s
+
+.PHONY : src/atime_sort.s
+
+# target to generate assembly for a file
+src/atime_sort.c.s:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/atime_sort.c.s
+.PHONY : src/atime_sort.c.s
+
 src/create_list.o: src/create_list.c.o
 
 .PHONY : src/create_list.o
@@ -3426,6 +3453,9 @@ help:
 	@echo "... src/alph_sort.o"
 	@echo "... src/alph_sort.i"
 	@echo "... src/alph_sort.s"
+	@echo "... src/atime_sort.o"
+	@echo "... src/atime_sort.i"
+	@echo "... src/atime_sort.s"
 	@echo "... src/create_list.o"
 	@echo "... src/create_list.i"
 	@echo "... src/create_list.s"

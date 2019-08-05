@@ -58,7 +58,7 @@ void    oth_rights(struct stat file, char **ac_rights)
 		(*ac_rights)[7] = 'r';
 }
 
-void l_flag(char *filename, struct stat file, int hidden)
+void l_flag(char *filename, struct stat file, int hidden, int t)
 {
 	char        *ac_rights;
 	char        *time;
@@ -75,7 +75,10 @@ void l_flag(char *filename, struct stat file, int hidden)
 	          getpwuid(file.st_uid)->pw_name, getgrgid(file.st_gid)->gr_name,
 	          file.st_size);
 	ft_strdel(&ac_rights);
-	time = ft_strdup(ctime(&file.st_mtime));
+	if (t == 0)
+		time = ft_strdup(ctime(&file.st_mtime));
+	else
+		time = ft_strdup(ctime(&file.st_atime));
 	time[ft_strlen(time) - 1] = '\0';
 	ft_putstr(time);
 	ft_strdel(&time);

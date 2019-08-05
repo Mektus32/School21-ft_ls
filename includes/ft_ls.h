@@ -16,6 +16,8 @@
 # include <time.h>
 # include <pwd.h>
 # include <grp.h>
+# include <sys/acl.h>
+# include <sys/xattr.h>
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <stdio.h>
@@ -72,6 +74,7 @@ t_subdir			*ft_fill_subdir(t_subdir **head, char *name, int can);
 t_subdir			*ft_push_back_next_subdir(t_subdir **head, char *name);
 t_subdir			*ft_create_next_subdir(char *name, t_subdir *prev);
 
+void    levels_atime_sort(t_subdir **level, int rev);
 char    *new_strchr(char *str, char c);
 void    flag_sort(t_param *list);
 void    print_level(t_subdir *level);
@@ -80,7 +83,7 @@ void    do_swap(t_subdir **head, t_subdir **a, t_subdir **b);
 int     list_find(t_subdir *head, t_subdir *tmp);
 void    levels_time_sort(t_subdir **level, int rev);
 char    **flag_split(int ac, char **av);
-void l_flag(char *filename, struct stat file, int hidden);
+void l_flag(char *filename, struct stat file, int hidden, int t);
 void a_flag(char *filename);
 void no_flag(char *filename);
 char    *new_strjoin(char **line);

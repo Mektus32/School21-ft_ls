@@ -30,10 +30,14 @@ void	ft_print_subdir(t_subdir *head, t_param *p)
 	tmp = head;
 	while (tmp)
 	{
-		if (p->l == 1 && p->a == 1)
-			l_flag(ft_strrchr(tmp->name, '/') + 1, tmp->buf, 1);
-		else if (p->l == 1 && p->a == 0)
-			l_flag(ft_strrchr(tmp->name, '/') + 1, tmp->buf, 0);
+		if (p->l == 1 && p->a == 1 && p->u == 0)
+			l_flag(ft_strrchr(tmp->name, '/') + 1, tmp->buf, 1, 0);
+		else if (p->l == 1 && p->a == 0 && p->u == 0)
+			l_flag(ft_strrchr(tmp->name, '/') + 1, tmp->buf, 0, 0);
+		else if (p->l == 1 && p->a == 1 && p->u == 1)
+			l_flag(ft_strrchr(tmp->name, '/') + 1, tmp->buf, 1, 1);
+		else if (p->l == 1 && p->a == 0 && p->u == 1)
+			l_flag(ft_strrchr(tmp->name, '/') + 1, tmp->buf, 0, 1);
 		else if (p->a == 1)
 			a_flag(ft_strrchr(tmp->name, '/') + 1);
 		else

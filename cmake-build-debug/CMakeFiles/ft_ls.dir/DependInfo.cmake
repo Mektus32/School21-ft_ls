@@ -103,6 +103,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/humanbean/ecole42/School21-ft_ls/libft/ft_ultoa_base.c" "/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/libft/ft_ultoa_base.c.o"
   "/home/humanbean/ecole42/School21-ft_ls/libft/get_next_line.c" "/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/libft/get_next_line.c.o"
   "/home/humanbean/ecole42/School21-ft_ls/src/alph_sort.c" "/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/src/alph_sort.c.o"
+  "/home/humanbean/ecole42/School21-ft_ls/src/atime_sort.c" "/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/src/atime_sort.c.o"
   "/home/humanbean/ecole42/School21-ft_ls/src/create_list.c" "/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/src/create_list.c.o"
   "/home/humanbean/ecole42/School21-ft_ls/src/error.c" "/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/src/error.c.o"
   "/home/humanbean/ecole42/School21-ft_ls/src/flag_choose.c" "/home/humanbean/ecole42/School21-ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/src/flag_choose.c.o"

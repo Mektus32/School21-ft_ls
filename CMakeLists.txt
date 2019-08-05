@@ -120,4 +120,4 @@ add_executable(ft_ls
         src/main.c
         src/param_func.c
         src/recursion_ls.c
-        src/vanilla_ls.c src/create_list.c src/sort_list.c src/alph_sort.c src/time_sort.c)
+        src/vanilla_ls.c src/create_list.c src/sort_list.c src/alph_sort.c src/time_sort.c src/atime_sort.c)
