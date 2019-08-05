@@ -71,7 +71,7 @@ void l_flag(char *filename, struct stat file, int hidden, int t)
 	uid_rights(file, &ac_rights);
 	grp_rights(file, &ac_rights);
 	oth_rights(file, &ac_rights);
-	ft_printf("%s %ld %s %s %6ld ", ac_rights, file.st_nlink,
+	ft_printf("%s %3ld %s %s %6ld ", ac_rights, file.st_nlink,
 	          getpwuid(file.st_uid)->pw_name, getgrgid(file.st_gid)->gr_name,
 	          file.st_size);
 	ft_strdel(&ac_rights);

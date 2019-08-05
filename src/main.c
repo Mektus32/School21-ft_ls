@@ -12,14 +12,21 @@
 
 #include "ft_ls.h"
 
-char    *new_strchr(char *str, char c)
+char    *char_del(char *str, char c)
 {
 	int i;
+	int j;
 
+	j = -1;
 	i = 0;
-	while (str[i] && str[i] != c)
+	while (str[i])
+	{
+		if (str[i] == c)
+			j = i;
 		i++;
-	str[i] = '\0';
+	}
+	if (j >= 0)
+		str[j] = '\0';
 	return (str);
 }
 
@@ -66,16 +73,24 @@ void	ft_print_list(t_param *head)
 	t_param *tmp;
 
 	tmp = head;
+	if (tmp->d)
+	{
+		if (tmp->l)
+			l_flag(head->name, head->newlvl->buf, 1, 0);
+		else
+			a_flag(head->name);
+		if (!tmp->l)
+			write(1, &"\n", 1);
+		return;
+	}
 	if (tmp->R == 1)
-		ft_printf("%s:\n", new_strchr(head->name, '/'));
+		ft_printf("%s:\n", head->name);
 	if (tmp->l == 1)
 		ft_printf("total %d\n", head->newlvl->buf.st_blocks);
 	while (head)
 	{
 		if (head->newlvl)
-		{
 			ft_print_subdir(head->newlvl, head);
-		}
 		head = head->next;
 	}
 	if (tmp->l == 0)

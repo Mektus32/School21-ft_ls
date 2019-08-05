@@ -24,6 +24,7 @@
 # include "libft.h"
 # include "ft_printf.h"
 # include <dirent.h>
+# define BUFF_SIZE 1024
 
 typedef struct		s_subdir
 {
@@ -74,8 +75,8 @@ t_subdir			*ft_fill_subdir(t_subdir **head, char *name, int can);
 t_subdir			*ft_push_back_next_subdir(t_subdir **head, char *name);
 t_subdir			*ft_create_next_subdir(char *name, t_subdir *prev);
 
+char    *char_del(char *str, char c);
 void    levels_atime_sort(t_subdir **level, int rev);
-char    *new_strchr(char *str, char c);
 void    flag_sort(t_param *list);
 void    print_level(t_subdir *level);
 void    swap_1(t_subdir **head, t_subdir **a, t_subdir **b);
