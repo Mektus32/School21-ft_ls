@@ -86,11 +86,17 @@ int		main(int ac, char **av)
 {
 	char    **split;
 	t_ls	*ls;
+	t_param *tmp;
 
 	ls = ft_memalloc(sizeof(t_ls));
 	split = flag_split(ac, av);
 	ft_fill(&ls->par, split);
-	flag_sort(ls->par);
-	ft_print_list(ls->par);
+	tmp = ls->par;
+	while (tmp)
+	{
+		flag_sort(tmp);
+		ft_print_list(tmp);
+		tmp = tmp->next;
+	}
 	return (0);
 }
