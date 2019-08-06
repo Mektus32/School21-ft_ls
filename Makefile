@@ -26,9 +26,7 @@ SRC =	atime_sort.c \
 		main.c \
 		new_strjoin.c \
 		param_func.c \
-		recursion_ls.c \
 		sort_list.c \
-		usual_ls.c \
 		vanilla_ls.c \
 		free.c
 

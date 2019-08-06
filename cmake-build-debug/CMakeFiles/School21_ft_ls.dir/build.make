@@ -1461,22 +1461,9 @@ CMakeFiles/School21_ft_ls.dir/src/param_func.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_ft_ls.dir/src/param_func.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ojessi/Desktop/School21-ft_ls/src/param_func.c -o CMakeFiles/School21_ft_ls.dir/src/param_func.c.s
 
-CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.o: CMakeFiles/School21_ft_ls.dir/flags.make
-CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.o: ../src/recursion_ls.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ojessi/Desktop/School21-ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building C object CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.o   -c /Users/ojessi/Desktop/School21-ft_ls/src/recursion_ls.c
-
-CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ojessi/Desktop/School21-ft_ls/src/recursion_ls.c > CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.i
-
-CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ojessi/Desktop/School21-ft_ls/src/recursion_ls.c -o CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.s
-
 CMakeFiles/School21_ft_ls.dir/src/sort_list.c.o: CMakeFiles/School21_ft_ls.dir/flags.make
 CMakeFiles/School21_ft_ls.dir/src/sort_list.c.o: ../src/sort_list.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ojessi/Desktop/School21-ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/School21_ft_ls.dir/src/sort_list.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ojessi/Desktop/School21-ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building C object CMakeFiles/School21_ft_ls.dir/src/sort_list.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_ft_ls.dir/src/sort_list.c.o   -c /Users/ojessi/Desktop/School21-ft_ls/src/sort_list.c
 
 CMakeFiles/School21_ft_ls.dir/src/sort_list.c.i: cmake_force
@@ -1489,7 +1476,7 @@ CMakeFiles/School21_ft_ls.dir/src/sort_list.c.s: cmake_force
 
 CMakeFiles/School21_ft_ls.dir/src/time_sort.c.o: CMakeFiles/School21_ft_ls.dir/flags.make
 CMakeFiles/School21_ft_ls.dir/src/time_sort.c.o: ../src/time_sort.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ojessi/Desktop/School21-ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/School21_ft_ls.dir/src/time_sort.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ojessi/Desktop/School21-ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/School21_ft_ls.dir/src/time_sort.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_ft_ls.dir/src/time_sort.c.o   -c /Users/ojessi/Desktop/School21-ft_ls/src/time_sort.c
 
 CMakeFiles/School21_ft_ls.dir/src/time_sort.c.i: cmake_force
@@ -1502,7 +1489,7 @@ CMakeFiles/School21_ft_ls.dir/src/time_sort.c.s: cmake_force
 
 CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.o: CMakeFiles/School21_ft_ls.dir/flags.make
 CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.o: ../src/vanilla_ls.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ojessi/Desktop/School21-ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building C object CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ojessi/Desktop/School21-ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.o   -c /Users/ojessi/Desktop/School21-ft_ls/src/vanilla_ls.c
 
 CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.i: cmake_force
@@ -1515,7 +1502,7 @@ CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.s: cmake_force
 
 CMakeFiles/School21_ft_ls.dir/src/free.c.o: CMakeFiles/School21_ft_ls.dir/flags.make
 CMakeFiles/School21_ft_ls.dir/src/free.c.o: ../src/free.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ojessi/Desktop/School21-ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building C object CMakeFiles/School21_ft_ls.dir/src/free.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ojessi/Desktop/School21-ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building C object CMakeFiles/School21_ft_ls.dir/src/free.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_ft_ls.dir/src/free.c.o   -c /Users/ojessi/Desktop/School21-ft_ls/src/free.c
 
 CMakeFiles/School21_ft_ls.dir/src/free.c.i: cmake_force
@@ -1636,7 +1623,6 @@ School21_ft_ls_OBJECTS = \
 "CMakeFiles/School21_ft_ls.dir/src/main.c.o" \
 "CMakeFiles/School21_ft_ls.dir/src/new_strjoin.c.o" \
 "CMakeFiles/School21_ft_ls.dir/src/param_func.c.o" \
-"CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.o" \
 "CMakeFiles/School21_ft_ls.dir/src/sort_list.c.o" \
 "CMakeFiles/School21_ft_ls.dir/src/time_sort.c.o" \
 "CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.o" \
@@ -1753,14 +1739,13 @@ School21_ft_ls: CMakeFiles/School21_ft_ls.dir/src/flag_return.c.o
 School21_ft_ls: CMakeFiles/School21_ft_ls.dir/src/main.c.o
 School21_ft_ls: CMakeFiles/School21_ft_ls.dir/src/new_strjoin.c.o
 School21_ft_ls: CMakeFiles/School21_ft_ls.dir/src/param_func.c.o
-School21_ft_ls: CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.o
 School21_ft_ls: CMakeFiles/School21_ft_ls.dir/src/sort_list.c.o
 School21_ft_ls: CMakeFiles/School21_ft_ls.dir/src/time_sort.c.o
 School21_ft_ls: CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.o
 School21_ft_ls: CMakeFiles/School21_ft_ls.dir/src/free.c.o
 School21_ft_ls: CMakeFiles/School21_ft_ls.dir/build.make
 School21_ft_ls: CMakeFiles/School21_ft_ls.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ojessi/Desktop/School21-ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Linking C executable School21_ft_ls"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ojessi/Desktop/School21-ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Linking C executable School21_ft_ls"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/School21_ft_ls.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

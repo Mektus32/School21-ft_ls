@@ -107,7 +107,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/School21_ft_ls.dir/src/main.c.o"
   "CMakeFiles/School21_ft_ls.dir/src/new_strjoin.c.o"
   "CMakeFiles/School21_ft_ls.dir/src/param_func.c.o"
-  "CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.o"
   "CMakeFiles/School21_ft_ls.dir/src/sort_list.c.o"
   "CMakeFiles/School21_ft_ls.dir/src/time_sort.c.o"
   "CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.o"

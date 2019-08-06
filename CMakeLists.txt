@@ -122,7 +122,6 @@ add_executable(School21_ft_ls
         src/main.c
         src/new_strjoin.c
         src/param_func.c
-        src/recursion_ls.c
         src/sort_list.c
         src/time_sort.c
         src/vanilla_ls.c src/free.c)

@@ -113,7 +113,6 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ojessi/Desktop/School21-ft_ls/src/main.c" "/Users/ojessi/Desktop/School21-ft_ls/cmake-build-debug/CMakeFiles/School21_ft_ls.dir/src/main.c.o"
   "/Users/ojessi/Desktop/School21-ft_ls/src/new_strjoin.c" "/Users/ojessi/Desktop/School21-ft_ls/cmake-build-debug/CMakeFiles/School21_ft_ls.dir/src/new_strjoin.c.o"
   "/Users/ojessi/Desktop/School21-ft_ls/src/param_func.c" "/Users/ojessi/Desktop/School21-ft_ls/cmake-build-debug/CMakeFiles/School21_ft_ls.dir/src/param_func.c.o"
-  "/Users/ojessi/Desktop/School21-ft_ls/src/recursion_ls.c" "/Users/ojessi/Desktop/School21-ft_ls/cmake-build-debug/CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.o"
   "/Users/ojessi/Desktop/School21-ft_ls/src/sort_list.c" "/Users/ojessi/Desktop/School21-ft_ls/cmake-build-debug/CMakeFiles/School21_ft_ls.dir/src/sort_list.c.o"
   "/Users/ojessi/Desktop/School21-ft_ls/src/time_sort.c" "/Users/ojessi/Desktop/School21-ft_ls/cmake-build-debug/CMakeFiles/School21_ft_ls.dir/src/time_sort.c.o"
   "/Users/ojessi/Desktop/School21-ft_ls/src/vanilla_ls.c" "/Users/ojessi/Desktop/School21-ft_ls/cmake-build-debug/CMakeFiles/School21_ft_ls.dir/src/vanilla_ls.c.o"

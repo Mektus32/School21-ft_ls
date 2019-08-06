@@ -23,20 +23,17 @@ t_param		*ft_create_param(char *str)
 	while (str[i] != '_' && str[i] != '\0')
 	{
 		str[i] == 'l' ? list->l = (unsigned int)1 : 0;
-		str[i] == 'R' ? list->R = (unsigned int)1 : 0;
+		str[i] == 'R' ? list->br = (unsigned int)1 : 0;
 		str[i] == 'a' ? list->a = (unsigned int)1 : 0;
 		str[i] == 'r' ? list->r = (unsigned int)1 : 0;
 		str[i] == 't' ? list->t = (unsigned int)1 : 0;
 		str[i] == 'u' ? list->u = (unsigned int)1 : 0;
 		str[i] == 'f' ? list->f = (unsigned int)1 : 0;
-		str[i] == 'g' ? list->g = (unsigned int)1 : 0;
 		str[i] == 'd' ? list->d = (unsigned int)1 : 0;
-		str[i] == 'G' ? list->G = (unsigned int)1 : 0;
 		i++;
 	}
 	list->name = ft_strdup(str + i + 1);
 	list->newlvl = NULL;
-	//free(str);
 	return (list);
 }
 
@@ -72,12 +69,12 @@ void	ft_fill(t_param **head, char **split)
 	while (split[i])
 	{
 		list = ft_push_back_param(head, split[i]);
-		if (list->R == 1)
+		if (list->br == 1)
 		{
 			if (list->name[0] == '.' && list->name[1] == '\0')
 				ft_fill_subdir(&list->newlvl, list->name, 0);
 			else
-				ft_fill_subdir(&list->newlvl, list->name, 1);
+				ft_fill_subdir(&list->newlvl, list->name, 0);
 		}
 		else
 			ft_push_back_subdir(&list->newlvl, list->name);

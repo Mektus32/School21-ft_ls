@@ -3066,33 +3066,6 @@ src/param_func.c.s:
 	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/param_func.c.s
 .PHONY : src/param_func.c.s
 
-src/recursion_ls.o: src/recursion_ls.c.o
-
-.PHONY : src/recursion_ls.o
-
-# target to build an object file
-src/recursion_ls.c.o:
-	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.o
-.PHONY : src/recursion_ls.c.o
-
-src/recursion_ls.i: src/recursion_ls.c.i
-
-.PHONY : src/recursion_ls.i
-
-# target to preprocess a source file
-src/recursion_ls.c.i:
-	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.i
-.PHONY : src/recursion_ls.c.i
-
-src/recursion_ls.s: src/recursion_ls.c.s
-
-.PHONY : src/recursion_ls.s
-
-# target to generate assembly for a file
-src/recursion_ls.c.s:
-	$(MAKE) -f CMakeFiles/School21_ft_ls.dir/build.make CMakeFiles/School21_ft_ls.dir/src/recursion_ls.c.s
-.PHONY : src/recursion_ls.c.s
-
 src/sort_list.o: src/sort_list.c.o
 
 .PHONY : src/sort_list.o
@@ -3510,9 +3483,6 @@ help:
 	@echo "... src/param_func.o"
 	@echo "... src/param_func.i"
 	@echo "... src/param_func.s"
-	@echo "... src/recursion_ls.o"
-	@echo "... src/recursion_ls.i"
-	@echo "... src/recursion_ls.s"
 	@echo "... src/sort_list.o"
 	@echo "... src/sort_list.i"
 	@echo "... src/sort_list.s"

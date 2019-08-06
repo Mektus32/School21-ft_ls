@@ -58,7 +58,7 @@ t_subdir	*ft_fill_subdir(t_subdir **head, char *name, int can)
 	DIR				*dir;
 	struct dirent	*file;
 	char 			*spec;
-	static int 		i = 1;
+	static int 		i;
 
 	if (!head)
 		return (NULL);
@@ -69,9 +69,9 @@ t_subdir	*ft_fill_subdir(t_subdir **head, char *name, int can)
 		spec = name;
 	if (((spec[0] == '.' && spec[1] == '\0') || (spec[0] == '.' && spec[1] == '.' && spec[2] == '\0')) && can)
 		return (NULL);
+	ft_printf("check[%d]\n", i++);
 	if (!(dir = opendir(name)))
 		return (NULL);
-
 	while ((file = readdir(dir)))
 	{
 		if (!list)

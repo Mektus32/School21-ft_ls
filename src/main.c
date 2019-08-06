@@ -55,12 +55,12 @@ void	ft_print_subdir(t_subdir *head, t_param *p)
 	{
 		if (head->newlvl)
 		{
-			if (p->l == 1 && p->R == 1)
+			if (p->l == 1 && p->br == 1)
 			{
 				ft_printf("\n%s:\n", head->name);
 				ft_printf("total %d\n", head->newlvl->buf.st_blocks);
 			}
-			else if (p->R == 1)
+			else if (p->br == 1)
 				ft_printf("\n\n%s:\n", head->name);
 			ft_print_subdir(head->newlvl, p);
 		}
@@ -83,7 +83,7 @@ void	ft_print_list(t_param *head)
 			write(1, &"\n", 1);
 		return;
 	}
-	if (tmp->R == 1)
+	if (tmp->br == 1)
 			ft_printf("%s:\n", head->name);
 	if (tmp->l == 1)
 		ft_printf("total %d\n", head->newlvl->buf.st_blocks);
