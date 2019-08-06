@@ -83,4 +83,5 @@ void	ft_fill(t_param **head, char **split)
 			ft_push_back_subdir(&list->newlvl, list->name);
 		i++;
 	}
+	ft_frtwarr((void**)split, i);
 }

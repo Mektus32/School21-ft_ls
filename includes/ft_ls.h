@@ -59,9 +59,10 @@ typedef	struct		s_ls
 	t_param		*par;
 }					t_ls;
 
-/*
+/**
  ** Функции для работы с основным списком
- */
+ **/
+
 t_subdir	*ft_push_back_subdir(t_subdir **head, char *name);
 void	            ft_fill(t_param **head, char **split);
 void                levels_alph_sort(t_subdir **level, int rev);
@@ -90,4 +91,8 @@ void	no_such_dir(char *filename);
 int		vanilla_ls(DIR *dir, int print_hidden, char **filename);
 void	flag_return(int ac, char **av, char **split, int *i);
 
+/**
+ ** Функции очистки
+ **/
+void				ft_firs_free(t_ls **ls);
 #endif

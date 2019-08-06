@@ -71,7 +71,8 @@ char **flag_split(int ac, char **av)
 	count = 0;
 	if (ac == 1)
 	{
-		split[count] = ft_strjoin("_", ".");
+		//split[count] = ft_strjoin("_", ".");
+		split[count] = ft_strdup("_.");
 		split[1] = NULL;
 		return (split);
 	}

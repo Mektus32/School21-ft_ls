@@ -15,7 +15,23 @@
 NAME = ft_ls
 
 # src / obj files
-SRC = atime_sort.c time_sort.c alph_sort.c create_list.c  error.c  flag_choose.c  flag_print.c  flag_return.c  main.c  new_strjoin.c  param_func.c  recursion_ls.c  sort_list.c  usual_ls.c  vanilla_ls.c
+SRC =	atime_sort.c \
+		time_sort.c \
+		alph_sort.c \
+		create_list.c \
+		error.c \
+		flag_choose.c \
+		flag_print.c \
+		flag_return.c \
+		main.c \
+		new_strjoin.c \
+		param_func.c \
+		recursion_ls.c \
+		sort_list.c \
+		usual_ls.c \
+		vanilla_ls.c \
+		free.c
+
 OBJ = $(addprefix $(OBJDIR), $(SRC:.c=.o))
 
 # compiler

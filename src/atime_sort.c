@@ -24,22 +24,13 @@ int     sorted_atime_level(t_subdir *level)
 
 	tmp = level->next;
 	cur = level;
-	//printf("dafuq\n");
-	//printf("%s\n", tmp->name);
-	//printf("%s\n", cur->name);
 	while (tmp)
 	{
 		if ((tmp->atime - cur->atime) > 0)
-		{
-			//printf("%ld\n%ld\n", tmp->mtime, cur->mtime);
-			//printf("%s\n%s\n", tmp->name, cur->name);
 			return (0);
-		}
-		//printf("dafuq\n%ld\n%ld\n", tmp->mtime, cur->mtime);
 		cur = cur->next;
 		tmp = tmp->next;
 	}
-	//printf("return 1\n");
 	return (1);
 }
 
@@ -56,10 +47,6 @@ void    rev_level_atime_sort(t_subdir **level)
 		while (cur)
 		{
 			cmp = tmp->atime - cur->atime;
-			/*printf("cmp = %ld\n", cmp);
-			printf("tmp = %s\ncur = %s\n", tmp->name, cur->name);
-			printf("tmp = %lu\ncur = %lu\n", tmp->atime, cur->atime);
-			printf("tmp_len = %d\ncur_len = %d\n", list_find(*level, tmp), list_find(*level, cur));*/
 			if (cmp > 0 && list_find(*level, tmp) < list_find(*level, cur))
 				do_swap(level, &tmp, &cur);
 			else if (cmp < 0 && list_find(*level, tmp) > list_find(*level, cur))
