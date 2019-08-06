@@ -46,9 +46,9 @@ void	ft_print_subdir(t_subdir *head, t_param *p)
 		else if (p->l == 1 && p->a == 0 && p->u == 1)
 			l_flag(ft_strrchr(tmp->name, '/') + 1, tmp->buf, 0, 1);
 		else if (p->a == 1)
-			a_flag(ft_strrchr(tmp->name, '/') + 1);
+			a_flag(ft_strrchr(tmp->name, '/') + 1, tmp->buf);
 		else
-			no_flag(ft_strrchr(tmp->name, '/') + 1);
+			no_flag(ft_strrchr(tmp->name, '/') + 1, tmp->buf);
 		tmp = tmp->next;
 	}
 	while (head)
@@ -78,13 +78,13 @@ void	ft_print_list(t_param *head)
 		if (tmp->l)
 			l_flag(head->name, head->newlvl->buf, 1, 0);
 		else
-			a_flag(head->name);
+			a_flag(head->name, tmp->newlvl->buf);
 		if (!tmp->l)
 			write(1, &"\n", 1);
 		return;
 	}
 	if (tmp->R == 1)
-		ft_printf("%s:\n", head->name);
+			ft_printf("%s:\n", head->name);
 	if (tmp->l == 1)
 		ft_printf("total %d\n", head->newlvl->buf.st_blocks);
 	while (head)

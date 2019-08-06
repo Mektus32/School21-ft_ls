@@ -84,27 +84,47 @@ void l_flag(char *filename, struct stat file, int hidden, int t)
 	ft_strdel(&time);
 	write(1, &" ", 1);
 	if (hidden == 1)
-		a_flag(filename);
+		a_flag(filename, file);
 	else if (hidden == 0)
-		no_flag(filename);
+		no_flag(filename, file);
 	write(1, &"\n", 1);
 }
 
-void no_flag(char *filename)
+void no_flag(char *filename, struct stat file)
 {
 	if (!filename)
 		return ;
 	if (filename[0] != '.')
 	{
-		ft_putstr(filename);
+		if (S_ISDIR(file.st_mode))
+		{
+			ft_putstr("\x1B[34m");
+			ft_putstr(filename);
+			ft_putstr("\x1b[0m");
+		}
+		else
+			ft_putstr(filename);
 		write(1, &"  ", 2);
 	}
 }
 
-void a_flag(char *filename)
+void a_flag(char *filename, struct stat file)
 {
 	if (!filename)
 		return;
-	ft_putstr(filename);
+	if (filename[0] == '.' && ft_strlen(filename) > 2)
+	{
+		ft_putstr("\x1B[32m");
+		ft_putstr(filename);
+		ft_putstr("\x1b[0m");
+	}
+	else if (S_ISDIR(file.st_mode))
+	{
+		ft_putstr("\x1B[34m");
+		ft_putstr(filename);
+		ft_putstr("\x1b[0m");
+	}
+	else
+		ft_putstr(filename);
 	write(1, &"  ", 2);
 }
