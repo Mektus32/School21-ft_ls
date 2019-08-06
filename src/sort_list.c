@@ -1,5 +1,21 @@
 #include "ft_ls.h"
 
+int		cmp(const char *str1, const char *str2)
+{
+	int	i;
+
+	i = 0;
+	while (str1[i] != '\0' || str2[i] != '\0')
+	{
+		if ((unsigned char)str1[i] != (unsigned char)str2[i])
+			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+		i++;
+	}
+	if ((unsigned char)str1[i] != (unsigned char)str2[i])
+		return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+	return (0);
+}
+
 void    print_level(t_subdir *level)
 {
 	t_subdir *tmp;
@@ -8,7 +24,7 @@ void    print_level(t_subdir *level)
 	printf("-----------------\n");
 	while (level)
 	{
-		printf("%s\n", level->name);
+		printf("%s---->%ld\n", level->name, level->mtime);
 		tmp = level;
 		level = level->next;
 	}
@@ -82,74 +98,15 @@ void    do_swap(t_subdir **head, t_subdir **a, t_subdir **b)
 	}
 }
 
-int     sorted_level(t_subdir *level)
-{
-	t_subdir *tmp;
-	t_subdir *cur;
-
-	tmp = level->next;
-	cur = level;
-	while (tmp)
-	{
-		if (ft_strcmp(tmp->name, cur->name) < 0)
-			return (0);
-		cur = cur->next;
-		tmp = tmp->next;
-	}
-	return (1);
-}
-
 int     list_find(t_subdir *head, t_subdir *tmp)
 {
 	int len;
 
 	len = 0;
-	while (head && ft_strcmp(head->name, tmp->name))
+	while (head && cmp(head->name, tmp->name))
 	{
 		len++;
 		head = head->next;
 	}
 	return (len);
-}
-
-void    level_alph_sort(t_subdir **level)
-{
-	t_subdir    *tmp;
-	t_subdir    *cur;
-	int         cmp;
-
-	tmp = *level;
-	while (!sorted_level(*level))
-	{
-		cur = (*level);
-		while (cur)
-		{
-			cmp = ft_strcmp((tmp->name), (cur->name));
-			if (cmp > 0 && list_find(*level, tmp) < list_find(*level, cur))
-				do_swap(level, &tmp, &cur);
-			else if (cmp < 0 && list_find(*level, tmp) > list_find(*level, cur))
-				do_swap(level, &tmp, &cur);
-			cur = cur->next;
-		}
-		if (tmp->next == NULL)
-			tmp = (*level);
-		else
-			tmp = tmp->next;
-	}
-}
-
-void    levels_sort(t_subdir **level)
-{
-	t_subdir *nlvl;
-
-	//print_level(*level);
-	nlvl = *level;
-	level_alph_sort(&nlvl);
-	(*level) = nlvl;
-	while (nlvl)
-	{
-		if (nlvl->newlvl)
-			levels_sort(&(nlvl->newlvl));
-		nlvl = nlvl->next;
-	}
 }
