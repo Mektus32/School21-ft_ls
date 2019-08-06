@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   new_strjoin.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/06 15:57:00 by ojessi            #+#    #+#             */
+/*   Updated: 2019/08/06 16:02:05 by ojessi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_ls.h"
 
-char    *new_strjoin(char **line)
+char	*new_strjoin(char **line)
 {
-	int     len;
-	int     i;
-	char    *str;
+	int		len;
+	int		i;
+	char	*str;
 
 	if (!(line))
 		return (NULL);

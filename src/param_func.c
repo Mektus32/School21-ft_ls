@@ -6,7 +6,7 @@
 /*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 12:24:56 by ojessi            #+#    #+#             */
-/*   Updated: 2019/07/31 12:24:57 by ojessi           ###   ########.fr       */
+/*   Updated: 2019/08/06 16:02:55 by ojessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ t_param		*ft_create_param(char *str)
 	}
 	list->name = ft_strdup(str + i + 1);
 	list->newlvl = NULL;
+	free(str);
 	return (list);
 }
 
@@ -60,7 +61,7 @@ t_param		*ft_push_back_param(t_param **head, char *str)
 	return (list);
 }
 
-void	ft_fill(t_param **head, char **split)
+void		ft_fill(t_param **head, char **split)
 {
 	int		i;
 	t_param	*list;
@@ -80,5 +81,5 @@ void	ft_fill(t_param **head, char **split)
 			ft_push_back_subdir(&list->newlvl, list->name);
 		i++;
 	}
-	ft_frtwarr((void**)split, i);
+	free(split);
 }

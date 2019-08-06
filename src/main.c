@@ -6,16 +6,16 @@
 /*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 11:22:46 by ojessi            #+#    #+#             */
-/*   Updated: 2019/08/06 12:59:59 by ojessi           ###   ########.fr       */
+/*   Updated: 2019/08/06 15:34:48 by ojessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
 
-char    *char_del(char *str, char c)
+char	*char_del(char *str, char c)
 {
-	int i;
-	int j;
+	int		i;
+	int		j;
 
 	j = -1;
 	i = 0;
@@ -28,6 +28,25 @@ char    *char_del(char *str, char c)
 	if (j >= 0)
 		str[j] = '\0';
 	return (str);
+}
+
+void	ft_next_print_subdir(t_subdir *head, t_param *p)
+{
+	while (head)
+	{
+		if (head->newlvl)
+		{
+			if (p->l == 1 && p->br == 1)
+			{
+				ft_printf("\n%s:\n", head->name);
+				ft_printf("total %d\n", head->newlvl->buf.st_blocks);
+			}
+			else if (p->br == 1)
+				ft_printf("\n\n%s:\n", head->name);
+			ft_print_subdir(head->newlvl, p);
+		}
+		head = head->next;
+	}
 }
 
 void	ft_print_subdir(t_subdir *head, t_param *p)
@@ -51,21 +70,7 @@ void	ft_print_subdir(t_subdir *head, t_param *p)
 			no_flag(ft_strrchr(tmp->name, '/') + 1, tmp->buf);
 		tmp = tmp->next;
 	}
-	while (head)
-	{
-		if (head->newlvl)
-		{
-			if (p->l == 1 && p->br == 1)
-			{
-				ft_printf("\n%s:\n", head->name);
-				ft_printf("total %d\n", head->newlvl->buf.st_blocks);
-			}
-			else if (p->br == 1)
-				ft_printf("\n\n%s:\n", head->name);
-			ft_print_subdir(head->newlvl, p);
-		}
-		head = head->next;
-	}
+	ft_next_print_subdir(head, p);
 }
 
 void	ft_print_list(t_param *head)
@@ -81,10 +86,10 @@ void	ft_print_list(t_param *head)
 			a_flag(head->name, tmp->newlvl->buf);
 		if (!tmp->l)
 			write(1, &"\n", 1);
-		return;
+		return ;
 	}
 	if (tmp->br == 1)
-			ft_printf("%s:\n", head->name);
+		ft_printf("%s:\n", head->name);
 	if (tmp->l == 1)
 		ft_printf("total %d\n", head->newlvl->buf.st_blocks);
 	while (head)
@@ -99,9 +104,9 @@ void	ft_print_list(t_param *head)
 
 int		main(int ac, char **av)
 {
-	char    **split;
-	t_ls	*ls;
-	t_param *tmp;
+	char		**split;
+	t_ls		*ls;
+	t_param		*tmp;
 
 	ls = ft_memalloc(sizeof(t_ls));
 	split = flag_split(ac, av);

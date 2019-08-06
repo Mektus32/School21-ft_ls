@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   vanilla_ls.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/06 16:10:57 by ojessi            #+#    #+#             */
+/*   Updated: 2019/08/06 16:11:15 by ojessi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_ls.h"
 
-int vanilla_ls(DIR *dir, int print_hidden, char **filename)
+int		vanilla_ls(DIR *dir, int print_hidden, char **filename)
 {
-	struct dirent   *entry;
-	struct stat     file;
+	struct dirent	*entry;
+	struct stat		file;
 
 	if (!dir)
 		return (0);

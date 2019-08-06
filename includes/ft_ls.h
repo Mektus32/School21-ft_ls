@@ -84,5 +84,7 @@ void				no_such_dir(char *filename);
 int					vanilla_ls(DIR *dir, int print_hidden, char **filename);
 void				flag_return(int ac, char **av, char **split, int *i);
 void				ft_firs_free(t_ls **ls);
+void				ft_print_subdir(t_subdir *head, t_param *p);
+void				*ft_error(t_subdir **head, char *name, int can);
 
 #endif

@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   flag_print.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/06 15:49:45 by ojessi            #+#    #+#             */
+/*   Updated: 2019/08/06 15:51:28 by ojessi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_ls.h"
 
-void    file_type(struct stat file, char **ac_rights)
+void	file_type(struct stat file, char **ac_rights)
 {
 	if (S_ISDIR(file.st_mode))
 		(*ac_rights)[0] = 'd';
@@ -16,7 +28,7 @@ void    file_type(struct stat file, char **ac_rights)
 		(*ac_rights)[0] = 'p';
 }
 
-void    uid_rights(struct stat file, char **ac_rights)
+void	uid_rights(struct stat file, char **ac_rights)
 {
 	if (file.st_mode & S_ISVTX)
 		(*ac_rights)[3] = 't';
@@ -30,7 +42,7 @@ void    uid_rights(struct stat file, char **ac_rights)
 		(*ac_rights)[1] = 'r';
 }
 
-void    grp_rights(struct stat file, char **ac_rights)
+void	grp_rights(struct stat file, char **ac_rights)
 {
 	if (file.st_mode & S_ISVTX)
 		(*ac_rights)[6] = 't';
@@ -44,7 +56,7 @@ void    grp_rights(struct stat file, char **ac_rights)
 		(*ac_rights)[4] = 'r';
 }
 
-void    oth_rights(struct stat file, char **ac_rights)
+void	oth_rights(struct stat file, char **ac_rights)
 {
 	if (file.st_mode & S_ISVTX)
 		(*ac_rights)[9] = 't';
@@ -58,10 +70,10 @@ void    oth_rights(struct stat file, char **ac_rights)
 		(*ac_rights)[7] = 'r';
 }
 
-void l_flag(char *filename, struct stat file, int hidden, int t)
+void	l_flag(char *filename, struct stat file, int hidden, int t)
 {
-	char        *ac_rights;
-	char        *time;
+	char	*ac_rights;
+	char	*time;
 
 	if (!filename || (hidden == 0 && filename[0] == '.'))
 		return ;
@@ -72,8 +84,8 @@ void l_flag(char *filename, struct stat file, int hidden, int t)
 	grp_rights(file, &ac_rights);
 	oth_rights(file, &ac_rights);
 	ft_printf("%s %3ld %s %s %6ld ", ac_rights, file.st_nlink,
-	          getpwuid(file.st_uid)->pw_name, getgrgid(file.st_gid)->gr_name,
-	          file.st_size);
+			getpwuid(file.st_uid)->pw_name, getgrgid(file.st_gid)->gr_name,
+			file.st_size);
 	ft_strdel(&ac_rights);
 	if (t == 0)
 		time = ft_strdup(ctime(&file.st_mtime));
@@ -83,48 +95,6 @@ void l_flag(char *filename, struct stat file, int hidden, int t)
 	ft_putstr(time);
 	ft_strdel(&time);
 	write(1, &" ", 1);
-	if (hidden == 1)
-		a_flag(filename, file);
-	else if (hidden == 0)
-		no_flag(filename, file);
+	hidden == 1 ? a_flag(filename, file) : no_flag(filename, file);
 	write(1, &"\n", 1);
-}
-
-void no_flag(char *filename, struct stat file)
-{
-	if (!filename)
-		return ;
-	if (filename[0] != '.')
-	{
-		if (S_ISDIR(file.st_mode))
-		{
-			ft_putstr("\x1B[34m");
-			ft_putstr(filename);
-			ft_putstr("\x1b[0m");
-		}
-		else
-			ft_putstr(filename);
-		write(1, &"  ", 2);
-	}
-}
-
-void a_flag(char *filename, struct stat file)
-{
-	if (!filename)
-		return;
-	if (filename[0] == '.' && ft_strlen(filename) > 2)
-	{
-		ft_putstr("\x1B[32m");
-		ft_putstr(filename);
-		ft_putstr("\x1b[0m");
-	}
-	else if (S_ISDIR(file.st_mode))
-	{
-		ft_putstr("\x1B[34m");
-		ft_putstr(filename);
-		ft_putstr("\x1b[0m");
-	}
-	else
-		ft_putstr(filename);
-	write(1, &"  ", 2);
 }

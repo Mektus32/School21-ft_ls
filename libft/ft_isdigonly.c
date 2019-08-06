@@ -6,16 +6,16 @@
 /*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 19:18:02 by ojessi            #+#    #+#             */
-/*   Updated: 2019/07/15 19:18:03 by ojessi           ###   ########.fr       */
+/*   Updated: 2019/08/06 16:16:59 by ojessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int 	ft_isdigonly(char *str)
+int		ft_isdigonly(char *str)
 {
-	int 	i;
-	int 	len;
+	int		i;
+	int		len;
 
 	len = ft_strlen(str);
 	i = -1;

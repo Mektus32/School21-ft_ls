@@ -1,33 +1,43 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   flag_return.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/06 15:54:46 by ojessi            #+#    #+#             */
+/*   Updated: 2019/08/06 15:55:55 by ojessi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_ls.h"
 
-static char    *filename_case1(char *flags, char *av)
+static char		*filename_case1(char *flags, char *av)
 {
-	char *tmp;
-	char *buf;
-
-	buf = ft_strnew(BUFF_SIZE);
-	tmp = ft_strdup(flags);
-	ft_strdel(&flags);
-	flags = ft_strjoin(tmp, "_");
-	ft_strdel(&tmp);
-	return (ft_strjoin(flags, char_del(av, '/')));
-}
-
-static char    *filename_case2(char *flags)
-{
-	char *tmp;
+	char	*tmp;
 
 	tmp = ft_strdup(flags);
 	ft_strdel(&flags);
 	flags = ft_strjoin(tmp, "_");
 	ft_strdel(&tmp);
-	return (ft_strjoin(flags, "."));
+	return (ft_free_join(flags, char_del(av, '/')));
 }
 
-static char    *filename_case3(char *av)
+static char		*filename_case2(char *flags)
 {
-	char *tmp;
-	char *filename;
+	char	*tmp;
+
+	tmp = ft_strdup(flags);
+	ft_strdel(&flags);
+	flags = ft_strjoin(tmp, "_");
+	ft_strdel(&tmp);
+	return (ft_free_join(flags, "."));
+}
+
+static char		*filename_case3(char *av)
+{
+	char	*tmp;
+	char	*filename;
 
 	tmp = ft_strdup(av);
 	filename = ft_strjoin("_", tmp);
@@ -35,10 +45,10 @@ static char    *filename_case3(char *av)
 	return (filename);
 }
 
-void flag_return(int ac, char **av, char **split, int *i)
+void			flag_return(int ac, char **av, char **split, int *i)
 {
-	char    *flags;
-	char    *tmp;
+	char	*flags;
+	char	*tmp;
 
 	flags = NULL;
 	while (*i < ac && av[*i][0] == '-')
@@ -60,11 +70,11 @@ void flag_return(int ac, char **av, char **split, int *i)
 		*split = filename_case3(av[*i]);
 }
 
-char **flag_split(int ac, char **av)
+char			**flag_split(int ac, char **av)
 {
-	char    **split;
-	int     i;
-	int     count;
+	char	**split;
+	int		i;
+	int		count;
 
 	split = (char **)malloc(sizeof(char *) * ac);
 	i = 1;

@@ -6,11 +6,12 @@
 /*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/06 13:07:06 by ojessi            #+#    #+#             */
-/*   Updated: 2019/08/06 13:07:07 by ojessi           ###   ########.fr       */
+/*   Updated: 2019/08/06 15:56:35 by ojessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
+
 static void	ft_free_newlvl(t_subdir **head)
 {
 	t_subdir	*tmp;

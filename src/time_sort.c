@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   time_sort.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/06 16:09:46 by ojessi            #+#    #+#             */
+/*   Updated: 2019/08/06 16:10:42 by ojessi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_ls.h"
 
-int     rev_sorted_time_level(t_subdir *level)
+int		rev_sorted_time_level(t_subdir *level)
 {
-	t_subdir *tmp;
-	t_subdir *cur;
+	t_subdir	*tmp;
+	t_subdir	*cur;
 
 	tmp = level->next;
 	cur = level;
@@ -17,10 +29,10 @@ int     rev_sorted_time_level(t_subdir *level)
 	return (1);
 }
 
-int     sorted_time_level(t_subdir *level)
+int		sorted_time_level(t_subdir *level)
 {
-	t_subdir *tmp;
-	t_subdir *cur;
+	t_subdir	*tmp;
+	t_subdir	*cur;
 
 	tmp = level->next;
 	cur = level;
@@ -34,11 +46,11 @@ int     sorted_time_level(t_subdir *level)
 	return (1);
 }
 
-void    rev_level_time_sort(t_subdir **level)
+void	rev_level_time_sort(t_subdir **level)
 {
-	t_subdir    *tmp;
-	t_subdir    *cur;
-	long        cmp;
+	t_subdir	*tmp;
+	t_subdir	*cur;
+	long		cmp;
 
 	tmp = *level;
 	while (!rev_sorted_time_level(*level))
@@ -60,11 +72,11 @@ void    rev_level_time_sort(t_subdir **level)
 	}
 }
 
-void    level_time_sort(t_subdir **level)
+void	level_time_sort(t_subdir **level)
 {
-	t_subdir    *tmp;
-	t_subdir    *cur;
-	long        cmp;
+	t_subdir	*tmp;
+	t_subdir	*cur;
+	long		cmp;
 
 	tmp = *level;
 	while (!sorted_time_level(*level))
@@ -86,9 +98,9 @@ void    level_time_sort(t_subdir **level)
 	}
 }
 
-void levels_time_sort(t_subdir **level, int rev)
+void	levels_time_sort(t_subdir **level, int rev)
 {
-	t_subdir *nlvl;
+	t_subdir	*nlvl;
 
 	nlvl = *level;
 	if (rev == 0)

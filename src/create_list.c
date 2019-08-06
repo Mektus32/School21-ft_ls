@@ -6,7 +6,7 @@
 /*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 18:47:32 by ojessi            #+#    #+#             */
-/*   Updated: 2019/07/31 18:47:33 by ojessi           ###   ########.fr       */
+/*   Updated: 2019/08/06 15:39:39 by ojessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,27 +57,20 @@ t_subdir	*ft_fill_subdir(t_subdir **head, char *name, int can)
 	t_subdir		*list;
 	DIR				*dir;
 	struct dirent	*file;
-	char 			*spec;
-	static int 		i;
 
-	if (!head)
+	if (!ft_error(head, name, can))
 		return (NULL);
 	list = *head;
-	if ((spec = ft_strrchr(name, '/')))
-		spec += 1;
-	else
-		spec = name;
-	if (((spec[0] == '.' && spec[1] == '\0') || (spec[0] == '.' && spec[1] == '.' && spec[2] == '\0')) && can)
-		return (NULL);
-	ft_printf("check[%d]\n", i++);
 	if (!(dir = opendir(name)))
 		return (NULL);
 	while ((file = readdir(dir)))
 	{
 		if (!list)
-			*head = ft_push_back_next_subdir(&list, ft_free_join(ft_strjoin(name, "/"), file->d_name));
+			*head = ft_push_back_next_subdir(&list,
+					ft_free_join(ft_strjoin(name, "/"), file->d_name));
 		else
-			ft_push_back_next_subdir(&list, ft_free_join(ft_strjoin(name, "/"), file->d_name));
+			ft_push_back_next_subdir(&list,
+					ft_free_join(ft_strjoin(name, "/"), file->d_name));
 	}
 	closedir(dir);
 	while (list)
@@ -107,7 +100,6 @@ t_subdir	*ft_push_back_subdir(t_subdir **head, char *name)
 	t_subdir		*list;
 	DIR				*dir;
 	struct dirent	*file;
-	char 			*spec;
 
 	if (!head)
 		return (NULL);
@@ -117,9 +109,11 @@ t_subdir	*ft_push_back_subdir(t_subdir **head, char *name)
 	while ((file = readdir(dir)))
 	{
 		if (!list)
-			*head = ft_push_back_next_subdir(&list, ft_free_join(ft_strjoin(name, "/"), file->d_name));
+			*head = ft_push_back_next_subdir(&list,
+					ft_free_join(ft_strjoin(name, "/"), file->d_name));
 		else
-			ft_push_back_next_subdir(&list, ft_free_join(ft_strjoin(name, "/"), file->d_name));
+			ft_push_back_next_subdir(&list,
+					ft_free_join(ft_strjoin(name, "/"), file->d_name));
 	}
 	closedir(dir);
 	return (list);

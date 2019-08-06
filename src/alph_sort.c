@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   alph_sort.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/06 15:35:26 by ojessi            #+#    #+#             */
+/*   Updated: 2019/08/06 15:37:39 by ojessi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_ls.h"
 
-int     rev_sorted_alph_level(t_subdir *level)
+int		rev_sorted_alph_level(t_subdir *level)
 {
-	t_subdir *tmp;
-	t_subdir *cur;
+	t_subdir	*tmp;
+	t_subdir	*cur;
 
 	tmp = level->next;
 	cur = level;
@@ -17,7 +29,7 @@ int     rev_sorted_alph_level(t_subdir *level)
 	return (1);
 }
 
-int     sorted_alph_level(t_subdir *level)
+int		sorted_alph_level(t_subdir *level)
 {
 	t_subdir *tmp;
 	t_subdir *cur;
@@ -34,11 +46,11 @@ int     sorted_alph_level(t_subdir *level)
 	return (1);
 }
 
-void    rev_level_alph_sort(t_subdir **level)
+void	rev_level_alph_sort(t_subdir **level)
 {
-	t_subdir    *tmp;
-	t_subdir    *cur;
-	int         cmp;
+	t_subdir	*tmp;
+	t_subdir	*cur;
+	int			cmp;
 
 	tmp = *level;
 	while (!rev_sorted_alph_level(*level))
@@ -60,11 +72,11 @@ void    rev_level_alph_sort(t_subdir **level)
 	}
 }
 
-void    level_alph_sort(t_subdir **level)
+void	level_alph_sort(t_subdir **level)
 {
-	t_subdir    *tmp;
-	t_subdir    *cur;
-	int         cmp;
+	t_subdir	*tmp;
+	t_subdir	*cur;
+	int			cmp;
 
 	tmp = *level;
 	while (!sorted_alph_level(*level))
@@ -86,7 +98,7 @@ void    level_alph_sort(t_subdir **level)
 	}
 }
 
-void levels_alph_sort(t_subdir **level, int rev)
+void	levels_alph_sort(t_subdir **level, int rev)
 {
 	t_subdir *nlvl;
 

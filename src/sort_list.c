@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_list.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/06 16:03:12 by ojessi            #+#    #+#             */
+/*   Updated: 2019/08/06 16:04:17 by ojessi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_ls.h"
 
 int		cmp(const char *str1, const char *str2)
 {
-	int	i;
+	int		i;
 
 	i = 0;
 	while (str1[i] != '\0' || str2[i] != '\0')
@@ -16,9 +28,9 @@ int		cmp(const char *str1, const char *str2)
 	return (0);
 }
 
-void    print_level(t_subdir *level)
+void	print_level(t_subdir *level)
 {
-	t_subdir *tmp;
+	t_subdir	*tmp;
 
 	tmp = NULL;
 	printf("-----------------\n");
@@ -31,13 +43,13 @@ void    print_level(t_subdir *level)
 	printf("-----------------\n");
 }
 
-void    swap_1(t_subdir **head, t_subdir **a, t_subdir **b)
+void	swap_1(t_subdir **head, t_subdir **a, t_subdir **b)
 {
-	t_subdir *first;
-	t_subdir *second;
-	t_subdir *third;
-	t_subdir *a_prev;
-	int     flag;
+	t_subdir	*first;
+	t_subdir	*second;
+	t_subdir	*third;
+	t_subdir	*a_prev;
+	int			flag;
 
 	a_prev = *head;
 	flag = 0;
@@ -56,14 +68,14 @@ void    swap_1(t_subdir **head, t_subdir **a, t_subdir **b)
 		a_prev->next = (*b);
 }
 
-void    do_swap(t_subdir **head, t_subdir **a, t_subdir **b)
+void	do_swap(t_subdir **head, t_subdir **a, t_subdir **b)
 {
-	t_subdir *a_prev;
-	t_subdir *b_prev;
-	t_subdir *a_next;
-	t_subdir *b_next;
-	int      flag_a;
-	int      flag_b;
+	t_subdir	*a_prev;
+	t_subdir	*b_prev;
+	t_subdir	*a_next;
+	t_subdir	*b_next;
+	int			flag_a;
+	int			flag_b;
 
 	if ((*a)->next == (*b))
 		swap_1(head, a, b);
@@ -98,9 +110,9 @@ void    do_swap(t_subdir **head, t_subdir **a, t_subdir **b)
 	}
 }
 
-int     list_find(t_subdir *head, t_subdir *tmp)
+int		list_find(t_subdir *head, t_subdir *tmp)
 {
-	int len;
+	int		len;
 
 	len = 0;
 	while (head && cmp(head->name, tmp->name))

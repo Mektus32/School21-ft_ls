@@ -6,7 +6,7 @@
 /*   By: ojessi <ojessi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 18:18:09 by ojessi            #+#    #+#             */
-/*   Updated: 2019/06/10 17:15:48 by ojessi           ###   ########.fr       */
+/*   Updated: 2019/08/06 16:30:18 by ojessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,6 @@ int					get_next_line(int fd, char **line);
 char				*ft_strtolower(char *str);
 int					ft_max(int a, int b);
 int					ft_min(int a, int b);
-int 				ft_isdigonly(char *str);
+int					ft_isdigonly(char *str);
 
 #endif
