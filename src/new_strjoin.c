@@ -6,13 +6,13 @@
 /*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/06 15:57:00 by ojessi            #+#    #+#             */
-/*   Updated: 2019/08/06 16:02:05 by ojessi           ###   ########.fr       */
+/*   Updated: 2019/08/07 14:56:56 by ojessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
 
-char	*new_strjoin(char **line)
+char		*new_strjoin(char **line)
 {
 	int		len;
 	int		i;
@@ -38,5 +38,39 @@ char	*new_strjoin(char **line)
 		len++;
 		i++;
 	}
+	return (str);
+}
+
+long int	total(t_subdir *level, int a)
+{
+	long int total;
+
+	total = 0;
+	while (level)
+	{
+		if (a == 0 && !is_hidden(level->name))
+			total += level->buf.st_blocks;
+		else if (a == 1)
+			total += level->buf.st_blocks;
+		level = level->next;
+	}
+	return (total);
+}
+
+char		*char_del(char *str, char c)
+{
+	int		i;
+	int		j;
+
+	j = -1;
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] == c)
+			j = i;
+		i++;
+	}
+	if (j >= 0)
+		str[j] = '\0';
 	return (str);
 }

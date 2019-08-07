@@ -98,5 +98,8 @@ int					b_flag_initil(t_subdir *b_prev,
 t_param				*ft_noflag(t_param *list, char c);
 t_param				*ft_nofile(t_param *list);
 t_param				*ft_check_flags(t_param *list, int *k, char c);
+char				*char_del(char *str, char c);
+long int			total(t_subdir *level, int a);
+int					is_hidden(const char *str);
 
 #endif

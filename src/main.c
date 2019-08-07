@@ -6,13 +6,13 @@
 /*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 11:22:46 by ojessi            #+#    #+#             */
-/*   Updated: 2019/08/07 12:08:11 by ojessi           ###   ########.fr       */
+/*   Updated: 2019/08/07 14:56:51 by ojessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
 
-int          is_hidden(const char *str)
+int		is_hidden(const char *str)
 {
 	int i;
 
@@ -22,42 +22,6 @@ int          is_hidden(const char *str)
 	if (str[i] && str[i + 1] != '.')
 		return (0);
 	return (1);
-}
-
-long int     total(t_subdir *level, int a)
-{
-	long int total;
-
-	total = 0;
-	while (level)
-	{
-		if (a == 0 && !is_hidden(level->name))
-			total += level->buf.st_size;
-		else if (a == 1)
-			total += level->buf.st_size;
-		level = level->next;
-	}
-	while ((total % 8))
-		total++;
-	return (total / 1024);
-}
-
-char	*char_del(char *str, char c)
-{
-	int		i;
-	int		j;
-
-	j = -1;
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == c)
-			j = i;
-		i++;
-	}
-	if (j >= 0)
-		str[j] = '\0';
-	return (str);
 }
 
 void	ft_next_print_subdir(t_subdir *head, t_param *p)
@@ -86,13 +50,13 @@ void	ft_print_subdir(t_subdir *head, t_param *p)
 	tmp = head;
 	while (tmp)
 	{
-		if (p->l == 1 && p->a == 1 && p->u == 0)
+		if (p->l == 1 && p->a == 1 && p->u == 0 && p->k != 1)
 			l_flag(ft_strrchr(tmp->name, '/') + 1, tmp->buf, 1, 0);
-		else if (p->l == 1 && p->a == 0 && p->u == 0)
+		else if (p->l == 1 && p->a == 0 && p->u == 0 && p->k != 1)
 			l_flag(ft_strrchr(tmp->name, '/') + 1, tmp->buf, 0, 0);
-		else if (p->l == 1 && p->a == 1 && p->u == 1)
+		else if (p->l == 1 && p->a == 1 && p->u == 1 && p->k != 1)
 			l_flag(ft_strrchr(tmp->name, '/') + 1, tmp->buf, 1, 1);
-		else if (p->l == 1 && p->a == 0 && p->u == 1)
+		else if (p->l == 1 && p->a == 0 && p->u == 1 && p->k != 1)
 			l_flag(ft_strrchr(tmp->name, '/') + 1, tmp->buf, 0, 1);
 		else if (p->a == 1)
 			a_flag(ft_strrchr(tmp->name, '/') + 1, tmp->buf, p->k);
@@ -110,7 +74,7 @@ void	ft_print_list(t_param *head)
 	tmp = head;
 	if (tmp->d && tmp->name)
 	{
-		if (tmp->l)
+		if (tmp->l && tmp->k != 1)
 			l_flag(head->name, head->newlvl->buf, 1, 0);
 		else
 			a_flag(head->name, tmp->newlvl->buf, 0);
@@ -118,9 +82,9 @@ void	ft_print_list(t_param *head)
 			write(1, &"\n", 1);
 		return ;
 	}
-	if (tmp->br == 1 && tmp->name)
+	if (tmp->br == 1 && tmp->name && tmp->k != 1)
 		ft_printf("%s:\n", head->name);
-	if (tmp->l == 1 && tmp->name)
+	if (tmp->l == 1 && tmp->name && tmp->k != 1)
 		ft_printf("total %d\n", total(head->newlvl, head->a));
 	while (head)
 	{
