@@ -12,6 +12,36 @@
 
 #include "ft_ls.h"
 
+int          is_hidden(const char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i] && str[i] != '/')
+		i++;
+	if (str[i] && str[i + 1] != '.')
+		return (0);
+	return (1);
+}
+
+long int     total(t_subdir *level, int a)
+{
+	long int total;
+
+	total = 0;
+	while (level)
+	{
+		if (a == 0 && !is_hidden(level->name))
+			total += level->buf.st_size;
+		else if (a == 1)
+			total += level->buf.st_size;
+		level = level->next;
+	}
+	while ((total % 8))
+		total--;
+	return (total / 1024);
+}
+
 char	*char_del(char *str, char c)
 {
 	int		i;
@@ -39,7 +69,7 @@ void	ft_next_print_subdir(t_subdir *head, t_param *p)
 			if (p->l == 1 && p->br == 1)
 			{
 				ft_printf("\n%s:\n", head->name);
-				ft_printf("total %d\n", head->newlvl->buf.st_blocks);
+				ft_printf("total %ld\n", total(head->newlvl, p->a));
 			}
 			else if (p->br == 1)
 				ft_printf("\n\n%s:\n", head->name);
@@ -91,7 +121,7 @@ void	ft_print_list(t_param *head)
 	if (tmp->br == 1)
 		ft_printf("%s:\n", head->name);
 	if (tmp->l == 1)
-		ft_printf("total %d\n", head->newlvl->buf.st_blocks);
+		ft_printf("total %ld\n", total(head->newlvl, head->a));
 	while (head)
 	{
 		if (head->newlvl)
