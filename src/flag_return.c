@@ -16,22 +16,16 @@ static char		*filename_case1(char *flags, char *av)
 {
 	char	*tmp;
 
-	tmp = ft_strdup(flags);
-	ft_strdel(&flags);
-	flags = ft_strjoin(tmp, "_");
-	ft_strdel(&tmp);
-	return (ft_free_join(flags, char_del(av, '/')));
+	tmp = ft_strjoin(flags, "_");
+	return (ft_free_join(tmp, char_del(av, '/')));
 }
 
 static char		*filename_case2(char *flags)
 {
 	char	*tmp;
 
-	tmp = ft_strdup(flags);
-	ft_strdel(&flags);
-	flags = ft_strjoin(tmp, "_");
-	ft_strdel(&tmp);
-	return (ft_free_join(flags, "."));
+	tmp = ft_strjoin(flags, "_");
+	return (ft_free_join(tmp, "."));
 }
 
 static char		*filename_case3(char *av)
@@ -47,12 +41,15 @@ static char		*filename_case3(char *av)
 
 void			flag_return(int ac, char **av, char **split, int *i)
 {
-	char	*flags;
+	static char	*flags;
 	char	*tmp;
+	int     j;
 
-	flags = NULL;
+	j = 0;
 	while (*i < ac && av[*i][0] == '-')
 	{
+		if (j == 0 && flags)
+			ft_strdel(&flags);
 		if (flags)
 			tmp = ft_strdup(flags);
 		else
@@ -61,6 +58,7 @@ void			flag_return(int ac, char **av, char **split, int *i)
 		flags = ft_strjoin(tmp, av[*i] + 1);
 		ft_strdel(&tmp);
 		(*i)++;
+		j++;
 	}
 	if (flags && *i < ac)
 		*split = filename_case1(flags, av[*i]);
@@ -85,7 +83,7 @@ char			**flag_split(int ac, char **av)
 		split[1] = NULL;
 		return (split);
 	}
-	while (i < ac && count < ac)
+	while (i < ac)
 	{
 		flag_return(ac, av, &split[count], &i);
 		i++;

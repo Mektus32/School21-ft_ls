@@ -17,11 +17,14 @@ int		rev_sorted_alph_level(t_subdir *level)
 	t_subdir	*tmp;
 	t_subdir	*cur;
 
-	tmp = level->next;
+	if (level->next)
+		tmp = level->next;
+	else
+		return (1);
 	cur = level;
 	while (tmp)
 	{
-		if (ft_strcmp(tmp->name, cur->name) > 0)
+		if (ft_stricmp(tmp->name, cur->name) > 0)
 			return (0);
 		cur = cur->next;
 		tmp = tmp->next;
@@ -34,11 +37,14 @@ int		sorted_alph_level(t_subdir *level)
 	t_subdir *tmp;
 	t_subdir *cur;
 
-	tmp = level->next;
+	if (level->next)
+		tmp = level->next;
+	else
+		return (1);
 	cur = level;
 	while (tmp)
 	{
-		if (ft_strcmp(tmp->name, cur->name) < 0)
+		if (ft_stricmp(tmp->name, cur->name) < 0)
 			return (0);
 		cur = cur->next;
 		tmp = tmp->next;
@@ -58,7 +64,7 @@ void	rev_level_alph_sort(t_subdir **level)
 		cur = (*level);
 		while (cur)
 		{
-			cmp = ft_strcmp((tmp->name), (cur->name));
+			cmp = ft_stricmp((tmp->name), (cur->name));
 			if (cmp > 0 && list_find(*level, tmp) > list_find(*level, cur))
 				do_swap(level, &tmp, &cur);
 			else if (cmp < 0 && list_find(*level, tmp) < list_find(*level, cur))
@@ -84,7 +90,7 @@ void	level_alph_sort(t_subdir **level)
 		cur = (*level);
 		while (cur)
 		{
-			cmp = ft_strcmp((tmp->name), (cur->name));
+			cmp = ft_stricmp((tmp->name), (cur->name));
 			if (cmp > 0 && list_find(*level, tmp) < list_find(*level, cur))
 				do_swap(level, &tmp, &cur);
 			else if (cmp < 0 && list_find(*level, tmp) > list_find(*level, cur))

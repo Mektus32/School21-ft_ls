@@ -86,12 +86,12 @@ void	ft_print_list(t_param *head)
 		ft_printf("%s:\n", head->name);
 	if (tmp->l == 1 && tmp->name && tmp->k != 1)
 		ft_printf("total %d\n", total(head->newlvl, head->a));
-	while (head)
-	{
-		if (head->newlvl && head->name)
-			ft_print_subdir(head->newlvl, head);
-		head = head->next;
-	}
+	if (head->newlvl && head->name)
+		ft_print_subdir(head->newlvl, head);
+	else if (!head->newlvl && head->k == 0)
+		ft_printf("%s  ", head->name);
+	else if (!head->newlvl && head->k == 1)
+		ft_printf("%s\n", head->name);
 	if (tmp->l == 0 && tmp->k != 1)
 		write(1, &"\n", 1);
 }
@@ -106,13 +106,13 @@ int		main(int ac, char **av)
 	split = flag_split(ac, av);
 	ft_fill(&ls->par, split);
 	tmp = ls->par;
+	param_flag_sort(&tmp);
+	flag_sort(tmp);
 	while (tmp)
 	{
-		if (tmp->name)
-		{
-			flag_sort(tmp);
-			ft_print_list(tmp);
-		}
+		printf("%s\n", tmp->name);
+		//if (tmp->name)
+		//	ft_print_list(tmp);
 		tmp = tmp->next;
 	}
 	ft_firs_free(&ls);

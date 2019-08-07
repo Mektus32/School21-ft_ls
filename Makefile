@@ -16,6 +16,11 @@ NAME = ft_ls
 
 # src / obj files
 SRC =	main.c \
+		param_atime_sort.c \
+		param_time_sort.c \
+		param_sort.c \
+		par_sort_list.c \
+		par_sort_list2.c \
 		free.c \
 		error.c \
 		sort_list.c \
@@ -34,7 +39,7 @@ OBJ = $(addprefix $(OBJDIR), $(SRC:.c=.o))
 
 # compiler
 CC = gcc
-CFLAGS = -Wextra -Werror -Wall -g
+CFLAGS = -Wall -Werror -Wextra -g
 
 # ft library
 FT = ./libft

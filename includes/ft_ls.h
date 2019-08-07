@@ -58,6 +58,23 @@ typedef	struct		s_ls
 	t_param		*par;
 }					t_ls;
 
+void		param_flag_sort(t_param **list);
+void	rev_param_atime_sort(t_param **level);
+void	param_atime_sort(t_param **level);
+void	rev_param_time_sort(t_param **level);
+void	param_time_sort(t_param **level);
+void	rev_param_sort(t_param **level);
+int		ft_stricmp(const char *str1, const char *str2);
+void    print_param(t_param *tmp);
+void	param_sort(t_param **level);
+int		p_list_find(t_param *head, t_param *tmp);
+void	p_do_swap(t_param **head, t_param **a, t_param **b);
+void	pa_head_condition(int flag_a, t_param **head,
+                          t_param **b, t_param **a_prev);
+void	pb_head_condition(int flag_b, t_param **head,
+                          t_param **a, t_param **b_prev);
+int		pa_flag_initil(t_param *a_prev, t_param **head, t_param **a);
+int		pb_flag_initil(t_param *b_prev, t_param **head, t_param **b);
 t_subdir			*ft_push_back_subdir(t_subdir **head, char *name);
 void				ft_fill(t_param **head, char **split);
 void				levels_alph_sort(t_subdir **level, int rev);

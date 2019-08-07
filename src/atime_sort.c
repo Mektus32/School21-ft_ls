@@ -17,7 +17,10 @@ int		rev_sorted_atime_level(t_subdir *level)
 	t_subdir	*tmp;
 	t_subdir	*cur;
 
-	tmp = level->next;
+	if (level->next)
+		tmp = level->next;
+	else
+		return (1);
 	cur = level;
 	while (tmp)
 	{
@@ -34,7 +37,10 @@ int		sorted_atime_level(t_subdir *level)
 	t_subdir	*tmp;
 	t_subdir	*cur;
 
-	tmp = level->next;
+	if (level->next)
+		tmp = level->next;
+	else
+		return (1);
 	cur = level;
 	while (tmp)
 	{

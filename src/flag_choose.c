@@ -16,6 +16,10 @@ void		flag_sort(t_param *list)
 {
 	while (list)
 	{
+		while (list && !list->newlvl)
+			list = list->next;
+		if (!list)
+			return ;
 		if (list->u == 1 && list->r == 1 &&
 		list->f == 0)
 			levels_atime_sort(&list->newlvl, 1);
