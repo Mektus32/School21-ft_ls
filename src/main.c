@@ -12,35 +12,7 @@
 
 #include "ft_ls.h"
 
-int          is_hidden(const char *str)
-{
-	int i;
 
-	i = 0;
-	while (str[i] && str[i] != '/')
-		i++;
-	if (str[i] && str[i + 1] != '.')
-		return (0);
-	return (1);
-}
-
-long int     total(t_subdir *level, int a)
-{
-	long int total;
-
-	total = 0;
-	while (level)
-	{
-		if (a == 0 && !is_hidden(level->name))
-			total += level->buf.st_size;
-		else if (a == 1)
-			total += level->buf.st_size;
-		level = level->next;
-	}
-	while ((total % 8))
-		total--;
-	return (total / 1024);
-}
 
 char	*char_del(char *str, char c)
 {
