@@ -20,7 +20,7 @@ void		flag_sort(t_param *list)
 		list->f == 0)
 			levels_atime_sort(&list->newlvl, 1);
 		else if (list->u == 1 &&
-				list->r == 0 && list->u == 0 && list->f == 0)
+				list->r == 0 && list->f == 0)
 			levels_atime_sort(&list->newlvl, 0);
 		else if (list->t == 1 && list->r == 1 &&
 		list->u == 0 && list->f == 0)
