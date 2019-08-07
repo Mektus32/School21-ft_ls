@@ -6,7 +6,7 @@
 /*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 11:22:46 by ojessi            #+#    #+#             */
-/*   Updated: 2019/08/06 15:34:48 by ojessi           ###   ########.fr       */
+/*   Updated: 2019/08/07 12:08:11 by ojessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void	ft_print_list(t_param *head)
 	t_param *tmp;
 
 	tmp = head;
-	if (tmp->d)
+	if (tmp->d && tmp->name)
 	{
 		if (tmp->l)
 			l_flag(head->name, head->newlvl->buf, 1, 0);
@@ -90,13 +90,13 @@ void	ft_print_list(t_param *head)
 			write(1, &"\n", 1);
 		return ;
 	}
-	if (tmp->br == 1)
+	if (tmp->br == 1 && tmp->name)
 		ft_printf("%s:\n", head->name);
-	if (tmp->l == 1)
-		ft_printf("total %ld\n", total(head->newlvl, head->a));
+	if (tmp->l == 1 && tmp->name)
+		ft_printf("total %d\n", head->newlvl->buf.st_blocks);
 	while (head)
 	{
-		if (head->newlvl)
+		if (head->newlvl && head->name)
 			ft_print_subdir(head->newlvl, head);
 		head = head->next;
 	}
@@ -116,8 +116,11 @@ int		main(int ac, char **av)
 	tmp = ls->par;
 	while (tmp)
 	{
-		flag_sort(tmp);
-		ft_print_list(tmp);
+		if (tmp->name)
+		{
+			flag_sort(tmp);
+			ft_print_list(tmp);
+		}
 		tmp = tmp->next;
 	}
 	ft_firs_free(&ls);

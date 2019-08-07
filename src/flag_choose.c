@@ -6,13 +6,13 @@
 /*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/06 15:48:51 by ojessi            #+#    #+#             */
-/*   Updated: 2019/08/06 15:49:22 by ojessi           ###   ########.fr       */
+/*   Updated: 2019/08/07 12:07:35 by ojessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
 
-void	flag_sort(t_param *list)
+void		flag_sort(t_param *list)
 {
 	while (list)
 	{
@@ -35,4 +35,18 @@ void	flag_sort(t_param *list)
 			levels_alph_sort(&list->newlvl, 0);
 		list = list->next;
 	}
+}
+
+t_param		*ft_check_flags(t_param *list, int *k, char c)
+{
+	c == 'l' ? list->l = (unsigned int)1 : (*k)++;
+	c == 'R' ? list->br = (unsigned int)1 : (*k)++;
+	c == 'a' ? list->a = (unsigned int)1 : (*k)++;
+	c == 'r' ? list->r = (unsigned int)1 : (*k)++;
+	c == 't' ? list->t = (unsigned int)1 : (*k)++;
+	c == 'u' ? list->u = (unsigned int)1 : (*k)++;
+	c == 'f' ? list->f = (unsigned int)1 : (*k)++;
+	c == 'd' ? list->d = (unsigned int)1 : (*k)++;
+	c == '1' ? list->k = (unsigned int)1 : (*k)++;
+	return (list);
 }

@@ -6,7 +6,7 @@
 /*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 12:24:56 by ojessi            #+#    #+#             */
-/*   Updated: 2019/08/06 16:02:55 by ojessi           ###   ########.fr       */
+/*   Updated: 2019/08/07 12:07:57 by ojessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,26 +16,24 @@ t_param		*ft_create_param(char *str)
 {
 	t_param		*list;
 	int			i;
+	int			k;
+	struct stat	buf;
 
 	if (!(list = ft_memalloc(sizeof(t_param))))
 		return (0);
 	i = 0;
 	while (str[i] != '_' && str[i] != '\0')
 	{
-		str[i] == 'l' ? list->l = (unsigned int)1 : 0;
-		str[i] == 'R' ? list->br = (unsigned int)1 : 0;
-		str[i] == 'a' ? list->a = (unsigned int)1 : 0;
-		str[i] == 'r' ? list->r = (unsigned int)1 : 0;
-		str[i] == 't' ? list->t = (unsigned int)1 : 0;
-		str[i] == 'u' ? list->u = (unsigned int)1 : 0;
-		str[i] == 'f' ? list->f = (unsigned int)1 : 0;
-		str[i] == 'd' ? list->d = (unsigned int)1 : 0;
-		str[i] == '1' ? list->k = (unsigned int)1 : 0;
+		k = 0;
+		list = ft_check_flags(list, &k, str[i]);
+		if (k != 8)
+			return ((list = ft_noflag(list, str[i])));
 		i++;
 	}
 	list->name = ft_strdup(str + i + 1);
+	if (lstat(list->name, &buf))
+		return ((list = ft_nofile(list)));
 	list->newlvl = NULL;
-	free(str);
 	return (list);
 }
 
@@ -80,6 +78,7 @@ void		ft_fill(t_param **head, char **split)
 		}
 		else
 			ft_push_back_subdir(&list->newlvl, list->name);
+		free(split[i]);
 		i++;
 	}
 	free(split);

@@ -6,7 +6,7 @@
 /*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 11:21:42 by ojessi            #+#    #+#             */
-/*   Updated: 2019/08/06 13:45:25 by ojessi           ###   ########.fr       */
+/*   Updated: 2019/08/07 11:11:06 by ojessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ typedef struct		s_param
 {
 	char			*name;
 	unsigned int	l : 1;
-	unsigned int    k : 1;
+	unsigned int	k : 1;
 	unsigned int	br : 1;
 	unsigned int	a : 1;
 	unsigned int	r : 1;
@@ -78,8 +78,8 @@ int					list_find(t_subdir *head, t_subdir *tmp);
 void				levels_time_sort(t_subdir **level, int rev);
 char				**flag_split(int ac, char **av);
 void				l_flag(char *filename, struct stat file, int hidden, int t);
-void a_flag(char *filename, struct stat file, int k);
-void no_flag(char *filename, struct stat file, int k);
+void				a_flag(char *filename, struct stat file, int k);
+void				no_flag(char *filename, struct stat file, int k);
 char				*new_strjoin(char **line);
 void				no_such_dir(char *filename);
 int					vanilla_ls(DIR *dir, int print_hidden, char **filename);
@@ -87,5 +87,16 @@ void				flag_return(int ac, char **av, char **split, int *i);
 void				ft_firs_free(t_ls **ls);
 void				ft_print_subdir(t_subdir *head, t_param *p);
 void				*ft_error(t_subdir **head, char *name, int can);
+void				b_head_condition(int flag_b, t_subdir **head,
+					t_subdir **a, t_subdir **b_prev);
+void				a_head_condition(int flag_a, t_subdir **head,
+					t_subdir **b, t_subdir **a_prev);
+int					a_flag_initil(t_subdir *a_prev,
+					t_subdir **head, t_subdir **a);
+int					b_flag_initil(t_subdir *b_prev,
+					t_subdir **head, t_subdir **b);
+t_param				*ft_noflag(t_param *list, char c);
+t_param				*ft_nofile(t_param *list);
+t_param				*ft_check_flags(t_param *list, int *k, char c);
 
 #endif
