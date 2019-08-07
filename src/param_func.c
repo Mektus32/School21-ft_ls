@@ -30,6 +30,7 @@ t_param		*ft_create_param(char *str)
 		str[i] == 'u' ? list->u = (unsigned int)1 : 0;
 		str[i] == 'f' ? list->f = (unsigned int)1 : 0;
 		str[i] == 'd' ? list->d = (unsigned int)1 : 0;
+		str[i] == '1' ? list->k = (unsigned int)1 : 0;
 		i++;
 	}
 	list->name = ft_strdup(str + i + 1);

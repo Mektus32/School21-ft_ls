@@ -95,6 +95,6 @@ void	l_flag(char *filename, struct stat file, int hidden, int t)
 	ft_putstr(time);
 	ft_strdel(&time);
 	write(1, &" ", 1);
-	hidden == 1 ? a_flag(filename, file) : no_flag(filename, file);
+	hidden == 1 ? a_flag(filename, file, 0) : no_flag(filename, file, 0);
 	write(1, &"\n", 1);
 }

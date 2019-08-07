@@ -65,9 +65,9 @@ void	ft_print_subdir(t_subdir *head, t_param *p)
 		else if (p->l == 1 && p->a == 0 && p->u == 1)
 			l_flag(ft_strrchr(tmp->name, '/') + 1, tmp->buf, 0, 1);
 		else if (p->a == 1)
-			a_flag(ft_strrchr(tmp->name, '/') + 1, tmp->buf);
+			a_flag(ft_strrchr(tmp->name, '/') + 1, tmp->buf, p->k);
 		else
-			no_flag(ft_strrchr(tmp->name, '/') + 1, tmp->buf);
+			no_flag(ft_strrchr(tmp->name, '/') + 1, tmp->buf, p->k);
 		tmp = tmp->next;
 	}
 	ft_next_print_subdir(head, p);
@@ -83,7 +83,7 @@ void	ft_print_list(t_param *head)
 		if (tmp->l)
 			l_flag(head->name, head->newlvl->buf, 1, 0);
 		else
-			a_flag(head->name, tmp->newlvl->buf);
+			a_flag(head->name, tmp->newlvl->buf, 0);
 		if (!tmp->l)
 			write(1, &"\n", 1);
 		return ;
@@ -98,7 +98,7 @@ void	ft_print_list(t_param *head)
 			ft_print_subdir(head->newlvl, head);
 		head = head->next;
 	}
-	if (tmp->l == 0)
+	if (tmp->l == 0 && tmp->k != 1)
 		write(1, &"\n", 1);
 }
 

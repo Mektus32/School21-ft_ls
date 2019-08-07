@@ -28,7 +28,7 @@ void	*ft_error(t_subdir **head, char *name, int can)
 	return (spec);
 }
 
-void	no_flag(char *filename, struct stat file)
+void no_flag(char *filename, struct stat file, int k)
 {
 	if (!filename)
 		return ;
@@ -42,11 +42,14 @@ void	no_flag(char *filename, struct stat file)
 		}
 		else
 			ft_putstr(filename);
-		write(1, &"  ", 2);
+		if (k == 0)
+			write(1, &"  ", 2);
+		else
+			write(1, &"\n", 1);
 	}
 }
 
-void	a_flag(char *filename, struct stat file)
+void a_flag(char *filename, struct stat file, int k)
 {
 	if (!filename)
 		return ;
@@ -64,5 +67,8 @@ void	a_flag(char *filename, struct stat file)
 	}
 	else
 		ft_putstr(filename);
-	write(1, &"  ", 2);
+	if (k == 0)
+		write(1, &"  ", 2);
+	else
+		write(1, &"\n", 1);
 }

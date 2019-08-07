@@ -41,6 +41,7 @@ typedef struct		s_param
 {
 	char			*name;
 	unsigned int	l : 1;
+	unsigned int    k : 1;
 	unsigned int	br : 1;
 	unsigned int	a : 1;
 	unsigned int	r : 1;
@@ -77,8 +78,8 @@ int					list_find(t_subdir *head, t_subdir *tmp);
 void				levels_time_sort(t_subdir **level, int rev);
 char				**flag_split(int ac, char **av);
 void				l_flag(char *filename, struct stat file, int hidden, int t);
-void				a_flag(char *filename, struct stat file);
-void				no_flag(char *filename, struct stat file);
+void a_flag(char *filename, struct stat file, int k);
+void no_flag(char *filename, struct stat file, int k);
 char				*new_strjoin(char **line);
 void				no_such_dir(char *filename);
 int					vanilla_ls(DIR *dir, int print_hidden, char **filename);
