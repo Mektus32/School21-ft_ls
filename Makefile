@@ -15,20 +15,20 @@
 NAME = ft_ls
 
 # src / obj files
-SRC =	atime_sort.c \
+SRC =	main.c \
+		free.c \
+		error.c \
+		sort_list.c \
 		time_sort.c \
 		alph_sort.c \
-		create_list.c \
-		error.c \
-		flag_choose.c \
 		flag_print.c \
-		flag_return.c \
-		main.c \
-		new_strjoin.c \
 		param_func.c \
-		sort_list.c \
-		vanilla_ls.c \
-		free.c
+		atime_sort.c \
+		sort_list2.c \
+		new_strjoin.c \
+		create_list.c \
+		flag_choose.c \
+		flag_return.c
 
 OBJ = $(addprefix $(OBJDIR), $(SRC:.c=.o))
 
@@ -40,7 +40,7 @@ CFLAGS = -Wextra -Werror -Wall -g
 FT = ./libft
 FT_LIB = $(addprefix $(FT), libft.a)
 FT_INC = -I ./libft
-FT_LNK = ./libft/libft.a # -l ft
+FT_LNK = ./libft/libft.a
 
 # printf library
 PR = ./ft_printf
