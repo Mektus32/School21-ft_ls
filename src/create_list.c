@@ -15,6 +15,7 @@
 t_subdir	*ft_create_next_subdir(char *name, t_subdir *prev)
 {
 	t_subdir	*new;
+	//char		*tmp;
 
 	if (!(new = (t_subdir*)malloc(sizeof(t_subdir))))
 		return (NULL);
@@ -22,9 +23,11 @@ t_subdir	*ft_create_next_subdir(char *name, t_subdir *prev)
 	new->newlvl = NULL;
 	new->prev = prev;
 	new->name = name;
+	errno = 0;
 	lstat(name, &new->buf);
+	errno = 0;
 	opendir(name);
-	new->var_errno = errno;
+	new->var_errno = errno == 13 ? 13 : 0;
 	new->atime = new->buf.st_atime;
 	new->mtime = new->buf.st_mtime;
 	new->ctime = new->buf.st_ctime;

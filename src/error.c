@@ -89,6 +89,7 @@ t_param		*ft_noflag(t_param *list, char c)
 	list->k = 0;
 	ft_printf("ls: illegal option -- %c\n", c);
 	ft_printf("usage: ls [-lRartufd1] [file ...]\n");
+	list->var_errno = errno;
 	return (list);
 }
 
@@ -107,5 +108,6 @@ t_param		*ft_nofile(t_param *list)
 	list->f = 0;
 	list->d = 0;
 	list->k = 0;
+	list->var_errno = errno;
 	return (list);
 }

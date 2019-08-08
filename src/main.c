@@ -67,13 +67,12 @@ void	ft_print_subdir(t_subdir *head, t_param *p)
 			ft_printf("ls: %s: Permission denied\n", tmp->name);
 		tmp = tmp->next;
 	}
-	write(1, "\n", 1);
 	ft_next_print_subdir(head, p);
 }
 
 void	ft_print_list(t_param *head)
 {
-	t_param *tmp;
+	t_param		*tmp;
 
 	tmp = head;
 	if (tmp->d && tmp->name)
@@ -98,8 +97,8 @@ void	ft_print_list(t_param *head)
 	}
 	if (head->newlvl && head->name)
 		ft_print_subdir(head->newlvl, head);
-//	else if (!head->newlvl && head->k == 0)
-//		ft_printf("%s  ", head->name);
+	else if (!head->newlvl && head->k == 0 && !tmp->l)
+		ft_printf("%s  ", head->name);
 	else if (!head->newlvl && head->k == 1)
 		ft_printf("%s\n", head->name);
 	if (tmp->l == 0 && tmp->k != 1)

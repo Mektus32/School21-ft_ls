@@ -27,6 +27,7 @@ t_param		*ft_not_a_directory(t_param *list)
 	list->f = 0;
 	list->d = 0;
 	list->k = 0;
+	list->var_errno = errno;
 	return (list);
 }
 
@@ -45,5 +46,6 @@ t_param		*ft_permission(t_param *list)
 	list->f = 0;
 	list->d = 0;
 	list->k = 0;
+	list->var_errno = errno;
 	return (list);
 }
