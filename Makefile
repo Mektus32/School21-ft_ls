@@ -34,7 +34,8 @@ SRC =	main.c \
 		new_strjoin.c \
 		create_list.c \
 		flag_choose.c \
-		flag_return.c
+		flag_return.c \
+		error2.c
 
 OBJ = $(addprefix $(OBJDIR), $(SRC:.c=.o))
 

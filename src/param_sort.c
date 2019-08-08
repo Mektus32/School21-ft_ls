@@ -32,7 +32,7 @@ int		sorted_alph_param(t_param *level)
 	cur = level;
 	while (tmp)
 	{
-		if (ft_stricmp(tmp->name, cur->name) < 0)
+		if (tmp->name && cur->name && ft_stricmp(tmp->name, cur->name) < 0)
 			return (0);
 		cur = cur->next;
 		tmp = tmp->next;

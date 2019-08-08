@@ -17,7 +17,7 @@ static char		*filename_case1(char *flags, char *av)
 	char	*tmp;
 
 	tmp = ft_strjoin(flags, "_");
-	return (ft_free_join(tmp, char_del(av, '/')));
+	return (ft_free_join(tmp, av));
 }
 
 static char		*filename_case2(char *flags)

@@ -31,8 +31,16 @@ t_param		*ft_create_param(char *str)
 		i++;
 	}
 	list->name = ft_strdup(str + i + 1);
-	if (lstat(list->name, &buf))
-		return ((list = ft_nofile(list)));
+	lstat(list->name, &buf);
+	if (!S_ISREG(buf.st_mode) && errno == 20)
+		return (list = ft_not_a_directory(list));
+	errno = 0;
+	opendir(list->name);
+	if (errno == 13)
+		return (list = ft_permission(list));
+	if (errno == 2)
+		return (list = ft_nofile(list));
+	list->buf = buf;
 	list->newlvl = NULL;
 	return (list);
 }
@@ -70,12 +78,7 @@ void		ft_fill(t_param **head, char **split)
 	{
 		list = ft_push_back_param(head, split[i]);
 		if (list->br == 1)
-		{
-			if (list->name[0] == '.' && list->name[1] == '\0')
 				ft_fill_subdir(&list->newlvl, list->name, 0);
-			else
-				ft_fill_subdir(&list->newlvl, list->name, 0);
-		}
 		else
 			ft_push_back_subdir(&list->newlvl, list->name);
 		free(split[i]);

@@ -32,6 +32,7 @@ void	ft_next_print_subdir(t_subdir *head, t_param *p)
 		{
 			if (p->l == 1 && p->br == 1)
 			{
+				ft_printf("kek->%s\n", head->name);
 				ft_printf("\n%s:\n", head->name);
 				ft_printf("total %ld\n", total(head->newlvl, p->a));
 			}
@@ -62,8 +63,11 @@ void	ft_print_subdir(t_subdir *head, t_param *p)
 			a_flag(ft_strrchr(tmp->name, '/') + 1, tmp->buf, p->k);
 		else
 			no_flag(ft_strrchr(tmp->name, '/') + 1, tmp->buf, p->k);
+		if (tmp->var_errno == 13)
+			ft_printf("ls: %s: Permission denied\n", tmp->name);
 		tmp = tmp->next;
 	}
+	write(1, "\n", 1);
 	ft_next_print_subdir(head, p);
 }
 
@@ -82,14 +86,20 @@ void	ft_print_list(t_param *head)
 			write(1, &"\n", 1);
 		return ;
 	}
-	if (tmp->br == 1 && tmp->name && tmp->k != 1)
+	if (tmp->br == 1 && tmp-> l != 1 && tmp->name && tmp->k != 1 && !S_ISREG(tmp->buf.st_mode))
 		ft_printf("%s:\n", head->name);
 	if (tmp->l == 1 && tmp->name && tmp->k != 1)
-		ft_printf("total %d\n", total(head->newlvl, head->a));
+	{
+		ft_printf("%s:\n", head->name);
+		if (!S_ISREG(tmp->buf.st_mode))
+			ft_printf("total %d\n", total(head->newlvl, head->a));
+		if (S_ISREG(tmp->buf.st_mode))
+			l_flag(tmp->name, tmp->buf, 1, 0);
+	}
 	if (head->newlvl && head->name)
 		ft_print_subdir(head->newlvl, head);
-	else if (!head->newlvl && head->k == 0)
-		ft_printf("%s  ", head->name);
+//	else if (!head->newlvl && head->k == 0)
+//		ft_printf("%s  ", head->name);
 	else if (!head->newlvl && head->k == 1)
 		ft_printf("%s\n", head->name);
 	if (tmp->l == 0 && tmp->k != 1)
@@ -98,6 +108,14 @@ void	ft_print_list(t_param *head)
 
 int		main(int ac, char **av)
 {
+//	struct stat	buf;
+//	lstat(av[1], &buf);
+//	ac = 0;
+//	opendir(av[1]);
+//	ft_printf("%d\n", errno);
+//	ft_printf("ls: %s", av[1]);
+//	perror(" ");
+
 	char		**split;
 	t_ls		*ls;
 	t_param		*tmp;

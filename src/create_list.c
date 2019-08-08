@@ -23,6 +23,8 @@ t_subdir	*ft_create_next_subdir(char *name, t_subdir *prev)
 	new->prev = prev;
 	new->name = name;
 	lstat(name, &new->buf);
+	opendir(name);
+	new->var_errno = errno;
 	new->atime = new->buf.st_atime;
 	new->mtime = new->buf.st_mtime;
 	new->ctime = new->buf.st_ctime;
