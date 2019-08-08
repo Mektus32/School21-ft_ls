@@ -101,7 +101,7 @@ int		list_find(t_subdir *head, t_subdir *tmp)
 	int		len;
 
 	len = 0;
-	while (head && ft_strcmp(head->name, tmp->name))
+	while (head && head != tmp)
 	{
 		len++;
 		head = head->next;

@@ -73,7 +73,7 @@ int		p_list_find(t_param *head, t_param *tmp)
 	int		len;
 
 	len = 0;
-	while (head && ft_strcmp(head->name, tmp->name))
+	while (head && head != tmp)
 	{
 		len++;
 		head = head->next;

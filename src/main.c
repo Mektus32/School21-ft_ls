@@ -110,9 +110,8 @@ int		main(int ac, char **av)
 	flag_sort(tmp);
 	while (tmp)
 	{
-		printf("%s\n", tmp->name);
-		//if (tmp->name)
-		//	ft_print_list(tmp);
+		if (tmp->name)
+			ft_print_list(tmp);
 		tmp = tmp->next;
 	}
 	ft_firs_free(&ls);

@@ -16,6 +16,7 @@ NAME = ft_ls
 
 # src / obj files
 SRC =	main.c \
+		param_flag_choose.c \
 		param_atime_sort.c \
 		param_time_sort.c \
 		param_sort.c \

@@ -1,15 +1,5 @@
 #include "ft_ls.h"
 
-void    print_param(t_param *tmp)
-{
-	while (tmp)
-	{
-		printf("%s\n", tmp->name);
-		tmp = tmp->next;
-	}
-	printf("--------\n");
-}
-
 int		rev_sorted_alph_param(t_param *level)
 {
 	t_param	*tmp;
@@ -78,9 +68,9 @@ void	rev_param_sort(t_param **level)
 
 void	param_sort(t_param **level)
 {
-	t_param	*tmp;
-	t_param	*cur;
-	int			cmp;
+	t_param	    *tmp;
+	t_param	    *cur;
+	int		    cmp;
 
 	tmp = *level;
 	while (!sorted_alph_param(*level))

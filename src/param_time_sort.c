@@ -1,6 +1,6 @@
 #include "ft_ls.h"
 
-int		rev_sorted_time_param(t_param *level)
+/*int		rev_sorted_time_param(t_param *level)
 {
 	t_param	*tmp;
 	t_param	*cur;
@@ -90,4 +90,4 @@ void	param_time_sort(t_param **level)
 		else
 			tmp = tmp->next;
 	}
-}
+}*/
