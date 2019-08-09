@@ -15,9 +15,6 @@
 t_param		*ft_not_a_directory(t_param *list)
 {
 	ft_printf("ls: %s: Not a directory\n", list->name);
-	list->name ? free(list->name) : 0;
-	list->name = NULL;
-	list->newlvl = NULL;
 	list->l = 0;
 	list->br = 0;
 	list->a = 0;
@@ -34,9 +31,6 @@ t_param		*ft_not_a_directory(t_param *list)
 t_param		*ft_permission(t_param *list)
 {
 	ft_printf("ls: %s: Permission denied\n", list->name);
-	list->name ? free(list->name) : 0;
-	list->name = NULL;
-	list->newlvl = NULL;
 	list->l = 0;
 	list->br = 0;
 	list->a = 0;

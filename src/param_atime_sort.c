@@ -1,6 +1,6 @@
 #include "ft_ls.h"
 
-/*int		rev_sorted_atime_param(t_param *level)
+int		rev_sorted_atime_param(t_param *level)
 {
 	t_param	*tmp;
 	t_param	*cur;
@@ -12,7 +12,7 @@
 	cur = level;
 	while (tmp)
 	{
-		if ((tmp->atime - cur->atime) < 0)
+		if ((tmp->buf.st_atime - cur->buf.st_atime) < 0)
 			return (0);
 		cur = cur->next;
 		tmp = tmp->next;
@@ -32,7 +32,7 @@ int		sorted_atime_param(t_param *level)
 	cur = level;
 	while (tmp)
 	{
-		if ((tmp->atime - cur->atime) > 0)
+		if ((tmp->buf.st_atime - cur->buf.st_atime) > 0)
 			return (0);
 		cur = cur->next;
 		tmp = tmp->next;
@@ -52,7 +52,7 @@ void	rev_param_atime_sort(t_param **level)
 		cur = (*level);
 		while (cur)
 		{
-			cmp = tmp->atime - cur->atime;
+			cmp = tmp->buf.st_atime - cur->buf.st_atime;
 			if (cmp > 0 && p_list_find(*level, tmp) < p_list_find(*level, cur))
 				p_do_swap(level, &tmp, &cur);
 			else if (cmp < 0 && p_list_find(*level, tmp) > p_list_find(*level, cur))
@@ -78,7 +78,7 @@ void	param_atime_sort(t_param **level)
 		cur = (*level);
 		while (cur)
 		{
-			cmp = tmp->atime - cur->atime;
+			cmp = tmp->buf.st_atime - cur->buf.st_atime;
 			if (cmp > 0 && p_list_find(*level, tmp) > p_list_find(*level, cur))
 				p_do_swap(level, &tmp, &cur);
 			else if (cmp < 0 && p_list_find(*level, tmp) < p_list_find(*level, cur))
@@ -90,4 +90,4 @@ void	param_atime_sort(t_param **level)
 		else
 			tmp = tmp->next;
 	}
-}*/
+}

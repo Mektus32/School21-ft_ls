@@ -75,9 +75,6 @@ void		a_flag(char *filename, struct stat file, int k)
 
 t_param		*ft_noflag(t_param *list, char c)
 {
-	list->name ? free(list->name) : 0;
-	list->name = NULL;
-	list->newlvl = NULL;
 	list->l = 0;
 	list->br = 0;
 	list->a = 0;
@@ -96,9 +93,6 @@ t_param		*ft_noflag(t_param *list, char c)
 t_param		*ft_nofile(t_param *list)
 {
 	ft_printf("ls: %s: No such file or directory\n", list->name);
-	list->name ? free(list->name) : 0;
-	list->name = NULL;
-	list->newlvl = NULL;
 	list->l = 0;
 	list->br = 0;
 	list->a = 0;
