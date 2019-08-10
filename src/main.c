@@ -1,3 +1,4 @@
+
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -89,9 +90,11 @@ void	ft_print_list(t_param *head)
 		ft_printf("%s:\n", head->name);
 	if (tmp->l == 1 && tmp->name && tmp->k != 1)
 	{
-		ft_printf("%s:\n", head->name);
 		if (!S_ISREG(tmp->buf.st_mode))
+		{
+			ft_printf("%s:\n", head->name);
 			ft_printf("total %d\n", total(head->newlvl, head->a));
+		}
 		if (S_ISREG(tmp->buf.st_mode))
 			l_flag(tmp->name, tmp->buf, 1, 0);
 	}
@@ -107,17 +110,10 @@ void	ft_print_list(t_param *head)
 
 int		main(int ac, char **av)
 {
-//	struct stat	buf;
-//	lstat(av[1], &buf);
-//	ac = 0;
-//	opendir(av[1]);
-//	ft_printf("%d\n", errno);
-//	ft_printf("ls: %s", av[1]);
-//	perror(" ");
-
 	char		**split;
 	t_ls		*ls;
 	t_param		*tmp;
+	t_param		*dir;
 
 	ls = ft_memalloc(sizeof(t_ls));
 	split = flag_split(ac, av);
@@ -125,11 +121,25 @@ int		main(int ac, char **av)
 	tmp = ls->par;
 	param_flag_sort(&tmp);
 	flag_sort(tmp);
+	dir = tmp;
 	while (tmp)
 	{
-		if (tmp->name)
+
+		if (tmp->name && tmp->file && tmp->var_errno == 0)
+		{
 			ft_print_list(tmp);
+			tmp->l ? write(1, "\n", 1) : 0 ;
+		}
 		tmp = tmp->next;
+	}
+	while (dir)
+	{
+		if (dir->name && !dir->file && (!dir->var_errno || dir->var_errno == 13))
+		{
+			ft_print_list(dir);
+			dir->l ? write(1, "\n", 1) : 0 ;
+		}
+		dir = dir->next;
 	}
 	ft_firs_free(&ls);
 	return (0);

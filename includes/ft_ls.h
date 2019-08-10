@@ -52,6 +52,7 @@ typedef struct		s_param
 	unsigned int	f : 1;
 	unsigned int	d : 1;
 	int				var_errno;
+	int				file : 1;
 	struct stat		buf;
 	struct s_param	*next;
 	t_subdir		*newlvl;

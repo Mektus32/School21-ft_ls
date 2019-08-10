@@ -18,7 +18,6 @@ t_param		*ft_create_param(char *str)
 	int			i;
 	int			k;
 	struct stat	buf;
-//	DIR			*dir;
 
 	if (!(list = ft_memalloc(sizeof(t_param))))
 		return (0);
@@ -34,6 +33,7 @@ t_param		*ft_create_param(char *str)
 	list->name = ft_strdup(str + i + 1);
 	errno = 0;
 	lstat(list->name, &buf);
+	list->file =S_ISREG(buf.st_mode) == 1 ?  1 : 0;
 	if (!S_ISREG(buf.st_mode) && errno == 20)
 		return (list = ft_not_a_directory(list));
 	errno = 0;
