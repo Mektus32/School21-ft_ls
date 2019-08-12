@@ -6,7 +6,7 @@
 /*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/06 15:48:51 by ojessi            #+#    #+#             */
-/*   Updated: 2019/08/07 12:07:35 by ojessi           ###   ########.fr       */
+/*   Updated: 2019/08/12 11:08:36 by ojessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,16 +41,26 @@ void		flag_sort(t_param *list)
 	}
 }
 
-t_param		*ft_check_flags(t_param *list, int *k, char c)
+t_param		*ft_check_flags(t_param *list, char *str, int *i)
 {
-	c == 'l' ? list->l = (unsigned int)1 : (*k)++;
-	c == 'R' ? list->br = (unsigned int)1 : (*k)++;
-	c == 'a' ? list->a = (unsigned int)1 : (*k)++;
-	c == 'r' ? list->r = (unsigned int)1 : (*k)++;
-	c == 't' ? list->t = (unsigned int)1 : (*k)++;
-	c == 'u' ? list->u = (unsigned int)1 : (*k)++;
-	c == 'f' ? list->f = (unsigned int)1 : (*k)++;
-	c == 'd' ? list->d = (unsigned int)1 : (*k)++;
-	c == '1' ? list->k = (unsigned int)1 : (*k)++;
+	int		k;
+
+	*i = 0;
+	while (str[*i] != '_' && str[*i] != '\0')
+	{
+		k = 0;
+		str[*i] == 'l' ? list->l = (unsigned int)1 : k++;
+		str[*i] == 'R' ? list->br = (unsigned int)1 : k++;
+		str[*i] == 'a' ? list->a = (unsigned int)1 : k++;
+		str[*i] == 'r' ? list->r = (unsigned int)1 : k++;
+		str[*i] == 't' ? list->t = (unsigned int)1 : k++;
+		str[*i] == 'u' ? list->u = (unsigned int)1 : k++;
+		str[*i] == 'f' ? list->f = (unsigned int)1 : k++;
+		str[*i] == 'd' ? list->d = (unsigned int)1 : k++;
+		str[*i] == '1' ? list->k = (unsigned int)1 : k++;
+		if (k != 8)
+			return (NULL);
+		(*i)++;
+	}
 	return (list);
 }

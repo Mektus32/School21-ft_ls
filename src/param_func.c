@@ -6,7 +6,7 @@
 /*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 12:24:56 by ojessi            #+#    #+#             */
-/*   Updated: 2019/08/07 12:07:57 by ojessi           ###   ########.fr       */
+/*   Updated: 2019/08/12 11:54:05 by ojessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,35 +16,28 @@ t_param		*ft_create_param(char *str)
 {
 	t_param		*list;
 	int			i;
-	int			k;
 	struct stat	buf;
+	DIR			*dir;
 
 	if (!(list = ft_memalloc(sizeof(t_param))))
 		return (0);
-	i = 0;
-	while (str[i] != '_' && str[i] != '\0')
-	{
-		k = 0;
-		list = ft_check_flags(list, &k, str[i]);
-		if (k != 8)
-			return ((list = ft_noflag(list, str[i])));
-		i++;
-	}
+	if (!ft_check_flags(list, str, &i))
+		return (list = ft_noflag(list, str[i]));
+	list = ft_check_flags(list, str, &i);
 	list->name = ft_strdup(str + i + 1);
 	errno = 0;
 	lstat(list->name, &buf);
-	list->file =S_ISREG(buf.st_mode) == 1 ?  1 : 0;
+	list->file = S_ISREG(buf.st_mode) == 1 ? 1 : 0;
 	if (!S_ISREG(buf.st_mode) && errno == 20)
 		return (list = ft_not_a_directory(list));
 	errno = 0;
-	opendir(list->name);
+	dir = opendir(list->name);
+	dir ? closedir(dir) : 0;
 	if (errno == 13)
 		return (list = ft_permission(list));
 	if (errno == 2)
 		return (list = ft_nofile(list));
-	list->var_errno = 0;
-	list->buf = buf;
-	list->newlvl = NULL;
+	list = ft_fill_param(list, buf);
 	return (list);
 }
 
@@ -81,7 +74,7 @@ void		ft_fill(t_param **head, char **split)
 	{
 		list = ft_push_back_param(head, split[i]);
 		if (list->br == 1)
-				ft_fill_subdir(&list->newlvl, list->name, 0);
+			ft_fill_subdir(&list->newlvl, list->name, 0);
 		else
 			ft_push_back_subdir(&list->newlvl, list->name);
 		free(split[i]);

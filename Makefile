@@ -35,13 +35,14 @@ SRC =	main.c \
 		create_list.c \
 		flag_choose.c \
 		flag_return.c \
-		error2.c
+		error2.c \
+		print.c
 
 OBJ = $(addprefix $(OBJDIR), $(SRC:.c=.o))
 
 # compiler
 CC = gcc
-CFLAGS = -g
+CFLAGS = -Wall -Wextra -Werror -g
 
 # ft library
 FT = ./libft

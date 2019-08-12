@@ -6,7 +6,7 @@
 /*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/06 16:03:12 by ojessi            #+#    #+#             */
-/*   Updated: 2019/08/07 10:59:58 by ojessi           ###   ########.fr       */
+/*   Updated: 2019/08/12 10:51:55 by ojessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,19 @@
 
 int		ft_stricmp(const char *str1, const char *str2)
 {
-	int	i;
+	int					i;
+	const unsigned char	*s1 = (const unsigned char*)str1;
+	const unsigned char	*s2 = (const unsigned char*)str2;
 
 	i = 0;
 	while (str1[i] != '\0' || str2[i] != '\0')
 	{
-		if (ft_toupper((unsigned char)str1[i]) != ft_toupper((unsigned char)str2[i]))
-			return (ft_toupper((unsigned char)str1[i]) - ft_toupper((unsigned char)str2[i]));
+		if (ft_toupper(s1[i]) != ft_toupper(s2[i]))
+			return (ft_toupper(s1[i]) - ft_toupper(s2[i]));
 		i++;
 	}
-	if (ft_toupper((unsigned char)str1[i]) != ft_toupper((unsigned char)str2[i]))
-		return (ft_toupper((unsigned char)str1[i]) - ft_toupper((unsigned char)str2[i]));
+	if (ft_toupper(s1[i]) != ft_toupper(s2[i]))
+		return (ft_toupper(s1[i]) - ft_toupper(s2[i]));
 	return (0);
 }
 

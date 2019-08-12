@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ft_ls"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/ojessi/Desktop/ft_ls/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/ojessi/Desktop/ft_ls/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/ojessi/Desktop/ft_ls/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ft_ls">
+				<Option output="/Users/ojessi/Desktop/ft_ls/cmake-build-debug/ft_ls" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ojessi/Desktop/ft_ls/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/ojessi/Desktop/ft_ls/ft_printf/includes"/>
+					<Add directory="/Users/ojessi/Desktop/ft_ls/includes"/>
+					<Add directory="/Users/ojessi/Desktop/ft_ls/libft/includes"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_ls"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ft_ls/fast">
+				<Option output="/Users/ojessi/Desktop/ft_ls/cmake-build-debug/ft_ls" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ojessi/Desktop/ft_ls/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/ojessi/Desktop/ft_ls/ft_printf/includes"/>
+					<Add directory="/Users/ojessi/Desktop/ft_ls/includes"/>
+					<Add directory="/Users/ojessi/Desktop/ft_ls/libft/includes"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_ls/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/includes/ft_printf.h">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/check_args.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/choise_spec.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/ft_atoi.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/ft_free_strjoin_duo.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/ft_free_strjoin_rev.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/ft_free_strncpy.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/ft_ftoa.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/ft_itoa.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/ft_ltoa.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/ft_ltoa_base.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/ft_memset.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/ft_printf.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/ft_strchr.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/ft_strdup.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/ft_strjoin.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/ft_strlen.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/ft_strncmp.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/ft_strnew.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/ft_strtolower.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/ft_ultoa.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/ft_ultoa_base.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/init_arg.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/print_digit.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/print_double.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/print_non_printabl.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/print_spec.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/print_spec_etc.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/print_xox.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/ft_printf/src/settings.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/includes/ft_ls.h">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/includes/ft_printf.h">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/includes/libft.h">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_abs.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_absf.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_atoi.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_bzero.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_count_words.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_free_join.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_free_strjoin_duo.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_free_strjoin_rev.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_frtwarr.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_ftoa.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_isalnum.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_isalpha.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_isascii.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_isdigit.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_isdigonly.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_isprint.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_isspace.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_itoa.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_list_add.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_list_foreach_if.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_list_push_back.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_list_remove_free_if.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_lstadd.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_lstaddback.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_lstdel.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_lstdelone.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_lstiter.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_lstmap.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_lstnew.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_ltoa.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_ltoa_base.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_max.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_memalloc.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_memccpy.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_memchr.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_memcmp.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_memcpy.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_memdel.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_memmove.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_memset.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_min.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_pow.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_putchar.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_putchar_fd.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_putendl.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_putendl_fd.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_putnbr.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_putnbr_fd.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_putstr.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_putstr_fd.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_setbackground_fd.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strcat.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strchr.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strclr.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strcmp.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strcpy.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strdel.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strdup.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strequ.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_striter.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_striteri.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strjoin.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strlcat.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strlcpy.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strlen.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strmap.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strmapi.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strncat.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strncmp.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strncpy.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strnequ.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strnew.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strnstr.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strrchr.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strrev.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strsplit.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strstr.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strsub.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strtolower.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_strtrim.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_tolower.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_toupper.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_truncf.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_ultoa.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/ft_ultoa_base.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/get_next_line.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/includes/get_next_line.h">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/libft/includes/libft.h">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/src/alph_sort.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/src/atime_sort.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/src/create_list.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/src/error.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/src/error2.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/src/flag_choose.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/src/flag_print.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/src/flag_return.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/src/free.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/src/main.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/src/new_strjoin.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/src/par_sort_list.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/src/par_sort_list2.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/src/param_atime_sort.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/src/param_flag_choose.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/src/param_func.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/src/param_sort.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/src/param_time_sort.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/src/print.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/src/sort_list.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/src/sort_list2.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/src/time_sort.c">
+			<Option target="ft_ls"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/ft_ls/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

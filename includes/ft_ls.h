@@ -6,7 +6,7 @@
 /*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 11:21:42 by ojessi            #+#    #+#             */
-/*   Updated: 2019/08/07 11:11:06 by ojessi           ###   ########.fr       */
+/*   Updated: 2019/08/12 10:26:24 by ojessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,11 +75,13 @@ void				param_sort(t_param **level);
 int					p_list_find(t_param *head, t_param *tmp);
 void				p_do_swap(t_param **head, t_param **a, t_param **b);
 void				pa_head_condition(int flag_a, t_param **head,
-                          t_param **b, t_param **a_prev);
+		t_param **b, t_param **a_prev);
 void				pb_head_condition(int flag_b, t_param **head,
-                          t_param **a, t_param **b_prev);
-int					pa_flag_initil(t_param *a_prev, t_param **head, t_param **a);
-int					pb_flag_initil(t_param *b_prev, t_param **head, t_param **b);
+		t_param **a, t_param **b_prev);
+int					pa_flag_initil(t_param *a_prev,
+		t_param **head, t_param **a);
+int					pb_flag_initil(t_param *b_prev,
+		t_param **head, t_param **b);
 t_subdir			*ft_push_back_subdir(t_subdir **head, char *name);
 void				ft_fill(t_param **head, char **split);
 void				levels_alph_sort(t_subdir **level, int rev);
@@ -119,11 +121,15 @@ int					b_flag_initil(t_subdir *b_prev,
 					t_subdir **head, t_subdir **b);
 t_param				*ft_noflag(t_param *list, char c);
 t_param				*ft_nofile(t_param *list);
-t_param				*ft_check_flags(t_param *list, int *k, char c);
+t_param				*ft_check_flags(t_param *list, char *str, int *i);
 char				*char_del(char *str, char c);
 long int			total(t_subdir *level, int a);
 int					is_hidden(const char *str);
 t_param				*ft_not_a_directory(t_param *list);
 t_param				*ft_permission(t_param *list);
+void				ft_print_l_flag(t_param *head, t_param *tmp);
+void				ft_print_list(t_param *head);
+void				ft_print_files(t_param *tmp1);
+t_param				*ft_fill_param(t_param *list, struct stat buf);
 
 #endif

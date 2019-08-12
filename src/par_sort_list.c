@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   par_sort_list.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/12 10:55:35 by ojessi            #+#    #+#             */
+/*   Updated: 2019/08/12 10:56:42 by ojessi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_ls.h"
 
 void	p_swap_1(t_param **head, t_param **a, t_param **b)
 {
-	t_param	*first;
-	t_param	*second;
-	t_param	*third;
-	t_param	*a_prev;
+	t_param		*first;
+	t_param		*second;
+	t_param		*third;
+	t_param		*a_prev;
 	int			flag;
 
 	a_prev = *head;
@@ -26,7 +38,7 @@ void	p_swap_1(t_param **head, t_param **a, t_param **b)
 }
 
 void	p_prev_initil(t_param **a, t_param **b,
-                    t_param **a_prev, t_param **b_prev)
+		t_param **a_prev, t_param **b_prev)
 {
 	t_param	*tmp_a;
 	t_param	*tmp_b;
@@ -43,9 +55,9 @@ void	p_prev_initil(t_param **a, t_param **b,
 
 void	p_do_swap(t_param **head, t_param **a, t_param **b)
 {
-	t_param	*a_prev;
-	t_param	*b_prev;
-	t_param	*a_next;
+	t_param		*a_prev;
+	t_param		*b_prev;
+	t_param		*a_next;
 	int			flag_a;
 	int			flag_b;
 

@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   par_sort_list2.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/12 11:06:54 by ojessi            #+#    #+#             */
+/*   Updated: 2019/08/12 11:07:18 by ojessi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_ls.h"
 
 void	pa_head_condition(int flag_a, t_param **head,
-                          t_param **b, t_param **a_prev)
+		t_param **b, t_param **a_prev)
 {
 	if (flag_a == 0)
 		(*a_prev)->next = (*b);
@@ -10,7 +22,7 @@ void	pa_head_condition(int flag_a, t_param **head,
 }
 
 void	pb_head_condition(int flag_b, t_param **head,
-                          t_param **a, t_param **b_prev)
+		t_param **a, t_param **b_prev)
 {
 	if (flag_b == 0)
 		(*b_prev)->next = (*a);

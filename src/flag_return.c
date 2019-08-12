@@ -6,7 +6,7 @@
 /*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/06 15:54:46 by ojessi            #+#    #+#             */
-/*   Updated: 2019/08/06 15:55:55 by ojessi           ###   ########.fr       */
+/*   Updated: 2019/08/12 11:07:56 by ojessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ static char		*filename_case3(char *av)
 void			flag_return(int ac, char **av, char **split, int *i)
 {
 	static char	*flags;
-	char	*tmp;
-	int     j;
+	char		*tmp;
+	int			j;
 
 	j = 0;
 	while (*i < ac && av[*i][0] == '-')

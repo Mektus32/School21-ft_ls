@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   param_sort.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/12 10:54:09 by ojessi            #+#    #+#             */
+/*   Updated: 2019/08/12 10:55:25 by ojessi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_ls.h"
 
 int		rev_sorted_alph_param(t_param *level)
@@ -42,8 +54,8 @@ int		sorted_alph_param(t_param *level)
 
 void	rev_param_sort(t_param **level)
 {
-	t_param	*tmp;
-	t_param	*cur;
+	t_param		*tmp;
+	t_param		*cur;
 	int			cmp;
 
 	tmp = *level;
@@ -55,7 +67,8 @@ void	rev_param_sort(t_param **level)
 			cmp = ft_stricmp((tmp->name), (cur->name));
 			if (cmp > 0 && p_list_find(*level, tmp) > p_list_find(*level, cur))
 				p_do_swap(level, &tmp, &cur);
-			else if (cmp < 0 && p_list_find(*level, tmp) < p_list_find(*level, cur))
+			else if (cmp < 0 && p_list_find(*level, tmp) <
+					p_list_find(*level, cur))
 				p_do_swap(level, &tmp, &cur);
 			cur = cur->next;
 		}
@@ -68,9 +81,9 @@ void	rev_param_sort(t_param **level)
 
 void	param_sort(t_param **level)
 {
-	t_param	    *tmp;
-	t_param	    *cur;
-	int		    cmp;
+	t_param		*tmp;
+	t_param		*cur;
+	int			cmp;
 
 	tmp = *level;
 	while (!sorted_alph_param(*level))
@@ -81,7 +94,8 @@ void	param_sort(t_param **level)
 			cmp = ft_stricmp((tmp->name), (cur->name));
 			if (cmp > 0 && p_list_find(*level, tmp) < p_list_find(*level, cur))
 				p_do_swap(level, &tmp, &cur);
-			else if (cmp < 0 && p_list_find(*level, tmp) > p_list_find(*level, cur))
+			else if (cmp < 0 && p_list_find(*level, tmp) >
+					p_list_find(*level, cur))
 				p_do_swap(level, &tmp, &cur);
 			cur = cur->next;
 		}

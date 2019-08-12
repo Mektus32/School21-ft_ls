@@ -6,7 +6,7 @@
 /*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 18:47:32 by ojessi            #+#    #+#             */
-/*   Updated: 2019/08/06 15:39:39 by ojessi           ###   ########.fr       */
+/*   Updated: 2019/08/12 11:48:18 by ojessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_subdir	*ft_create_next_subdir(char *name, t_subdir *prev)
 {
 	t_subdir	*new;
-	//char		*tmp;
+	DIR			*dir;
 
 	if (!(new = (t_subdir*)malloc(sizeof(t_subdir))))
 		return (NULL);
@@ -26,11 +26,12 @@ t_subdir	*ft_create_next_subdir(char *name, t_subdir *prev)
 	errno = 0;
 	lstat(name, &new->buf);
 	errno = 0;
-	opendir(name);
+	dir = opendir(name);
 	new->var_errno = errno == 13 ? 13 : 0;
 	new->atime = new->buf.st_atime;
 	new->mtime = new->buf.st_mtime;
 	new->ctime = new->buf.st_ctime;
+	dir ? closedir(dir) : 0;
 	return (new);
 }
 
