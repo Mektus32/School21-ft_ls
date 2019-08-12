@@ -6,7 +6,7 @@
 /*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 11:22:46 by ojessi            #+#    #+#             */
-/*   Updated: 2019/08/12 10:56:56 by ojessi           ###   ########.fr       */
+/*   Updated: 2019/08/12 12:42:39 by ojessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,8 @@ void	ft_print_list(t_param *head)
 	if (tmp->d && tmp->name)
 	{
 		if (tmp->l && tmp->k != 1)
-			l_flag(head->name, head->newlvl ? head->newlvl->buf : head->buf, 1, 0);
+			l_flag(head->name, head->newlvl ? head->newlvl->buf
+					: head->buf, 1, 0);
 		else
 			a_flag(head->name, tmp->newlvl ? tmp->newlvl->buf : tmp->buf, 0);
 		if (!tmp->l)
@@ -106,7 +107,6 @@ int		main(int ac, char **av)
 	ft_fill(&ls->par, split);
 	tmp = ls->par;
 	param_flag_sort(&tmp);
-
 	flag_sort(tmp);
 	ft_print_files(tmp);
 	ls->par = tmp;
